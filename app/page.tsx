@@ -8,30 +8,6 @@ export default function Page() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
-  const posts = [
-    {
-      title: 'AI Is Changing the Operating Model of Leadership',
-      date: '12 June 2026',
-      excerpt:
-        'AI is no longer only about productivity. It is becoming part of how leaders shape decision-making, execution, and organisational learning.',
-      category: 'AI & Leadership',
-    },
-    {
-      title: 'Why ERP Modernisation Is a Leadership Discipline',
-      date: '05 June 2026',
-      excerpt:
-        'ERP programmes succeed when leaders balance architecture, process clarity, and sustained business adoption — not just technology choices.',
-      category: 'Digital Transformation',
-    },
-    {
-      title: 'From Automation to Augmentation',
-      date: '28 May 2026',
-      excerpt:
-        'The strongest use cases for AI are not replacing people, but helping skilled teams move faster, think better, and execute with higher quality.',
-      category: 'Strategy',
-    },
-  ]
-
   const focusAreas = [
     {
       title: 'Digital Transformation',
@@ -254,7 +230,9 @@ export default function Page() {
         {/* BLOG */}
         <section id="blog" className="bg-slate-950 py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+
+            {/* Section header */}
+            <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
                   Latest writing
@@ -268,28 +246,36 @@ export default function Page() {
               </a>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-3">
-              {posts.map((post) => (
-                <article
-                  key={post.title}
-                  className="rounded-[1.75rem] border border-slate-800 bg-slate-900 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-700 hover:shadow-xl hover:shadow-black/30"
-                >
-                  <div className="mb-4 flex items-center justify-between gap-4">
-                    <span className="rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold text-emerald-400">
-                      {post.category}
-                    </span>
-                    <span className="text-xs font-medium uppercase tracking-[0.16em] text-slate-600">
-                      {post.date}
-                    </span>
-                  </div>
-                  <h3 className="mb-3 text-xl font-semibold leading-8 text-white">{post.title}</h3>
-                  <p className="mb-6 leading-7 text-slate-400">{post.excerpt}</p>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-slate-600">
-                    Full article coming soon
-                  </span>
-                </article>
-              ))}
+            {/* Authenticity note */}
+            <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900 px-5 py-4">
+              <span className="mt-0.5 text-base">✍️</span>
+              <p className="text-sm leading-7 text-slate-400">
+                All posts are written from my own experience —{' '}
+                <span className="font-semibold text-slate-300">no ghostwriters, no AI generation.</span>
+              </p>
             </div>
+
+            {/* Empty state */}
+            <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-slate-800 bg-slate-900/50 px-8 py-20 text-center">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-800 text-2xl">
+                📝
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-white">
+                First posts are on their way
+              </h3>
+              <p className="max-w-md text-sm leading-7 text-slate-500">
+                I am working on the first articles right now. Check back soon — or connect on LinkedIn to be notified when they go live.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/egebjerg72/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-2.5 text-sm font-semibold text-slate-300 transition hover:border-blue-600 hover:text-blue-400"
+              >
+                Follow on LinkedIn →
+              </a>
+            </div>
+
           </div>
         </section>
 
@@ -302,11 +288,8 @@ export default function Page() {
                 Outside the office
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                Hiking
+                The trails that reset the thinking
               </h2>
-              <p className="mt-3 max-w-xl text-slate-400">
-                Staying grounded — one trail at a time.
-              </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
