@@ -38,7 +38,7 @@ export default function Page() {
       text: 'Leading modernisation of business platforms, processes, and operating models with a practical execution mindset.',
     },
     {
-      title: 'AI & Copilot Adoption',
+      title: 'AI Adoption',
       text: 'Turning AI from curiosity into measurable business value through adoption, governance, and specialised use cases.',
     },
     {
@@ -124,7 +124,7 @@ export default function Page() {
 
               <p className="mb-8 max-w-2xl text-lg leading-8 text-slate-400 md:text-xl">
                 CIO focused on digital transformation, enterprise platforms, automation, and AI adoption.
-                I share perspectives on leadership, ERP, Copilot, and how technology shapes the future way of working.
+                I share perspectives on leadership, ERP, AI, and how technology shapes the future way of working.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -209,7 +209,7 @@ export default function Page() {
                 operational performance.
               </p>
               <p>
-                This site is a place to share perspectives on CIO leadership, digital transformation, ERP, Copilot,
+                This site is a place to share perspectives on CIO leadership, digital transformation, ERP, AI,
                 automation, and the future of work. It is intended as both a professional profile and a platform for
                 ongoing reflection.
               </p>
@@ -302,7 +302,7 @@ export default function Page() {
                 Outside the office
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                Hiking &amp; Running
+                Hiking
               </h2>
               <p className="mt-3 max-w-xl text-slate-400">
                 Staying grounded — one trail at a time.
