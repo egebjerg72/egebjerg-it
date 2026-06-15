@@ -116,7 +116,7 @@ export default function Page() {
                 {[
                   { label: 'Leadership', value: 'CIO perspective' },
                   { label: 'Focus',      value: 'AI & transformation' },
-                  { label: 'Platform',   value: 'ERP · M365 · Automation' },
+                  { label: 'Approach', value: 'Adopt · Govern · Scale' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm backdrop-blur">
                     <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{item.label}</div>
@@ -146,8 +146,8 @@ export default function Page() {
                     <div className="text-sm text-slate-500">Positioning highlights</div>
                   </div>
                   <div className="rounded-full bg-emerald-900/50 px-3 py-1 text-xs font-semibold text-emerald-400">
-                    Growth mindset
-                  </div>
+                  Execution-first
+                </div>
                 </div>
 
                 <div className="space-y-4">
@@ -368,8 +368,8 @@ export default function Page() {
             >
               LinkedIn
             </a>
-            <a href="mailto:hello@egebjerg.it" className="transition hover:text-blue-400">
-              hello@egebjerg.it
+            <a href="mailto:nh@egebjerg.it" className="transition hover:text-blue-400">
+              nh@egebjerg.it
             </a>
             <a href="#top" className="transition hover:text-blue-400">
               Back to top
