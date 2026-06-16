@@ -8,18 +8,36 @@ export default function Page() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
-  const focusAreas = [
+  const boardContributions = [
     {
+      icon: '🧭',
+      title: 'Technology Strategy',
+      text: 'Translating complex IT landscapes into strategic direction — bridging the gap between technology and business outcomes at board level.',
+    },
+    {
+      icon: '🔒',
+      title: 'Digital Risk & Cybersecurity',
+      text: 'Bringing structured awareness of digital risk, data governance, and cyber resilience to board-level conversations and decisions.',
+    },
+    {
+      icon: '🔄',
       title: 'Digital Transformation',
-      text: 'Leading modernisation of business platforms, processes, and operating models with a practical execution mindset.',
+      text: 'Hands-on experience steering organisations through structural IT transitions, ERP rollouts, and large-scale digitisation programmes.',
     },
     {
-      title: 'AI Adoption',
-      text: 'Turning AI from curiosity into measurable business value through adoption, governance, and specialised use cases.',
+      icon: '💡',
+      title: 'IT Investment Oversight',
+      text: 'Challenging and qualifying IT budgets, vendor choices, and ROI expectations — grounded in real execution experience as a CIO.',
     },
     {
-      title: 'Enterprise Platforms',
-      text: 'Working across ERP, collaboration, automation, and data to create a coherent and future-ready digital landscape.',
+      icon: '🤝',
+      title: 'Organisational Change',
+      text: 'Advising on the human side of technology — change management, capability building, and aligning people with new digital operating models.',
+    },
+    {
+      icon: '📊',
+      title: 'Governance & Performance',
+      text: 'Supporting boards in establishing meaningful KPIs, IT governance structures, and transparent reporting on technology investments.',
     },
   ]
 
@@ -46,7 +64,7 @@ export default function Page() {
           {/* Desktop nav */}
           <nav className="hidden gap-6 text-sm font-medium text-slate-400 md:flex">
             <a href="#about"   className="transition hover:text-blue-400">About</a>
-            <a href="#focus"   className="transition hover:text-blue-400">Focus</a>
+            <a href="#board"   className="transition hover:text-blue-400">Board</a>
             <a href="#blog"    className="transition hover:text-blue-400">Blog</a>
             <a href="#gallery" className="transition hover:text-blue-400">Gallery</a>
             <a href="#contact" className="transition hover:text-blue-400">Contact</a>
@@ -69,7 +87,7 @@ export default function Page() {
           <div className="border-t border-slate-800 bg-slate-900 px-6 py-4 md:hidden">
             <nav className="flex flex-col gap-4 text-sm font-medium text-slate-300">
               <a href="#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">About</a>
-              <a href="#focus"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Focus</a>
+              <a href="#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Board</a>
               <a href="#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Blog</a>
               <a href="#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Gallery</a>
               <a href="#contact" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Contact</a>
@@ -116,7 +134,7 @@ export default function Page() {
                 {[
                   { label: 'Leadership', value: 'CIO perspective' },
                   { label: 'Focus',      value: 'AI & transformation' },
-                  { label: 'Approach', value: 'Adopt · Govern · Scale' },
+                  { label: 'Approach',   value: 'Adopt · Govern · Scale' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm backdrop-blur">
                     <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{item.label}</div>
@@ -146,8 +164,8 @@ export default function Page() {
                     <div className="text-sm text-slate-500">Positioning highlights</div>
                   </div>
                   <div className="rounded-full bg-emerald-900/50 px-3 py-1 text-xs font-semibold text-emerald-400">
-                  Execution-first
-                </div>
+                    Execution-first
+                  </div>
                 </div>
 
                 <div className="space-y-4">
@@ -193,37 +211,41 @@ export default function Page() {
           </div>
         </section>
 
-        {/* FOCUS AREAS */}
-        <section id="focus" className="bg-slate-900 py-20">
+        {/* BOARD CONTRIBUTIONS */}
+        <section id="board" className="bg-slate-900 py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
             <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
-                  Focus areas
+                  Board & Advisory Boards
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  Themes that define my work and writing
+                  What I bring to the board table
                 </h2>
               </div>
-              <p className="max-w-2xl text-slate-400">
-                A mix of strategy, execution, and continuous improvement across enterprise technology and leadership.
+              <p className="max-w-sm text-slate-400">
+                As a CIO with 10+ years across industries, I contribute with strategic
+                clarity on technology — where it creates value, where it carries risk,
+                and how to govern it well.
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
-              {focusAreas.map((area) => (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {boardContributions.map((item) => (
                 <div
-                  key={area.title}
+                  key={item.title}
                   className="group rounded-[1.75rem] border border-slate-800 bg-gradient-to-b from-slate-800 to-slate-900 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-700 hover:shadow-xl hover:shadow-black/30"
                 >
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 text-lg font-bold text-white">
-                    {area.title.charAt(0)}
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 text-xl">
+                    {item.icon}
                   </div>
-                  <h3 className="mb-3 text-xl font-semibold text-white">{area.title}</h3>
-                  <p className="leading-7 text-slate-400">{area.text}</p>
+                  <h3 className="mb-3 text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="leading-7 text-slate-400">{item.text}</p>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
@@ -348,6 +370,7 @@ export default function Page() {
             </div>
           </div>
         </section>
+
       </main>
 
       {/* FOOTER / CONTACT */}
