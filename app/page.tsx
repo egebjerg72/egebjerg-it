@@ -106,8 +106,8 @@ export default function Page() {
           </div>
 
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:px-10 lg:py-28">
-            <div className="max-w-3xl">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-4 py-2 text-sm text-slate-300 shadow-sm">
+            <div className="max-w-3xl flex flex-col">
+              <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-4 py-2 text-sm text-slate-300 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 Modern leadership, AI and digital execution
               </div>
@@ -130,7 +130,7 @@ export default function Page() {
                 </a>
               </div>
 
-              <div className="mt-12 grid gap-4 sm:grid-cols-3">
+              <div className="mt-auto pt-12 grid gap-4 sm:grid-cols-3">
                 {[
                   { label: 'Leadership', value: 'CIO perspective' },
                   { label: 'Focus',      value: 'AI & transformation' },
@@ -144,7 +144,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-end">
               <div className="w-full rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-black/40 backdrop-blur-xl">
                 <div className="mb-5 flex justify-center">
                   <div className="relative h-36 w-36 overflow-hidden rounded-full ring-4 ring-slate-700 shadow-lg">
