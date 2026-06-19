@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Blog post content styling */
+.blog-content {
+  @apply text-slate-300 leading-8 text-base;
+}
+.blog-content p {
+  @apply mb-6;
+}
+.blog-content h2 {
+  @apply mt-10 mb-4 text-2xl font-bold tracking-tight text-white;
+}
+.blog-content strong {
+  @apply font-semibold text-slate-100;
+}
+.blog-content em {
+  @apply italic;
+}

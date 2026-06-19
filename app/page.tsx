@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { blogPosts } from '../data/blogPosts'
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -189,19 +190,20 @@ export default function Page() {
                 About
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                Building modern digital capabilities with a practical leadership style
+                Hands-on leadership, grounded in 25 years of doing the work
               </h2>
             </div>
             <div className="space-y-5 text-base leading-8 text-slate-300">
               <p>
-                I work at the intersection of leadership, technology, and business execution. My focus is on creating
-                environments where enterprise systems, automation, and AI support better decision-making and stronger
-                operational performance.
+                Technology is only as good as the people and processes around it. That is the lesson 25 years in IT teaches you — especially when you have been on both sides: building the systems and leading the teams that depend on them.
+
+I hold a Master's degree in IT, but the education I rely on most is practical. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in small and midsized companies where you rarely have the luxury of big teams or big budgets. You solve problems with clarity and resourcefulness.
               </p>
               <p>
-                This site is a place to share perspectives on CIO leadership, digital transformation, ERP, AI,
-                automation, and the future of work. It is intended as both a professional profile and a platform for
-                ongoing reflection.
+                On the leadership side, I work deliberately with emotional intelligence. Transformation programmes do not fail because of technology — they fail because of people. Understanding resistance, building trust, and bringing people with you is as important as any system rollout.
+              </p>
+              <p>
+                This site is where I share what I am learning — written from my own experience, without filters.
               </p>
             </div>
           </div>
@@ -221,9 +223,7 @@ export default function Page() {
                 </h2>
               </div>
               <p className="max-w-sm text-slate-300">
-                As a CIO with 10+ years across industries, I contribute with strategic
-                clarity on technology — where it creates value, where it carries risk,
-                and how to govern it well.
+                Grounded experience in leading IT and transformation from the inside — where strategy and execution meet in real time. I have navigated cloud migrations, vendor negotiations, security challenges, and AI ambitions, with a strong emphasis on supporting people and the organisation through change to ensure transformation delivers lasting impact.
               </p>
             </div>
 
@@ -245,56 +245,88 @@ export default function Page() {
           </div>
         </section>
 
-        {/* BLOG */}
-        <section id="blog" className="bg-slate-900 py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+       {/* BLOG */}
+<section id="blog" className="bg-slate-900 py-20">
+  <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-            <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-                  Latest writing
-                </div>
-                <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  Thoughts on AI, leadership and digital transformation
-                </h2>
-              </div>
-              <a href="#contact" className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
-                Let&apos;s connect →
-              </a>
+    <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div>
+        <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+          Latest writing
+        </div>
+        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+          Thoughts on AI, leadership and digital transformation
+        </h2>
+      </div>
+      <a href="#contact" className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
+        Let&apos;s connect →
+      </a>
+    </div>
+
+    {/* Authenticity note */}
+    <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-4">
+      <span className="mt-0.5 text-base">✍️</span>
+      <p className="text-sm leading-7 text-slate-300">
+        All posts are written from my own experience —{' '}
+        <span className="font-semibold text-slate-100">no ghostwriters, no AI generation.</span>
+      </p>
+    </div>
+
+    {blogPosts.length > 0 ? (
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {blogPosts.map((post) => (
+          <a
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group flex flex-col rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-800/60 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
+          >
+            <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+              <span>
+                {new Date(post.date).toLocaleDateString('en-GB', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              </span>
+              <span>·</span>
+              <span>{post.readingTime}</span>
             </div>
-
-            {/* Authenticity note */}
-            <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-4">
-              <span className="mt-0.5 text-base">✍️</span>
-              <p className="text-sm leading-7 text-slate-300">
-                All posts are written from my own experience —{' '}
-                <span className="font-semibold text-slate-100">no ghostwriters, no AI generation.</span>
-              </p>
+            <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition group-hover:text-blue-400">
+              {post.title}
+            </h3>
+            <p className="mb-6 flex-1 text-sm leading-7 text-slate-400">
+              {post.excerpt}
+            </p>
+            <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
+              Read post →
             </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-slate-700 bg-slate-800/50 px-8 py-20 text-center">
+        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-700 text-2xl">
+          📝
+        </div>
+        <h3 className="mb-2 text-lg font-semibold text-white">
+          First posts are on their way
+        </h3>
+        <p className="max-w-md text-sm leading-7 text-slate-400">
+          I am working on the first articles right now. Check back soon — or connect on LinkedIn to be notified when they go live.
+        </p>
+        <a
+          href="https://www.linkedin.com/in/egebjerg72/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 rounded-2xl border border-slate-600 bg-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-blue-600 hover:text-blue-400"
+        >
+          Follow on LinkedIn →
+        </a>
+      </div>
+    )}
 
-            {/* Empty state */}
-            <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-slate-700 bg-slate-800/50 px-8 py-20 text-center">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-700 text-2xl">
-                📝
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-white">
-                First posts are on their way
-              </h3>
-              <p className="max-w-md text-sm leading-7 text-slate-400">
-                I am working on the first articles right now. Check back soon — or connect on LinkedIn to be notified when they go live.
-              </p>
-              <a
-                href="https://www.linkedin.com/in/egebjerg72/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 rounded-2xl border border-slate-600 bg-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-blue-600 hover:text-blue-400"
-              >
-                Follow on LinkedIn →
-              </a>
-            </div>
-
-          </div>
-        </section>
+  </div>
+</section>
 
         {/* GALLERY */}
         <section id="gallery" className="bg-slate-800 py-20">
