@@ -115,13 +115,16 @@ export default function Page() {
               </h1>
 
               <p className="mb-8 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                I started as a developer. Over 25 years I moved through project management and IT management into the CIO role — and I have stayed hands-on every step of the way. I have led a full cloud transformation — D365 FO, D365 Commerce, Power Platform — and I am now focused on the next phase: getting AI into real processes with real, measurable results.
+                I started as a developer and moved into project management, IT leadership, and the CIO role — staying hands-on along the way.
+I have led a full cloud transformation across D365 FO, D365 Commerce and the Power Platform.
+Now I focus on the next phase: bringing AI into real business processes with measurable results.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a href="#blog" className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500">
-                  Explore the blog
-                </a>
+                
+<a href="#board" className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500">
+  What I bring to the board
+</a>
                 <a href="#about" className="rounded-2xl border border-slate-600 bg-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 shadow-sm transition hover:border-blue-600 hover:text-blue-400">
                   About me
                 </a>
@@ -131,7 +134,7 @@ export default function Page() {
                 {[
                   { label: 'Leadership', value: 'CIO perspective' },
                   { label: 'Focus',      value: 'AI with measurable impact' },
-                  { label: 'Approach',   value: 'Adopt · Govern · Scale' },
+                  { label: 'Approach',   value: 'Hands-on delivery, not slides' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border border-slate-700 bg-slate-800/70 p-4 shadow-sm backdrop-blur">
                     <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{item.label}</div>
@@ -167,9 +170,9 @@ export default function Page() {
 
                 <div className="space-y-4">
                   {[
-                    'Enterprise leadership grounded in business value',
-                    'AI adoption with practical governance and execution',
-                    'Strong interest in modern platforms, automation and scalable change',
+                    'Enterprise leadership with human depth',
+                    'Applies AI in real operations - not experiments',
+                    'Builds scalable platforms and keeps them running',
                   ].map((line) => (
                     <div key={line} className="flex items-start gap-3 rounded-2xl bg-slate-700/60 p-4">
                       <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500" />
