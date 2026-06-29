@@ -104,7 +104,9 @@ export default function Page() {
           </div>
 
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:px-10 lg:py-28">
-            <div className="max-w-3xl flex flex-col">
+
+            {/* ── LEFT COLUMN ── */}
+            <div className="flex flex-col">
               <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-slate-600 bg-slate-700/80 px-4 py-2 text-sm text-slate-200 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 25 years in IT — from coding to leading transformation
@@ -114,36 +116,42 @@ export default function Page() {
                 Niels Henrik Egebjerg
               </h1>
 
-              <p className="mb-8 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                I started as a developer and moved into project management, IT leadership, and the CIO role — staying hands-on along the way.
-I have led a full cloud transformation across D365 FO, D365 Commerce and the Power Platform.
-Now I focus on the next phase: bringing AI into real business processes with measurable results.
-              </p>
+              {/* ── NEW TEXT — three italic paragraphs ── */}
+              <div className="mb-8 space-y-5 text-lg leading-8 text-slate-300">
+                <p>
+                  I started as a developer and grew into project management, IT leadership, and the CIO
+                  role — keeping a hands-on approach throughout. That foundation shapes how I lead today:
+                  close to the technology, grounded in delivery, and focused on outcomes that matter to
+                  the business.
+                </p>
+                <p>
+                  I have led transformation from strategy through execution, including organisational change, governance,
+                  and adoption across the enterprise, implementing modern cloud technology and processes that ensure strong data.
+                </p>
+                <p>
+                  Now I am focused on embedding AI into real business processes in ways
+                  that are governed, measurable, and changes how the organisation works and decides.
+                </p>
+              </div>
 
-              <div className="flex flex-wrap gap-4">
-                
-<a href="#board" className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500">
-  What I bring to the board
-</a>
-                <a href="#about" className="rounded-2xl border border-slate-600 bg-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 shadow-sm transition hover:border-blue-600 hover:text-blue-400">
+              {/* ── BUTTONS — mt-auto pushes them to bottom, aligning with Executive Profile card ── */}
+              <div className="mt-auto flex flex-wrap gap-4">
+                <a
+                  href="#board"
+                  className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500"
+                >
+                  What I bring to the board
+                </a>
+                <a
+                  href="#about"
+                  className="rounded-2xl border border-slate-600 bg-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 shadow-sm transition hover:border-blue-600 hover:text-blue-400"
+                >
                   About me
                 </a>
               </div>
-
-              <div className="mt-auto pt-12 grid gap-4 sm:grid-cols-3">
-                {[
-                  { label: 'Leadership', value: 'CIO perspective' },
-                  { label: 'Focus',      value: 'AI with measurable impact' },
-                  { label: 'Approach',   value: 'Hands-on delivery, not slides' },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-2xl border border-slate-700 bg-slate-800/70 p-4 shadow-sm backdrop-blur">
-                    <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{item.label}</div>
-                    <div className="mt-2 text-sm font-medium text-slate-100">{item.value}</div>
-                  </div>
-                ))}
-              </div>
             </div>
 
+            {/* ── RIGHT COLUMN — Executive Profile card ── */}
             <div className="flex items-end">
               <div className="w-full rounded-[2rem] border border-slate-700 bg-slate-800/80 p-6 shadow-xl shadow-black/40 backdrop-blur-xl">
                 <div className="mb-5 flex justify-center">
@@ -171,8 +179,8 @@ Now I focus on the next phase: bringing AI into real business processes with mea
                 <div className="space-y-4">
                   {[
                     'Enterprise leadership with human depth',
-                    'Applies AI in real operations - not experiments',
-                    'Builds scalable platforms and keeps them running',
+                    'Applies AI in real operations',
+                    'Builds sustainable platforms and processes',
                   ].map((line) => (
                     <div key={line} className="flex items-start gap-3 rounded-2xl bg-slate-700/60 p-4">
                       <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500" />
@@ -182,6 +190,7 @@ Now I focus on the next phase: bringing AI into real business processes with mea
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -198,15 +207,25 @@ Now I focus on the next phase: bringing AI into real business processes with mea
             </div>
             <div className="space-y-5 text-base leading-8 text-slate-300">
               <p>
-                Technology is only as good as the people and processes around it. That is the lesson 25 years in IT teaches you — especially when you have been on both sides: building the systems and leading the teams that depend on them.
-
-I hold a Master's degree in IT, but the education I rely on most is practical. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in small and midsized companies where you rarely have the luxury of big teams or big budgets. You solve problems with clarity and resourcefulness.
+                Technology is only as good as the people and processes around it. That is the lesson 25
+                years in IT teaches you — especially when you have been on both sides: building the
+                systems and leading the teams that depend on them.
               </p>
               <p>
-                On the leadership side, I work deliberately with emotional intelligence. Transformation programmes do not fail because of technology — they fail because of people. Understanding resistance, building trust, and bringing people with you is as important as any system rollout.
+                I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have
+                worked across ERP and CRM, e-commerce, systems administration, security, and compliance
+                — in small and midsized companies where you rarely have the luxury of big teams or big
+                budgets. You solve problems with clarity and resourcefulness.
               </p>
               <p>
-                This site is where I share what I am learning — written from my own experience, without filters.
+                On the leadership side, I work deliberately with emotional intelligence. Transformation
+                programmes do not fail because of technology — they fail because of people. Understanding
+                resistance, building trust, and bringing people with you is as important as any system
+                rollout.
+              </p>
+              <p>
+                This site is where I share what I am learning — written from my own experience, without
+                filters.
               </p>
             </div>
           </div>
@@ -226,7 +245,10 @@ I hold a Master's degree in IT, but the education I rely on most is practical. I
                 </h2>
               </div>
               <p className="max-w-sm text-slate-300">
-                Grounded experience in leading IT and transformation from the inside — where strategy and execution meet in real time. I have navigated cloud migrations, vendor negotiations, security challenges, and AI ambitions, with a strong emphasis on supporting people and the organisation through change to ensure transformation delivers lasting impact.
+                Grounded experience in leading IT and transformation from the inside — where strategy and
+                execution meet in real time. I have navigated cloud migrations, vendor negotiations,
+                security challenges, and AI ambitions, with a strong emphasis on supporting people and
+                the organisation through change to ensure transformation delivers lasting impact.
               </p>
             </div>
 
@@ -248,88 +270,89 @@ I hold a Master's degree in IT, but the education I rely on most is practical. I
           </div>
         </section>
 
-       {/* BLOG */}
-<section id="blog" className="bg-slate-900 py-20">
-  <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        {/* BLOG */}
+        <section id="blog" className="bg-slate-900 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-    <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-      <div>
-        <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-          Latest writing
-        </div>
-        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-          Thoughts on AI, leadership and digital transformation
-        </h2>
-      </div>
-      <a href="#contact" className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
-        Let&apos;s connect →
-      </a>
-    </div>
-
-    {/* Authenticity note */}
-    <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-4">
-      <span className="mt-0.5 text-base">✍️</span>
-      <p className="text-sm leading-7 text-slate-300">
-        All posts are written from my own experience —{' '}
-        <span className="font-semibold text-slate-100">no ghostwriters, no AI generation.</span>
-      </p>
-    </div>
-
-    {blogPosts.length > 0 ? (
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <a
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="group flex flex-col rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-800/60 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
-          >
-            <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-              <span>
-                {new Date(post.date).toLocaleDateString('en-GB', {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                })}
-              </span>
-              <span>·</span>
-              <span>{post.readingTime}</span>
+            <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+                  Latest writing
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                  Thoughts on AI, leadership and digital transformation
+                </h2>
+              </div>
+              <a href="#contact" className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
+                Let&apos;s connect →
+              </a>
             </div>
-            <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition group-hover:text-blue-400">
-              {post.title}
-            </h3>
-            <p className="mb-6 flex-1 text-sm leading-7 text-slate-400">
-              {post.excerpt}
-            </p>
-            <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
-              Read post →
-            </div>
-          </a>
-        ))}
-      </div>
-    ) : (
-      <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-slate-700 bg-slate-800/50 px-8 py-20 text-center">
-        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-700 text-2xl">
-          📝
-        </div>
-        <h3 className="mb-2 text-lg font-semibold text-white">
-          First posts are on their way
-        </h3>
-        <p className="max-w-md text-sm leading-7 text-slate-400">
-          I am working on the first articles right now. Check back soon — or connect on LinkedIn to be notified when they go live.
-        </p>
-        <a
-          href="https://www.linkedin.com/in/egebjerg72/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 rounded-2xl border border-slate-600 bg-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-blue-600 hover:text-blue-400"
-        >
-          Follow on LinkedIn →
-        </a>
-      </div>
-    )}
 
-  </div>
-</section>
+            {/* Authenticity note */}
+            <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-4">
+              <span className="mt-0.5 text-base">✍️</span>
+              <p className="text-sm leading-7 text-slate-300">
+                All posts are written from my own experience —{' '}
+                <span className="font-semibold text-slate-100">no ghostwriters, no AI generation.</span>
+              </p>
+            </div>
+
+            {blogPosts.length > 0 ? (
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {blogPosts.map((post) => (
+                  <a
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-800/60 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
+                  >
+                    <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                      <span>
+                        {new Date(post.date).toLocaleDateString('en-GB', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric',
+                        })}
+                      </span>
+                      <span>·</span>
+                      <span>{post.readingTime}</span>
+                    </div>
+                    <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition group-hover:text-blue-400">
+                      {post.title}
+                    </h3>
+                    <p className="mb-6 flex-1 text-sm leading-7 text-slate-400">
+                      {post.excerpt}
+                    </p>
+                    <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
+                      Read post →
+                    </div>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-slate-700 bg-slate-800/50 px-8 py-20 text-center">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-700 text-2xl">
+                  📝
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">
+                  First posts are on their way
+                </h3>
+                <p className="max-w-md text-sm leading-7 text-slate-400">
+                  I am working on the first articles right now. Check back soon — or connect on LinkedIn
+                  to be notified when they go live.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/egebjerg72/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 rounded-2xl border border-slate-600 bg-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-blue-600 hover:text-blue-400"
+                >
+                  Follow on LinkedIn →
+                </a>
+              </div>
+            )}
+
+          </div>
+        </section>
 
         {/* GALLERY */}
         <section id="gallery" className="bg-slate-800 py-20">
@@ -386,12 +409,16 @@ I hold a Master's degree in IT, but the education I rely on most is practical. I
                       Technology only matters when it changes how we work and decide
                     </h2>
                     <p className="mt-4 max-w-3xl leading-8 text-slate-300">
-                      My focus is not technology for its own sake, but how platforms, AI and operating models can
-                      support better execution, stronger leadership and practical business value.
+                      My focus is not technology for its own sake, but how platforms, AI and operating
+                      models can support better execution, stronger leadership and practical business
+                      value.
                     </p>
                   </div>
                   <div>
-                    <a href="#contact" className="inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">
+                    <a
+                      href="#contact"
+                      className="inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                    >
                       Get in touch
                     </a>
                   </div>
