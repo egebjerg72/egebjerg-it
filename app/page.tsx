@@ -119,14 +119,12 @@ export default function Page() {
               {/* ── NEW TEXT — three italic paragraphs ── */}
               <div className="mb-8 space-y-5 text-lg leading-8 text-slate-300">
                 <p>
-                  I started as a developer and grew into project management, IT leadership, and the CIO
-                  role — keeping a hands-on approach throughout. That foundation shapes how I lead today:
-                  close to the technology, grounded in delivery, and focused on outcomes that matter to
+                  CIO close to technology, grounded in delivery, and focused on outcomes that matter to
                   the business.
                 </p>
                 <p>
                   I have led transformation from strategy through execution, including organisational change, governance,
-                  and adoption across the enterprise, implementing modern cloud technology and processes that ensure strong data.
+                  and adoption across the enterprise, implementing modern cloud technology and processes ensuring strong data and reporting.
                 </p>
                 <p>
                   Now I am focused on embedding AI into real business processes in ways
@@ -244,12 +242,7 @@ export default function Page() {
                   What I bring to the board table
                 </h2>
               </div>
-              <p className="max-w-sm text-slate-300">
-                Grounded experience in leading IT and transformation from the inside — where strategy and
-                execution meet in real time. I have navigated cloud migrations, vendor negotiations,
-                security challenges, and AI ambitions, with a strong emphasis on supporting people and
-                the organisation through change to ensure transformation delivers lasting impact.
-              </p>
+              
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
