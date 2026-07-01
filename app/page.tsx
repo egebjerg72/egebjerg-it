@@ -105,7 +105,7 @@ export default function Page() {
 
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:px-10 lg:py-28">
 
-            {/* ── LEFT COLUMN ── */}
+            {/* LEFT COLUMN */}
             <div className="flex flex-col">
               <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-slate-600 bg-slate-700/80 px-4 py-2 text-sm text-slate-200 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -116,7 +116,6 @@ export default function Page() {
                 Niels Henrik Egebjerg
               </h1>
 
-              {/* ── NEW TEXT — three italic paragraphs ── */}
               <div className="mb-8 space-y-5 text-lg leading-8 text-slate-300">
                 <p>
                   CIO close to technology, grounded in delivery, and focused on outcomes that matter to
@@ -124,7 +123,7 @@ export default function Page() {
                 </p>
                 <p>
                   I have led transformation from strategy through execution, including organisational change, governance,
-                  and adoption across the enterprise, implementing modern cloud technology and processes ensuring strong data and reporting.
+                  and adoption across the enterprise, implementing modern cloud technology and processes ensuring a strong data foundation.
                 </p>
                 <p>
                   Now I am focused on embedding AI into real business processes in ways
@@ -132,7 +131,6 @@ export default function Page() {
                 </p>
               </div>
 
-              {/* ── BUTTONS — mt-auto pushes them to bottom, aligning with Executive Profile card ── */}
               <div className="mt-auto flex flex-wrap gap-4">
                 <a
                   href="#board"
@@ -149,7 +147,7 @@ export default function Page() {
               </div>
             </div>
 
-            {/* ── RIGHT COLUMN — Executive Profile card ── */}
+            {/* RIGHT COLUMN — Executive Profile card */}
             <div className="flex items-end">
               <div className="w-full rounded-[2rem] border border-slate-700 bg-slate-800/80 p-6 shadow-xl shadow-black/40 backdrop-blur-xl">
                 <div className="mb-5 flex justify-center">
@@ -192,39 +190,78 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ABOUT */}
+        {/* ── ABOUT ── */}
         <section id="about" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-                About
+          <div className="grid gap-14 lg:grid-cols-[1fr_1.6fr]">
+
+            {/* LEFT — label, heading, photo */}
+            <div className="flex flex-col gap-8">
+              <div>
+                <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+                  About
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                  Hands-on leadership, grounded in 25 years of doing the work
+                </h2>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                Hands-on leadership, grounded in 25 years of doing the work
-              </h2>
+
+              {/* Portrait */}
+              <div className="group relative overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-800 shadow-xl shadow-black/40">
+                <div className="relative aspect-[3/4] w-full">
+                  <Image
+                    src="/about.jpg"
+                    alt="Niels Henrik Egebjerg"
+                    fill
+                    className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                  />
+                  {/* subtle gradient overlay at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                </div>
+                {/* Caption bar */}
+                <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-5 py-4">
+                  <div className="h-2 w-2 rounded-full bg-emerald-500" />
+                  <span className="text-sm font-medium text-slate-200">Niels Henrik Egebjerg · CIO</span>
+                </div>
+              </div>
             </div>
-            <div className="space-y-5 text-base leading-8 text-slate-300">
+
+            {/* RIGHT — text content */}
+            <div className="flex flex-col justify-center space-y-5 text-base leading-8 text-slate-300">
+
               <p>
                 Technology is only as good as the people and processes around it. That is the lesson 25
-                years in IT teaches you — especially when you have been on both sides: building the
-                systems and leading the teams that depend on them.
+                years in IT teaches you — especially when you have been close to both sides: building the
+                systems and working alongside the teams that depend on them.
               </p>
+
               <p>
                 I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have
                 worked across ERP and CRM, e-commerce, systems administration, security, and compliance
                 — in small and midsized companies where you rarely have the luxury of big teams or big
                 budgets. You solve problems with clarity and resourcefulness.
               </p>
-              <p>
-                On the leadership side, I work deliberately with emotional intelligence. Transformation
-                programmes do not fail because of technology — they fail because of people. Understanding
-                resistance, building trust, and bringing people with you is as important as any system
-                rollout.
+
+              {/* EI paragraph — visually lifted as a highlight block */}
+              <div className="rounded-2xl border border-blue-800/50 bg-blue-950/40 px-6 py-5">
+                <p>
+                  On the leadership side, I work deliberately with emotional intelligence — and that starts
+                  with self-awareness. Knowing your own triggers, blind spots, and default reactions is the
+                  foundation. But it does not stop there. The people around you — their motivations, concerns,
+                  and ways of working — matter just as much. In small and midsized organisations, you rarely
+                  have the distance of hierarchy. You need to read the room, build genuine trust, and
+                  understand what each person needs to move forward.
+                </p>
+              </div>
+
+              <p className="font-medium text-slate-200">
+                Transformation programmes do not fail because of technology — they fail because of people.
+                And you cannot bring people with you if you do not know yourself, and if you do not know them.
               </p>
-              <p>
-                This site is where I share what I am learning — written from my own experience, without
-                filters.
+
+              <p className="text-slate-400 italic">
+                This site is where I share what I am learning — written from my own experience, without filters.
               </p>
+
             </div>
           </div>
         </section>
@@ -236,13 +273,12 @@ export default function Page() {
             <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
-                  Board & Advisory Boards
+                  Board / Advisory Board
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
                   What I bring to the board table
                 </h2>
               </div>
-              
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
