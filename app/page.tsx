@@ -241,17 +241,29 @@ export default function Page() {
                 budgets. You solve problems with clarity and resourcefulness.
               </p>
 
-              {/* EI paragraph — visually lifted as a highlight block */}
-              <div className="rounded-2xl border border-blue-800/50 bg-blue-950/40 px-6 py-5">
-                <p>
-                  On the leadership side, I work deliberately with emotional intelligence — and that starts
-                  with self-awareness. Knowing your own triggers, blind spots, and default reactions is the
-                  foundation. But it does not stop there. The people around you — their motivations, concerns,
-                  and ways of working — matter just as much. In small and midsized organisations, you rarely
-                  have the distance of hierarchy. You need to read the room, build genuine trust, and
-                  understand what each person needs to move forward.
-                </p>
-              </div>
+{/* Emotional Intelligence */}
+<div className="pt-2">
+  <h4 className="mb-4 text-xl font-semibold text-white">
+    Emotional intelligence
+  </h4>
+
+  <p className="leading-relaxed text-slate-300">
+    On the leadership side, I work deliberately with emotional intelligence —
+    and that starts with self-awareness. Knowing your own triggers, blind spots,
+    and default reactions is the foundation.
+  </p>
+
+  <p className="mt-4 leading-relaxed text-slate-300">
+    But it does not stop there. The people around you — their motivations,
+    concerns, and ways of working — matter just as much.
+  </p>
+
+  <p className="mt-4 leading-relaxed text-slate-300">
+    In small and midsized organisations, you rarely have the distance of
+    hierarchy. You need to read the room, build genuine trust, and understand
+    what each person needs to move forward.
+  </p>
+</div>
 
               <p className="font-medium text-slate-200">
                 Transformation programmes do not fail because of technology — they fail because of people.
