@@ -109,7 +109,7 @@ export default function Page() {
             <div className="flex flex-col">
               <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-slate-600 bg-slate-700/80 px-4 py-2 text-sm text-slate-200 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                25 years in IT — from coding to leading transformation
+                From coding to leading transformation
               </div>
 
               <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
@@ -190,93 +190,91 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ── ABOUT ── */}
-        <section id="about" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-          <div className="grid gap-14 lg:grid-cols-[1fr_1.6fr]">
+       {/* ── ABOUT ── */}
+<section id="about" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+  <div className="grid gap-14 lg:grid-cols-[1fr_1.6fr]">
 
-            {/* LEFT — label, heading, photo */}
-            <div className="flex flex-col gap-8">
-              <div>
-                <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-                  About
-                </div>
-                <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  Hands-on leadership, grounded in 25 years of doing the work
-                </h2>
-              </div>
+    {/* LEFT — label, heading, experience headline, photo */}
+    <div className="flex flex-col gap-8">
+      <div>
+        <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+          About
+        </div>
+        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+          Hands-on leadership, grounded in 25 years of doing the work
+        </h2>
+      </div>
 
-              {/* Portrait */}
-              <div className="group relative overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-800 shadow-xl shadow-black/40">
-                <div className="relative aspect-[3/4] w-full">
-                  <Image
-                    src="/about.jpg"
-                    alt="Niels Henrik Egebjerg"
-                    fill
-                    className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
-                  />
-                  {/* subtle gradient overlay at bottom */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                </div>
-                {/* Caption bar */}
-                <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-5 py-4">
-                  <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span className="text-sm font-medium text-slate-200">Niels Henrik Egebjerg · CIO</span>
-                </div>
-              </div>
-            </div>
+      {/* Portrait */}
+      <div className="group relative overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-800 shadow-xl shadow-black/40">
+        <div className="relative aspect-[3/4] w-full">
+          <Image
+            src="/about.jpg"
+            alt="Niels Henrik Egebjerg"
+            fill
+            className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-5 py-4">
+          <div className="h-2 w-2 rounded-full bg-emerald-500" />
+          <span className="text-sm font-medium text-slate-200">Niels Henrik Egebjerg · CIO</span>
+        </div>
+      </div>
+    </div>
 
-            {/* RIGHT — text content */}
-            <div className="flex flex-col justify-center space-y-5 text-base leading-8 text-slate-300">
+    {/* RIGHT — text content */}
+<div className="flex flex-col justify-center space-y-5 text-lg leading-8 text-slate-300">
 
-              <p>
-                Technology is only as good as the people and processes around it. That is the lesson 25
-                years in IT teaches you — especially when you have been close to both sides: building the
-                systems and working alongside the teams that depend on them.
-              </p>
+  <h3 className="text-2xl font-bold tracking-tight text-white">
+    Experience
+  </h3>
 
-              <p>
-                I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have
-                worked across ERP and CRM, e-commerce, systems administration, security, and compliance
-                — in small and midsized companies where you rarely have the luxury of big teams or big
-                budgets. You solve problems with clarity and resourcefulness.
-              </p>
-
-{/* Emotional Intelligence */}
-<div className="pt-2">
-  <h4 className="mb-4 text-xl font-semibold text-white">
-    Emotional intelligence
-  </h4>
-
-  <p className="leading-relaxed text-slate-300">
-    On the leadership side, I work deliberately with emotional intelligence —
-    and that starts with self-awareness. Knowing your own triggers, blind spots,
-    and default reactions is the foundation.
+  <p>
+    Technology is only as good as the people and processes around it. That is the lesson 25
+    years in IT teaches you — especially when you have been close to both sides: building the
+    systems and working alongside the teams that depend on them.
   </p>
 
-  <p className="mt-4 leading-relaxed text-slate-300">
-    But it does not stop there. The people around you — their motivations,
-    concerns, and ways of working — matter just as much.
+  <p>
+    I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have
+    worked across ERP and CRM, e-commerce, systems administration, security, and compliance
+    — in small and midsized companies where you rarely have the luxury of big teams or big
+    budgets. You solve problems with clarity and resourcefulness.
   </p>
 
-  <p className="mt-4 leading-relaxed text-slate-300">
-    In small and midsized organisations, you rarely have the distance of
-    hierarchy. You need to read the room, build genuine trust, and understand
-    what each person needs to move forward.
+  {/* Emotional Intelligence */}
+  <div className="pt-2">
+    <h4 className="mb-4 text-xl font-semibold text-white">
+      Emotional intelligence
+    </h4>
+
+    <p className="leading-relaxed text-slate-300">
+      On the leadership side, I work deliberately with emotional intelligence —
+      and that starts with self-awareness. Knowing your own triggers, blind spots,
+      and default reactions is the foundation.
+    </p>
+
+    <p className="mt-4 leading-relaxed text-slate-300">
+      But it does not stop there. The people around you — their motivations,
+      concerns, and ways of working — matter just as much.
+    </p>
+
+    <p className="mt-4 leading-relaxed text-slate-300">
+      In small and midsized organisations, you rarely have the distance of
+      hierarchy. You need to read the room, build genuine trust, and understand
+      what each person needs to move forward.
+    </p>
+  </div>
+
+  <p className="font-medium text-slate-200">
+    Transformation programmes do not fail because of technology — they fail because of people.
+    And you cannot bring people with you if you do not know yourself, and if you do not know them.
   </p>
+
 </div>
-
-              <p className="font-medium text-slate-200">
-                Transformation programmes do not fail because of technology — they fail because of people.
-                And you cannot bring people with you if you do not know yourself, and if you do not know them.
-              </p>
-
-              <p className="text-slate-400 italic">
-                This site is where I share what I am learning — written from my own experience, without filters.
-              </p>
-
-            </div>
-          </div>
-        </section>
+  </div>
+</section>
 
         {/* BOARD CONTRIBUTIONS */}
         <section id="board" className="bg-slate-800 py-20">
