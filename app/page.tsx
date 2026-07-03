@@ -258,8 +258,7 @@ export default function Page() {
     </p>
 
     <p className="mt-4 leading-relaxed text-slate-300">
-      In small and midsized organisations, you rarely have the distance of
-      hierarchy. You need to read the room, build genuine trust, and understand
+      You need to read the room, build genuine trust, and understand
       what each person needs to move forward.
     </p>
   </div>
