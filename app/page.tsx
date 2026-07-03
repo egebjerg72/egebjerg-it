@@ -237,10 +237,7 @@ export default function Page() {
   </p>
 
   <p>
-    I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have
-    worked across ERP and CRM, e-commerce, systems administration, security, and compliance
-    — in small and midsized companies where you rarely have the luxury of big teams or big
-    budgets. You solve problems with clarity and resourcefulness.
+    I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses ranging from lean global operators to multi-billion DKK organisations. Always close to the decision-makers. You rarely have the luxury of big teams or big budgets — which means you solve problems with clarity and resourcefulness. Today, at C-level, that is still exactly how I work.
   </p>
 
   {/* Emotional Intelligence */}
@@ -256,7 +253,7 @@ export default function Page() {
     </p>
 
     <p className="mt-4 leading-relaxed text-slate-300">
-      But it does not stop there. The people around you — their motivations,
+      The people around you — their motivations,
       concerns, and ways of working — matter just as much.
     </p>
 
