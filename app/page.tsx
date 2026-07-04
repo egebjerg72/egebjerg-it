@@ -10,35 +10,38 @@ export default function Page() {
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
   const boardContributions = [
+      {
+      icon: '🔄',
+      title: 'Digital Transformation',
+      text: 'Hands-on experience steering organisations through structural IT transitions, ERP rollouts, and large-scale digitisation programmes.',
+    }, 
+    {
+      icon: '🤝',
+      title: 'Organisational Change',
+      text: 'Advising on the human side of technology — change management, capability building, and aligning people with new processes.',
+    },
     {
       icon: '🧭',
-      title: 'Technology Strategy',
-      text: 'Translating complex IT landscapes into strategic direction — bridging the gap between technology and business outcomes at board level.',
+      title: 'Solution Architecture',
+      text: 'Translating complex IT landscapes into strategic direction — bridging the gap between technology and business outcomes.',
     },
+
     {
       icon: '🔒',
       title: 'Digital Risk & Cybersecurity',
       text: 'Bringing structured awareness of digital risk, data governance, and cyber resilience to board-level conversations and decisions.',
     },
-    {
-      icon: '🔄',
-      title: 'Digital Transformation',
-      text: 'Hands-on experience steering organisations through structural IT transitions, ERP rollouts, and large-scale digitisation programmes.',
-    },
+  
     {
       icon: '💡',
       title: 'IT Investment Oversight',
       text: 'Challenging and qualifying IT budgets, vendor choices, and ROI expectations — grounded in real execution experience as a CIO.',
     },
-    {
-      icon: '🤝',
-      title: 'Organisational Change',
-      text: 'Advising on the human side of technology — change management, capability building, and aligning people with new digital operating models.',
-    },
+   
     {
       icon: '📊',
       title: 'Governance & Performance',
-      text: 'Supporting boards in establishing meaningful KPIs, IT governance structures, and transparent reporting on technology investments.',
+      text: 'Support establishing meaningful KPIs, IT governance structures, and transparent reporting.',
     },
   ]
 
@@ -231,14 +234,10 @@ export default function Page() {
   </h3>
 
   <p>
-    Technology is only as good as the people and processes around it. That is the lesson 25
-    years in IT teaches you — especially when you have been close to both sides: building the
-    systems and working alongside the teams that depend on them.
-  </p>
-
-  <p>
-    I hold a Master&apos;s degree in IT, but the education I rely on most is practical. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses ranging from lean global operators to multi-billion DKK organisations. Always close to the decision-makers. You rarely have the luxury of big teams or big budgets — which means you solve problems with clarity and resourcefulness. Today, at C-level, that is still exactly how I work.
-  </p>
+    Technology is only as good as the people and processes around it. That is the lesson 25 years in IT teaches you — especially when you have been close to both sides: building the systems and working alongside the teams that depend on them.
+</p>
+<p>
+I hold a Master's degree in IT, and my academic foundation shapes the way I structure problems, assess risk, and think in systems. I have Worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses, always close to the decisions. I have rarely had the luxury of big teams or big budgets — which means I solve problems with clarity, structure, and resourcefulness. Today, at C-level, that is still exactly how I work.</p>
 
   {/* Emotional Intelligence */}
   <div className="pt-2">

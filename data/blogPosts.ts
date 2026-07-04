@@ -12,7 +12,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'everyone-is-talking-about-ai-agents',
-    title: 'Everyone is talking about AI agents. I just built a website.',
+    title: 'I just built a website.',
     author: 'Niels Henrik Egebjerg',
     date: '2026-06-19',
     readingTime: '4 min read',
