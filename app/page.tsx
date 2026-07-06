@@ -17,7 +17,7 @@ export default function Page() {
     }, 
     {
       icon: '🤝',
-      title: 'Organisational Change',
+      title: 'Organizational Change',
       text: 'Advising on the human side of technology — change management, capability building, and aligning people with new processes.',
     },
     {
@@ -237,7 +237,7 @@ export default function Page() {
     Technology is only as good as the people and processes around it. That is the lesson 25 years in IT teaches you — especially when you have been close to both sides: building the systems and working alongside the teams that depend on them.
 </p>
 <p>
-I hold a Master's degree in IT, and my academic foundation shapes the way I structure problems, assess risk, and think in systems. I have Worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses, always close to the decisions. I have rarely had the luxury of big teams or big budgets — which means I solve problems with clarity, structure, and resourcefulness. Today, at C-level, that is still exactly how I work.</p>
+I hold a Master's degree in IT, and my academic foundation shapes the way I structure problems, assess risk, and think in systems. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses, always close to the decisions. I have rarely had the luxury of big teams or big budgets — which means I solve problems with clarity, structure, and resourcefulness. Today, at C-level, that is still exactly how I work.</p>
 
   {/* Emotional Intelligence */}
   <div className="pt-2">
@@ -249,13 +249,9 @@ I hold a Master's degree in IT, and my academic foundation shapes the way I stru
       On the leadership side, I work deliberately with emotional intelligence —
       and that starts with self-awareness. Knowing your own triggers, blind spots,
       and default reactions is the foundation.
-    </p>
-
-    <p className="mt-4 leading-relaxed text-slate-300">
-      The people around you — their motivations,
-      concerns, and ways of working — matter just as much.
-    </p>
-
+      Then focusing on the people around you — their motivations,
+      concerns and ways of working.
+</p>
     <p className="mt-4 leading-relaxed text-slate-300">
       You need to read the room, build genuine trust, and understand
       what each person needs to move forward.

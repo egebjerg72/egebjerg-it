@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>It sounds big. And it <em>can</em> be complex. But one thing is clear: tasks that used to take weeks or months can, in some cases, now be solved in hours or days.</p>
 
-      <p>This makes it critical for companies, organisations, and leaders to understand what AI means for the way we work.</p>
+      <p>This makes it critical for companies, organizations, and leaders to understand what AI means for the way we work.</p>
 
       <p>I set out to build a small side project to make this more tangible — and less abstract.</p>
 
@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>This site is my answer to the question: <em>"What happens when a CIO sits down and builds something using the same tools he recommends to others?"</em></p>
 
-      <p>egebjerg.it was created in a single evening. Not because I am a developer. But because I sat down with the right AI tools and did it myself — step by step.</p>
+      <p>egebjerg.it was created in a single evening. Not because I am a developer. But because I sat down with an AI tools, asked the right questions and followed instructions step by step.</p>
 
       <p>No agency. No developers. No budget.</p>
 
