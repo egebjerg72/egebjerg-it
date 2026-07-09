@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>It is also clear that your own domain skills affect the quality of the outcome. I could be reasonably happy with the first version of egebjerg.it. But when my marketing colleague looks at the front-end layout, when a copywriter reviews my writing, or when a skilled developer examines the code, it will be challenged in ways I would not think of myself. And they would know how to direct the AI assistant far more precisely, making the result significantly better in just a few minutes.</p>
 
-<p>With this understanding — AI is an extremely powerful tool. And I will continue to challenge and develop the solution across different areas.</p>
+<p>With this understanding, AI is behind extremely powerful tools. And I will continue to challenge and develop the solution across different areas.</p>
 
 <h2>Why Does This Matter as a CIO?</h2>
 
@@ -87,17 +87,15 @@ export const blogPosts: BlogPost[] = [
 
 <p>Too many leaders observe AI from the outside. They read about it. Approve budgets for it. But rarely engage with it directly.</p>
 
-<p>Organisations that lead in AI adoption share one trait: their senior leaders engage with the technology directly, not just strategically. Proximity builds judgment. And judgment — knowing which questions to ask, which risks to govern, and which investments to prioritise — is what separates leaders who shape AI's role in their organisation from those who are shaped by it.</p>
+<p>Organisations that lead in AI adoption share one trait: their senior leaders engage with the technology directly, not just strategically. Knowing which questions to ask, which risks to govern, and which investments to prioritise is what separates leaders who shape AI's role in their organisation from those who are shaped by it.</p>
 
 <p>My point is simple: <strong>You do not need to understand everything. But you should understand enough to ask the right questions.</strong></p>
 
 <p class="blog-closing">
-  <em>So — when did you last use your AI tool yourself, rather than delegate it? </em><br/>
+  <em>When did you last use your AI tool yourself, rather than delegate it? </em><br/>
   <em>I strongly recommend the hands-on approach!
   </p>
-  <p>
-  — Niels Henrik</em>
-</p>
+
     `,
   },
 ]
