@@ -310,7 +310,7 @@ I hold a Master's degree in IT, and my academic foundation shapes the way I stru
                   Latest writing
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  Thoughts on AI, leadership and digital transformation
+                  CIO thoughts
                 </h2>
               </div>
               <a href="#contact" className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
