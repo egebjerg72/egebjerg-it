@@ -24,19 +24,59 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* Blog post content styling */
+
+/* ─── Blog post content styling ──────────────────────────── */
+
 .blog-content {
   @apply text-slate-300 leading-8 text-base;
 }
+
 .blog-content p {
   @apply mb-6;
 }
+
+/* Intro bold paragraph */
+.blog-content p.blog-intro {
+  @apply text-lg text-white font-medium leading-snug mb-6;
+}
+
+/* Closing italic signature */
+.blog-content p.blog-closing {
+  @apply mt-10 text-slate-400 italic border-l-2 border-blue-500 pl-4;
+}
+
 .blog-content h2 {
   @apply mt-10 mb-4 text-2xl font-bold tracking-tight text-white;
 }
+
 .blog-content strong {
   @apply font-semibold text-slate-100;
 }
+
 .blog-content em {
   @apply italic;
+}
+
+/* Bullet list */
+.blog-content ul {
+  @apply mb-6 space-y-3 pl-0 list-none;
+}
+
+.blog-content ul li {
+  @apply relative pl-5 text-slate-300;
+}
+
+.blog-content ul li::before {
+  content: '→';
+  @apply absolute left-0 text-blue-400;
+}
+
+/* ─── Blog Hero Image ─────────────────────────────────────── */
+
+.blog-content figure.blog-hero-image {
+  @apply my-10 rounded-xl overflow-hidden;
+}
+
+.blog-content figure.blog-hero-image img {
+  @apply w-full h-auto object-cover rounded-xl;
 }
