@@ -6,9 +6,11 @@ import Link from 'next/link'
 import { blogPosts } from '../data/blogPosts'
 import profileImage from '../public/profile.jpg'
 import aboutImage from '../public/about.jpg'
+import northCapeImage from '../public/gallery/north-cape.jpg'
 import hiking1Image from '../public/gallery/hiking-1.jpg'
 import hiking2Image from '../public/gallery/hiking-2.jpg'
 import hiking3Image from '../public/gallery/hiking-3.jpg'
+import reinebringenImage from '../public/gallery/reinebringen.jpg'
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -52,6 +54,8 @@ export default function Page() {
   ]
 
   const galleryImages = [
+    { image: northCapeImage, alt: 'Reinebringen, Lofoten Islands' },
+    { image: reinebringenImage, alt: 'North Cape, Norway' },
     { image: hiking1Image, alt: 'Pulpit Rock' },
     { image: hiking2Image, alt: 'The Trolls Tongue' },
     { image: hiking3Image, alt: 'Peaceful morning coffee' },
