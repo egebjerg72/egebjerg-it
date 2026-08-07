@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
 
 
 
-<h2>The Noise Is Real. So Is the Opportunity.</h2>
+<h2>The noise is real. So is the opportunity.</h2>
 
 <p>There is rightly an intense focus on AI at the moment. Conferences, whitepapers and LinkedIn posts from people <em>"transforming businesses with agentic AI"</em>, building AI into every process you can think of, performing deep analysis in seconds. And it will for sure change the way we work and keep evolving for years to come.</p>
 
@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>This makes it critical for companies, organisations, and leaders to understand what AI means for the way we work and what possibilities it brings for the future. And that is not easy. It can be quite overwhelming to read the daily feeds listing new possibilities and features. We also need to govern how AI tools are adopted by people, how they are used in daily work and processes, and how automations are set up responsibly, with clear guardrails and security in place.</p>
 
-<h2>Hands On</h2>
+<h2>Hands on</h2>
 
 <p>In my experience as a leader, you need to try it out yourself. You need to know what works. You need to understand how to make prompts to your AI assistant that actually deliver results. You need to understand that AI agents have instructions, skills, and knowledge, and then learn to challenge and improve them. To understand why agents act as they do, and to be able to elaborate on ideas for how to use them, improve them, and which new agents to introduce. This is what changes daily work and delivers new possibilities, speed, and automations.</p>
 
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>That point was a game changer for me, making it possible to do more work and add more quality and new dimensions to it. Turning AI tools from background noise into a genuine competitive advantage.</p>
 
-<h2>What Is egebjerg.it?</h2>
+<h2>What is egebjerg.it?</h2>
 
 <p>I set up this spare-time project to build a personal website and deliberately used it as a method for building hands-on leadership judgment around AI. I wanted to see how far I could get, from scratch, with help from my AI assistant.</p>
 
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
   />
 </figure>
 
-<h2>What Did I Learn?</h2>
+<h2>What did I learn?</h2>
 
 <p>You can go very far in areas where you are not an expert, and with decent results. But results are directly tied to the information you provide.</p>
 
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>With this understanding, AI is behind extremely powerful tools. And I will continue to challenge and develop the solution across different areas.</p>
 
-<h2>Why Does This Matter as a CIO?</h2>
+<h2>Why does this matter as a CIO?</h2>
 
 <p>Even organisations that are advanced in their use of AI agents do not always fully understand how to maximise their impact.</p>
 
