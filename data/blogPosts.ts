@@ -66,6 +66,10 @@ export const blogPosts: BlogPost[] = [
   <img
     src="/images/blog-ai-leadership.jpg"
     alt="AI Leadership and Digital Transformation — Niels Henrik Egebjerg"
+    width="811"
+    height="762"
+    loading="lazy"
+    decoding="async"
   />
 </figure>
 

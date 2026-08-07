@@ -1,12 +1,18 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
+import Link from 'next/link'
 import { blogPosts } from '../data/blogPosts'
+import profileImage from '../public/profile.jpg'
+import aboutImage from '../public/about.jpg'
+import hiking1Image from '../public/gallery/hiking-1.jpg'
+import hiking2Image from '../public/gallery/hiking-2.jpg'
+import hiking3Image from '../public/gallery/hiking-3.jpg'
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
+  const [lightbox, setLightbox] = useState<{ image: StaticImageData; alt: string } | null>(null)
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
   const boardContributions = [
@@ -46,9 +52,9 @@ export default function Page() {
   ]
 
   const galleryImages = [
-    { src: '/gallery/hiking-1.jpg', alt: 'Pulpit Rock' },
-    { src: '/gallery/hiking-2.jpg', alt: 'The Trolls Tongue' },
-    { src: '/gallery/hiking-3.jpg', alt: 'Peaceful morning coffee' },
+    { image: hiking1Image, alt: 'Pulpit Rock' },
+    { image: hiking2Image, alt: 'The Trolls Tongue' },
+    { image: hiking3Image, alt: 'Peaceful morning coffee' },
   ]
 
   return (
@@ -156,9 +162,11 @@ export default function Page() {
                 <div className="mb-5 flex justify-center">
                   <div className="relative h-36 w-36 overflow-hidden rounded-full ring-4 ring-slate-600 shadow-lg">
                     <Image
-                      src="/profile.jpg"
+                      src={profileImage}
                       alt="Niels Henrik Egebjerg"
                       fill
+                      sizes="144px"
+                      placeholder="blur"
                       className="object-cover object-top"
                       priority
                     />
@@ -212,9 +220,11 @@ export default function Page() {
       <div className="group relative overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-800 shadow-xl shadow-black/40">
         <div className="relative aspect-[3/4] w-full">
           <Image
-            src="/about.jpg"
+            src={aboutImage}
             alt="Niels Henrik Egebjerg"
             fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            placeholder="blur"
             className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
@@ -237,7 +247,7 @@ export default function Page() {
     Technology is only as good as the people and processes around it. That is the lesson 25 years in IT teaches you — especially when you have been close to both sides: building the systems and working alongside the teams that depend on them.
 </p>
 <p>
-I hold a Master's degree in IT, and my academic foundation shapes the way I structure problems, assess risk, and think in systems. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses, always close to the decisions. I have rarely had the luxury of big teams or big budgets — which means I solve problems with clarity, structure, and resourcefulness. Today, at C-level, that is still exactly how I work.</p>
+I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I structure problems, assess risk, and think in systems. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses, always close to the decisions. I have rarely had the luxury of big teams or big budgets — which means I solve problems with clarity, structure, and resourcefulness. Today, at C-level, that is still exactly how I work.</p>
 
   {/* Emotional Intelligence */}
   <div className="pt-2">
@@ -330,7 +340,7 @@ I hold a Master's degree in IT, and my academic foundation shapes the way I stru
             {blogPosts.length > 0 ? (
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {blogPosts.map((post) => (
-                  <a
+                  <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
                     className="group flex flex-col rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-800/60 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
@@ -355,7 +365,7 @@ I hold a Master's degree in IT, and my academic foundation shapes the way I stru
                     <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
                       Read post →
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             ) : (
@@ -399,19 +409,21 @@ I hold a Master's degree in IT, and my academic foundation shapes the way I stru
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {galleryImages
-                .filter((img) => !failedImages.has(img.src))
+                .filter((img) => !failedImages.has(img.image.src))
                 .map((img) => (
                   <button
-                    key={img.src}
+                    key={img.image.src}
                     onClick={() => setLightbox(img)}
                     className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-slate-700 bg-slate-700 shadow-sm transition hover:border-slate-500 hover:shadow-xl hover:shadow-black/40 focus:outline-none"
                   >
                     <Image
-                      src={img.src}
+                      src={img.image}
                       alt={img.alt}
                       fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      placeholder="blur"
                       className="object-cover transition duration-500 group-hover:scale-105"
-                      onError={() => setFailedImages((prev) => new Set([...prev, img.src]))}
+                      onError={() => setFailedImages((prev) => new Set([...prev, img.image.src]))}
                     />
                     <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
                       <div className="p-5">
@@ -505,9 +517,13 @@ I hold a Master's degree in IT, and my academic foundation shapes the way I stru
             className="flex max-h-[90vh] max-w-4xl flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={lightbox.src}
+            <Image
+              src={lightbox.image}
               alt={lightbox.alt}
+              width={lightbox.image.width}
+              height={lightbox.image.height}
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              placeholder="blur"
               className="max-h-[82vh] w-auto max-w-full rounded-[1.5rem] object-contain shadow-2xl"
             />
             <p className="mt-4 text-sm font-medium text-slate-300">{lightbox.alt}</p>
