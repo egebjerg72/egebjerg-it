@@ -11,54 +11,23 @@ import hiking1Image from '../public/gallery/hiking-1.jpg'
 import hiking2Image from '../public/gallery/hiking-2.jpg'
 import hiking3Image from '../public/gallery/hiking-3.jpg'
 import reinebringenImage from '../public/gallery/reinebringen.jpg'
+import { useLanguage } from '../lib/i18n/context'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Page() {
+  const { t, language } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
   const [lightbox, setLightbox] = useState<{ image: StaticImageData; alt: string } | null>(null)
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
-  const boardContributions = [
-      {
-      icon: '🔄',
-      title: 'Digital Transformation',
-      text: 'Hands-on experience steering organisations through structural IT transitions, ERP rollouts, and large-scale digitisation programmes.',
-    }, 
-    {
-      icon: '🤝',
-      title: 'Organizational Change',
-      text: 'Advising on the human side of technology — change management, capability building, and aligning people with new processes.',
-    },
-    {
-      icon: '🧭',
-      title: 'Solution Architecture',
-      text: 'Translating complex IT landscapes into strategic direction — bridging the gap between technology and business outcomes.',
-    },
-
-    {
-      icon: '🔒',
-      title: 'Digital Risk & Cybersecurity',
-      text: 'Bringing structured awareness of digital risk, data governance, and cyber resilience to board-level conversations and decisions.',
-    },
-  
-    {
-      icon: '💡',
-      title: 'IT Investment Oversight',
-      text: 'Challenging and qualifying IT budgets, vendor choices, and ROI expectations — grounded in real execution experience as a CIO.',
-    },
-   
-    {
-      icon: '📊',
-      title: 'Governance & Performance',
-      text: 'Support establishing meaningful KPIs, IT governance structures, and transparent reporting.',
-    },
-  ]
+  const boardContributions = t.board.items
 
   const galleryImages = [
-    { image: northCapeImage, alt: 'Reinebringen, Lofoten Islands' },
-    { image: reinebringenImage, alt: 'North Cape, Norway' },
-    { image: hiking1Image, alt: 'Pulpit Rock' },
-    { image: hiking2Image, alt: 'The Trolls Tongue' },
-    { image: hiking3Image, alt: 'Peaceful morning coffee' },
+    { image: northCapeImage, alt: t.gallery.altNorthCape },
+    { image: reinebringenImage, alt: t.gallery.altReinebringen },
+    { image: hiking1Image, alt: t.gallery.altPulpitRock },
+    { image: hiking2Image, alt: t.gallery.altTrollsTongue },
+    { image: hiking3Image, alt: t.gallery.altCoffee },
   ]
 
   return (
@@ -69,16 +38,17 @@ export default function Page() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <div>
             <div className="text-lg font-semibold tracking-tight text-white">egebjerg.it</div>
-            <div className="text-xs text-slate-400">CIO · Digital Transformation · AI</div>
+            <div className="text-xs text-slate-400">{t.nav.tagline}</div>
           </div>
 
           {/* Desktop nav */}
           <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex">
-            <a href="#about"   className="transition hover:text-blue-400">About</a>
-            <a href="#board"   className="transition hover:text-blue-400">Board</a>
-            <a href="#blog"    className="transition hover:text-blue-400">Blog</a>
-            <a href="#gallery" className="transition hover:text-blue-400">Gallery</a>
-            <a href="#contact" className="transition hover:text-blue-400">Contact</a>
+            <a href="#about"   className="transition hover:text-blue-400">{t.nav.about}</a>
+            <a href="#board"   className="transition hover:text-blue-400">{t.nav.board}</a>
+            <a href="#blog"    className="transition hover:text-blue-400">{t.nav.blog}</a>
+            <a href="#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</a>
+            <a href="#contact" className="transition hover:text-blue-400">{t.nav.contact}</a>
+            <LanguageSwitcher />
           </nav>
 
           {/* Mobile hamburger */}
@@ -93,15 +63,16 @@ export default function Page() {
           </button>
         </div>
 
-        {/* Mobile menu panel */}
+          {/* Mobile menu panel */}
         {menuOpen && (
           <div className="border-t border-slate-700 bg-slate-800 px-6 py-4 md:hidden">
             <nav className="flex flex-col gap-4 text-sm font-medium text-slate-200">
-              <a href="#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">About</a>
-              <a href="#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Board</a>
-              <a href="#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Blog</a>
-              <a href="#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Gallery</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">Contact</a>
+              <a href="#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.about}</a>
+              <a href="#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.board}</a>
+              <a href="#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</a>
+              <a href="#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</a>
+              <a href="#contact" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.contact}</a>
+              <div className="pt-1"><LanguageSwitcher /></div>
             </nav>
           </div>
         )}
@@ -122,7 +93,7 @@ export default function Page() {
             <div className="flex flex-col">
               <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-slate-600 bg-slate-700/80 px-4 py-2 text-sm text-slate-200 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                From coding to leading transformation
+                {t.hero.badge}
               </div>
 
               <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
@@ -130,18 +101,9 @@ export default function Page() {
               </h1>
 
               <div className="mb-8 space-y-5 text-lg leading-8 text-slate-300">
-                <p>
-                  CIO close to technology, grounded in delivery, and focused on outcomes that matter to
-                  the business.
-                </p>
-                <p>
-                  I have led transformation from strategy through execution, including organisational change, governance,
-                  and adoption across the enterprise, implementing modern cloud technology and processes ensuring a strong data foundation.
-                </p>
-                <p>
-                  Now I am focused on embedding AI into real business processes in ways
-                  that are governed, measurable, and changes how the organisation works and decides.
-                </p>
+                <p>{t.hero.p1}</p>
+                <p>{t.hero.p2}</p>
+                <p>{t.hero.p3}</p>
               </div>
 
               <div className="mt-auto flex flex-wrap gap-4">
@@ -149,13 +111,13 @@ export default function Page() {
                   href="#board"
                   className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500"
                 >
-                  What I bring to the board
+                  {t.hero.ctaBoard}
                 </a>
                 <a
                   href="#about"
                   className="rounded-2xl border border-slate-600 bg-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 shadow-sm transition hover:border-blue-600 hover:text-blue-400"
                 >
-                  About me
+                  {t.hero.ctaAbout}
                 </a>
               </div>
             </div>
@@ -179,20 +141,16 @@ export default function Page() {
 
                 <div className="mb-5 flex items-center justify-between">
                   <div>
-                    <div className="text-sm font-semibold text-slate-100">Executive Profile</div>
-                    <div className="text-sm text-slate-400">Positioning highlights</div>
+                    <div className="text-sm font-semibold text-slate-100">{t.hero.profileCardTitle}</div>
+                    <div className="text-sm text-slate-400">{t.hero.profileCardSub}</div>
                   </div>
                   <div className="rounded-full bg-emerald-900/50 px-3 py-1 text-xs font-semibold text-emerald-400">
-                    Execution-first
+                    {t.hero.profileBadge}
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  {[
-                    'Enterprise leadership with human depth',
-                    'Applies AI in real operations',
-                    'Builds sustainable platforms and processes',
-                  ].map((line) => (
+                  {t.hero.profileLines.map((line) => (
                     <div key={line} className="flex items-start gap-3 rounded-2xl bg-slate-700/60 p-4">
                       <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500" />
                       <p className="text-sm leading-6 text-slate-200">{line}</p>
@@ -213,10 +171,10 @@ export default function Page() {
     <div className="flex flex-col gap-8">
       <div>
         <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-          About
+          {t.about.label}
         </div>
         <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-          Hands-on leadership, grounded in 25 years of doing the work
+          {t.about.heading}
         </h2>
       </div>
 
@@ -244,38 +202,23 @@ export default function Page() {
 <div className="flex flex-col justify-center space-y-5 text-lg leading-8 text-slate-300">
 
   <h3 className="text-2xl font-bold tracking-tight text-white">
-    Experience
+    {t.about.experienceHeading}
   </h3>
 
-  <p>
-    Technology is only as good as the people and processes around it. That is the lesson 25 years in IT teaches you — especially when you have been close to both sides: building the systems and working alongside the teams that depend on them.
-</p>
-<p>
-I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I structure problems, assess risk, and think in systems. I have worked across ERP and CRM, e-commerce, systems administration, security, and compliance — in internationally active businesses, always close to the decisions. I have rarely had the luxury of big teams or big budgets — which means I solve problems with clarity, structure, and resourcefulness. Today, at C-level, that is still exactly how I work.</p>
+  <p>{t.about.p1}</p>
+  <p>{t.about.p2}</p>
 
   {/* Emotional Intelligence */}
   <div className="pt-2">
     <h4 className="mb-4 text-xl font-semibold text-white">
-      Emotional intelligence
+      {t.about.eqHeading}
     </h4>
 
-    <p className="leading-relaxed text-slate-300">
-      On the leadership side, I work deliberately with emotional intelligence —
-      and that starts with self-awareness. Knowing your own triggers, blind spots,
-      and default reactions is the foundation.
-      Then focusing on the people around you — their motivations,
-      concerns and ways of working.
-</p>
-    <p className="mt-4 leading-relaxed text-slate-300">
-      You need to read the room, build genuine trust, and understand
-      what each person needs to move forward.
-    </p>
+    <p className="leading-relaxed text-slate-300">{t.about.eqP1}</p>
+    <p className="mt-4 leading-relaxed text-slate-300">{t.about.eqP2}</p>
   </div>
 
-  <p className="font-medium text-slate-200">
-    Transformation programmes do not fail because of technology — they fail because of people.
-    And you cannot bring people with you if you do not know yourself, and if you do not know them.
-  </p>
+  <p className="font-medium text-slate-200">{t.about.closing}</p>
 
 </div>
   </div>
@@ -288,10 +231,10 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
             <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
-                  Board / Advisory Board
+                  {t.board.label}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  What I bring to the board table
+                  {t.board.heading}
                 </h2>
               </div>
             </div>
@@ -321,14 +264,14 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
             <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-                  Latest writing
+                  {t.blog.label}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  CIO thoughts
+                  {t.blog.heading}
                 </h2>
               </div>
               <a href="#contact" className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
-                Let&apos;s connect →
+                {t.blog.connect}
               </a>
             </div>
 
@@ -336,8 +279,8 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
             <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-4">
               <span className="mt-0.5 text-base">✍️</span>
               <p className="text-sm leading-7 text-slate-300">
-                All posts are written from my own experience —{' '}
-                <span className="font-semibold text-slate-100">no ghostwriters, no AI generation.</span>
+                {t.blog.authenticityNote}{' '}
+                <span className="font-semibold text-slate-100">{t.blog.authenticityBold}</span>
               </p>
             </div>
 
@@ -351,7 +294,7 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
                   >
                     <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
                       <span>
-                        {new Date(post.date).toLocaleDateString('en-GB', {
+                        {new Date(post.date).toLocaleDateString(language === 'da' ? 'da-DK' : 'en-GB', {
                           day: 'numeric',
                           month: 'long',
                           year: 'numeric',
@@ -367,7 +310,7 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
                       {post.excerpt}
                     </p>
                     <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
-                      Read post →
+                      {t.blog.readPost}
                     </div>
                   </Link>
                 ))}
@@ -378,11 +321,10 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
                   📝
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">
-                  First posts are on their way
+                  {t.blog.emptyHeading}
                 </h3>
                 <p className="max-w-md text-sm leading-7 text-slate-400">
-                  I am working on the first articles right now. Check back soon — or connect on LinkedIn
-                  to be notified when they go live.
+                  {t.blog.emptyBody}
                 </p>
                 <a
                   href="https://www.linkedin.com/in/egebjerg72/"
@@ -390,7 +332,7 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
                   rel="noopener noreferrer"
                   className="mt-6 rounded-2xl border border-slate-600 bg-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-blue-600 hover:text-blue-400"
                 >
-                  Follow on LinkedIn →
+                  {t.blog.followLinkedIn}
                 </a>
               </div>
             )}
@@ -404,10 +346,10 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
 
             <div className="mb-10">
               <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
-                Outside the office
+                {t.gallery.label}
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                The trails that reset the thinking
+                {t.gallery.heading}
               </h2>
             </div>
 
@@ -449,15 +391,13 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
                 <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
                   <div>
                     <div className="mb-3 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
-                      Perspective
+                      {t.perspective.label}
                     </div>
                     <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-                      Technology only matters when it changes how we work and decide
+                      {t.perspective.heading}
                     </h2>
                     <p className="mt-4 max-w-3xl leading-8 text-slate-300">
-                      My focus is not technology for its own sake, but how platforms, AI and operating
-                      models can support better execution, stronger leadership and practical business
-                      value.
+                      {t.perspective.body}
                     </p>
                   </div>
                   <div>
@@ -465,7 +405,7 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
                       href="#contact"
                       className="inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
                     >
-                      Get in touch
+                      {t.perspective.cta}
                     </a>
                   </div>
                 </div>
@@ -482,7 +422,7 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
           <div>
             <div className="text-lg font-semibold text-white">Niels Henrik Egebjerg</div>
             <p className="mt-2 max-w-xl text-sm leading-7 text-slate-400">
-              CIO · egebjerg.it
+              {t.footer.role}
             </p>
           </div>
           <div className="grid gap-3 text-sm text-slate-400">
@@ -498,7 +438,7 @@ I hold a Master&apos;s degree in IT, and my academic foundation shapes the way I
               nh@egebjerg.it
             </a>
             <a href="#top" className="transition hover:text-blue-400">
-              Back to top
+              {t.footer.backToTop}
             </a>
           </div>
         </div>
