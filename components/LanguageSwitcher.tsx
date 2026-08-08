@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLanguage } from '../lib/i18n/context'
 
 export default function LanguageSwitcher() {
@@ -11,25 +12,21 @@ export default function LanguageSwitcher() {
         onClick={() => setLanguage('da')}
         aria-label="Dansk"
         title="Dansk"
-        className={`rounded-full px-2 py-1 text-xl leading-none transition ${
-          language === 'da'
-            ? 'bg-slate-600 opacity-100'
-            : 'opacity-50 hover:opacity-80'
+        className={`rounded-full p-1.5 transition ${
+          language === 'da' ? 'bg-slate-600' : 'opacity-40 hover:opacity-70'
         }`}
       >
-        🇩🇰
+        <Image src="/flags/dk.svg" alt="Dansk" width={22} height={16} className="rounded-sm" />
       </button>
       <button
         onClick={() => setLanguage('en')}
         aria-label="English"
         title="English"
-        className={`rounded-full px-2 py-1 text-xl leading-none transition ${
-          language === 'en'
-            ? 'bg-slate-600 opacity-100'
-            : 'opacity-50 hover:opacity-80'
+        className={`rounded-full p-1.5 transition ${
+          language === 'en' ? 'bg-slate-600' : 'opacity-40 hover:opacity-70'
         }`}
       >
-        🇬🇧
+        <Image src="/flags/gb.svg" alt="English" width={22} height={16} className="rounded-sm" />
       </button>
     </div>
   )
