@@ -11,14 +11,14 @@ const da: Translations = {
   },
 
   hero: {
-    badge: 'Fra kodning til at lede transformation',
+    badge: 'Fra kode til strategi',
     name: 'Niels Henrik Egebjerg',
-    p1: 'CIO tæt på teknologien, forankret i levering og fokuseret på resultater, der betyder noget for forretningen.',
+    p1: 'CIO tæt på teknologien, fokuseret på leverance og resultater, der betyder noget for forretningen.',
     p2: 'Jeg har ledet transformation fra strategi til eksekvering, herunder organisatorisk forandring, governance og implementering på tværs af virksomheden — med moderne cloudteknologi og processer, der sikrer et stærkt datafundament.',
     p3: 'Nu er jeg fokuseret på at integrere AI i reelle forretningsprocesser på måder, der er styrede, målbare og ændrer den måde, organisationen arbejder og beslutter på.',
     ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
     ctaAbout: 'Om mig',
-    profileCardTitle: 'Executive Profil',
+    profileCardTitle: 'Executive Profile',
     profileCardSub: 'Positioneringspunkter',
     profileBadge: 'Eksekvering først',
     profileLines: [
@@ -37,12 +37,12 @@ const da: Translations = {
     eqHeading: 'Emotionel intelligens',
     eqP1: 'På ledelsessiden arbejder jeg bevidst med emotionel intelligens — og det starter med selvbevidsthed. At kende sine egne triggere, blinde vinkler og standardreaktioner er fundamentet. Dernæst at fokusere på menneskene omkring sig — deres motivationer, bekymringer og arbejdsformer.',
     eqP2: 'Man skal aflæse rummet, opbygge ægte tillid og forstå, hvad den enkelte har brug for for at komme videre.',
-    closing: 'Transformationsprogrammer mislykkes ikke på grund af teknologi — de mislykkes på grund af mennesker. Og du kan ikke tage folk med dig, hvis du ikke kender dig selv, og hvis du ikke kender dem.',
+    closing: 'Store forandringsprojekter mislykkes ikke på grund af teknologi — de mislykkes på grund af mennesker. Og du kan ikke tage folk med dig, hvis du ikke kender dig selv, og hvis du ikke kender dem.',
   },
 
   board: {
-    label: 'Bestyrelse / Rådgivende Bestyrelse',
-    heading: 'Hvad jeg bidrager med ved bestyrelsesbordet',
+    label: 'Bestyrelse / Advisory Board',
+    heading: 'Hvad jeg bidrager med',
     items: [
       {
         icon: '🔄',
