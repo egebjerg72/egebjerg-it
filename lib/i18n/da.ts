@@ -19,7 +19,7 @@ const da: Translations = {
     ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
     ctaAbout: 'Om mig',
     profileCardTitle: 'Executive Profile',
-    profileCardSub: 'Positioneringspunkter',
+    profileCardSub: 'Fokuspunkter',
     profileBadge: 'Eksekvering først',
     profileLines: [
       'Enterprise-ledelse med menneskelig dybde',
