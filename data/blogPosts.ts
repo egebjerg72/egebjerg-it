@@ -3,22 +3,30 @@
 export interface BlogPost {
   slug: string
   title: string
+  titleDa: string
   excerpt: string
+  excerptDa: string
   date: string
   author: string
   readingTime: string
+  readingTimeDa: string
   content: string
+  contentDa: string
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'you-dont-need-to-understand-everything-about-ai',   // ← keep your existing slug
+    slug: 'you-dont-need-to-understand-everything-about-ai',
     title: 'You don\'t need to understand everything about AI',
+    titleDa: 'Du behøver ikke forstå alt om AI',
     excerpt:
       'The gap between leaders who observe AI and leaders who engage with it is widening fast. This is my perspective on why it matters, and what I did about it.',
+    excerptDa:
+      'Kløften mellem ledere, der observerer AI, og ledere der engagerer sig i det, vokser hurtigt. Her er mit perspektiv på hvorfor det betyder noget, og hvad jeg gjorde ved det.',
     date: '2026-07-09',
     author: 'Niels Henrik Egebjerg',
     readingTime: '6 min read',
+    readingTimeDa: '6 min læsning',
     content: `
 <p class="blog-intro"><strong>You don't need to understand everything about AI. But you should understand enough to ask the right questions.</strong></p>
 
@@ -100,6 +108,85 @@ export const blogPosts: BlogPost[] = [
   <em>I strongly recommend the hands-on approach!
   </p>
 
+    `,
+    contentDa: `
+<p class="blog-intro"><strong>Du behøver ikke forstå alt om AI. Men du bør forstå nok til at stille de rigtige spørgsmål.</strong></p>
+
+<p>Den kløft — mellem ledere der observerer AI og ledere der engagerer sig i det — vokser hurtigt. Her er mit perspektiv på, hvorfor det betyder noget, og hvad jeg gjorde ved det.</p>
+
+<h2>Støjen er reel. Det er muligheden også.</h2>
+
+<p>Der er med rette et intenst fokus på AI i øjeblikket. Konferencer, whitepapers og LinkedIn-opslag fra folk, der <em>"transformerer virksomheder med agentbaseret AI"</em>, bygger AI ind i alle processer, man kan forestille sig, og udfører dyb analyse på sekunder. Og det vil helt sikkert ændre den måde, vi arbejder på, og fortsætte med at udvikle sig i de kommende år.</p>
+
+<p>Det er tydeligt, at opgaver der tidligere tog uger, i nogle tilfælde nu kan løses på timer eller endda minutter. Det er også tydeligt, at AI kan levere stærk rådgivning og analyse, hvis det bruges på den rigtige måde — og tilføje kompetencer, som organisationen ikke har, og måske ikke havde planlagt at ansætte.</p>
+
+<p>Det gør det afgørende for virksomheder, organisationer og ledere at forstå, hvad AI betyder for den måde, vi arbejder på, og hvilke muligheder det bringer for fremtiden. Det er ikke let. Det kan være ganske overvældende at følge de daglige opdateringer med nye muligheder og funktioner. Vi skal også styre, hvordan AI-værktøjer tages i brug af medarbejderne, hvordan de bruges i dagligt arbejde og processer, og hvordan automatiseringer sættes op ansvarligt — med klare rammer og sikkerhed på plads.</p>
+
+<h2>Hands on</h2>
+
+<p>I min erfaring som leder skal du prøve det selv. Du skal vide, hvad der virker. Du skal forstå, hvordan du formulerer prompts til din AI-assistent, der faktisk leverer resultater. Du skal forstå, at AI-agenter har instruktioner, færdigheder og viden — og lære at udfordre og forbedre dem. Forstå, hvorfor agenter handler, som de gør, og være i stand til at komme med idéer til, hvordan man bruger dem, forbedrer dem, og hvilke nye agenter man bør introducere. Det er det, der ændrer det daglige arbejde og leverer nye muligheder, hastighed og automatiseringer.</p>
+
+<p>Min hands-on erfaring startede med ChatGPT i min fritid, men rykkede hurtigt over til Copilot i mit daglige arbejde. De første prompts var imponerende, men mange rutiner glød tilbage til, som jeg plejede at arbejde. Indtil jeg tvang mig selv til at prøve igen, forbedre mine prompts og holde op med at acceptere fejl som resultatet. Efter et stykke tid tippede det fra at være noget, jeg <em>burde</em> lære, til noget der faktisk gav værdi i mit daglige arbejde.</p>
+
+<p>Det punkt var en gamechanger for mig — det gjorde det muligt at udføre mere arbejde og tilføje mere kvalitet og nye dimensioner til det. AI-værktøjer gik fra at være baggrundsstøj til at blive en reel konkurrencemæssig fordel.</p>
+
+<h2>Hvad er egebjerg.it?</h2>
+
+<p>Jeg satte dette fritidsprojekt op for at bygge en personlig hjemmeside og brugte det bevidst som metode til at opbygge hands-on ledelsesvurdering om AI. Jeg ville se, hvor langt jeg kunne komme, fra bunden, med hjælp fra min AI-assistent.</p>
+
+<p>egebjerg.it blev skabt på en enkelt aften. Ikke fordi jeg er udvikler. Men fordi jeg satte mig ned med et AI-værktøj, stillede de rigtige spørgsmål og fulgte instruktionerne trin for trin.</p>
+
+<p><strong>Intet bureau. Ingen udviklere. Intet budget.</strong></p>
+
+<p>I mit tilfælde en Microsoft 365 Copilot-licens kombineret med OpenAIs GPT-model og Anthropics Claude. Jeg beskrev idéen i en simpel prompt og blev guidet mod en opsætning baseret på to specialiserede agenter med konkrete implementeringsinstruktioner. Ud fra disse instruktioner konfigurerede jeg to Copilot-agenter:</p>
+
+<ul>
+  <li>
+    <strong>En rådgivende agent:</strong> Et panel bestående af en formand, en personlig rådgiver, en brandingekspert og en kritisk udfordrer.
+    <em>(AI har en tendens til at være overdrevent positiv. At introducere et kritisk perspektiv har en mærkbar effekt på kvaliteten. Det er en vigtig læring.)</em>
+  </li>
+  <li>
+    <strong>En udviklingsagent:</strong> En senior full-stack-udvikler med klare instruktioner om den valgte platform (GitHub, Cloudflare Pages og domæneopsætning).
+  </li>
+</ul>
+
+<figure class="blog-hero-image">
+  <img
+    src="/images/blog-ai-leadership.jpg"
+    alt="AI-lederskab og digital transformation — Niels Henrik Egebjerg"
+    width="811"
+    height="762"
+    loading="lazy"
+    decoding="async"
+  />
+</figure>
+
+<h2>Hvad lærte jeg?</h2>
+
+<p>Du kan komme meget langt inden for områder, du ikke er ekspert i — og med anstændige resultater. Men resultaterne er direkte koblet til den information, du giver.</p>
+
+<p>Når du prompter, så fortæl AI-assistenten dit <strong>mål</strong>, <strong>konteksten</strong>, de <strong>kilder</strong> der skal bruges, og de <strong>forventninger</strong> du har til resultatet. Det bringer dig langt.</p>
+
+<p>Det er også tydeligt, at dine egne faglige kompetencer påvirker kvaliteten af resultatet. Jeg kunne være rimeligt tilfreds med den første version af egebjerg.it. Men når min marketingkollega ser på frontend-layoutet, når en tekstforfatter gennemgår mit skriveri, eller når en dygtig udvikler undersøger koden, vil det blive udfordret på måder, jeg ikke selv ville tænke på. Og de ville vide, hvordan de skulle guide AI-assistenten langt mere præcist — og gøre resultatet markant bedre på blot få minutter.</p>
+
+<p>Med denne forståelse er AI bag ekstremt kraftfulde værktøjer. Og jeg vil fortsætte med at udfordre og udvikle løsningen på tværs af forskellige områder.</p>
+
+<h2>Hvorfor betyder dette noget som CIO?</h2>
+
+<p>Selv organisationer der er avancerede i brugen af AI-agenter forstår ikke altid fuldt ud, hvordan man maksimerer deres effekt.</p>
+
+<p>Problemet er ikke mangel på investering. Det er mangel på nærhed til teknologien.</p>
+
+<p>For mange ledere observerer AI udefra. De læser om det. Godkender budgetter til det. Men engagerer sig sjældent direkte i det.</p>
+
+<p>Organisationer der leder inden for AI-adoption deler ét træk: deres seniorledere engagerer sig direkte i teknologien — ikke kun strategisk. At vide, hvilke spørgsmål man skal stille, hvilke risici man skal styre, og hvilke investeringer man skal prioritere, er det, der adskiller ledere der former AI's rolle i deres organisation fra dem, der formes af den.</p>
+
+<p>Mit punkt er enkelt: <strong>Du behøver ikke forstå alt. Men du bør forstå nok til at stille de rigtige spørgsmål.</strong></p>
+
+<p class="blog-closing">
+  <em>Hvornår brugte du sidst selv dit AI-værktøj — i stedet for at delegere det?</em><br/>
+  <em>Jeg anbefaler stærkt den hands-on tilgang!</em>
+</p>
     `,
   },
 ]

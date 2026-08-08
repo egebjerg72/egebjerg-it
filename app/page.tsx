@@ -301,13 +301,13 @@ export default function Page() {
                         })}
                       </span>
                       <span>·</span>
-                      <span>{post.readingTime}</span>
+                      <span>{language === 'da' ? post.readingTimeDa : post.readingTime}</span>
                     </div>
                     <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition group-hover:text-blue-400">
-                      {post.title}
+                      {language === 'da' ? post.titleDa : post.title}
                     </h3>
                     <p className="mb-6 flex-1 text-sm leading-7 text-slate-400">
-                      {post.excerpt}
+                      {language === 'da' ? post.excerptDa : post.excerpt}
                     </p>
                     <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
                       {t.blog.readPost}
