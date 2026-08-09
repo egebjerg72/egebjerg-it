@@ -2,7 +2,7 @@ import type { Translations } from './en'
 
 const da: Translations = {
   nav: {
-    tagline: 'CIO · Digital Transformation · AI',
+    tagline: 'CIO · Digitalisering · Ledelse',
     about: 'Om mig',
     board: 'Bestyrelse',
     blog: 'Blog',
@@ -11,88 +11,96 @@ const da: Translations = {
   },
 
   hero: {
-    badge: 'Fra kode til strategi',
+    badge: '25 år i IT',
     name: 'Niels Henrik Egebjerg',
-    p1: 'CIO med tæt forbindelse til teknologien og fokus på at levere resultater, der skaber værdi for forretningen.',
-    p2: 'Jeg har ledet transformationer fra strategi til implementering, herunder organisatoriske forandringer, governance og udrulning på tværs af virksomheden – understøttet af moderne cloudteknologi og processer, der skaber et stærkt datafundament.',
-    p3: 'I dag arbejder jeg med at integrere AI i konkrete forretningsprocesser på en måde, der er styret, målbar og skaber varige ændringer i organisationens måde at arbejde og træffe beslutninger på.',
+    p1: 'CIO med begge ben på jorden og en baggrund, der spænder fra drift og sikkerhed til ERP, CRM, e-handel og ledelse.',
+    p2: 'Jeg hjælper virksomheder med at omsætte teknologi til konkrete resultater. Gennem årene har jeg ledet større IT-forandringer, implementeret nye platforme og skabt bedre grundlag for beslutninger gennem data, processer og struktur.',
+    p3: 'I dag arbejder jeg blandt andet med, hvordan AI kan bruges ansvarligt og pragmatisk til at løse virkelige forretningsmæssige udfordringer og skabe målbar værdi.',
     ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
     ctaAbout: 'Om mig',
     profileCardTitle: 'Lederprofil',
     profileCardSub: 'Fokuspunkter',
-    profileBadge: 'Eksekvering først',
+    profileBadge: 'Praktisk erfaring',
     profileLines: [
-      'Strategisk ledelse med menneskelig indsigt',
-      'Anvender AI i konkrete arbejdsprocesser',
-      'Bygger bæredygtige platforme og processer',
+      'Omsætter strategi til handling',
+      'Teknologi med fokus på forretningen',
+      'Skaber forandringer, der holder',
     ],
   },
 
   about: {
     label: 'Om mig',
-    heading: 'Praktisk ledelse funderet på 25 års erfaring',
+    heading: '25 års erfaring med teknologi og forretning',
+
     experienceHeading: 'Erfaring',
-    p1: 'Teknologi er kun så god som de mennesker og processer, der omgiver den. Det er en af de vigtigste erfaringer, man gør sig efter 25 år i IT – især når man har oplevet begge sider: at bygge systemerne og arbejde tæt sammen med de mennesker, der er afhængige af dem i hverdagen.',
-    p2: 'Jeg har en kandidatgrad i IT, og mit akademiske fundament præger fortsat den måde, jeg strukturerer problemer, vurderer risici og tænker i sammenhænge. Gennem min karriere har jeg arbejdet med ERP og CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Ofte med begrænsede ressourcer, små teams og høje forventninger. Derfor har jeg lært at løse problemer med klarhed, struktur og opfindsomhed. I dag som CIO arbejder jeg stadig på præcis den måde.',
-    eqHeading: 'Emotionel intelligens',
-    eqP1: 'På ledelsessiden arbejder jeg bevidst med emotionel intelligens, og det begynder med selvindsigt. At kende sine egne triggere, blinde vinkler og reaktionsmønstre er fundamentet. Herfra handler det om at forstå menneskene omkring sig – deres motivation, bekymringer og måde at arbejde på.',
-    eqP2: 'Man skal kunne aflæse rummet, opbygge tillid og forstå, hvad den enkelte har brug for for at lykkes.',
-    closing: 'Store forandringsprojekter mislykkes sjældent på grund af teknologien. De mislykkes, når menneskerne ikke kommer med. Derfor er forståelsen af både sig selv og andre en afgørende del af enhver transformation.',
+
+    p1: 'Teknologi skaber først værdi, når mennesker, processer og data fungerer sammen. Det er en erfaring, jeg har taget med mig gennem mere end 25 år i IT, hvor jeg både har arbejdet tæt på teknologien og tæt på de mennesker og forretninger, der er afhængige af den.',
+
+    p2: 'Jeg er uddannet cand.it. og har gennem min karriere arbejdet med ERP, CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Jeg har sjældent haft store budgetter eller store specialistteams til rådighed, og derfor har jeg lært at skabe resultater gennem struktur, prioritering og pragmatiske løsninger. Som CIO arbejder jeg stadig ud fra de samme principper.',
+
+    eqHeading: 'Ledelse og mennesker',
+
+    eqP1: 'Teknologi alene flytter sjældent en organisation. Derfor lægger jeg stor vægt på at forstå mennesker, motivation og de barrierer, der opstår, når arbejdsformer ændrer sig.',
+
+    eqP2: 'God ledelse handler for mig om at skabe tillid, lytte, udfordre konstruktivt og hjælpe mennesker med at lykkes i praksis.',
+
+    closing: 'Store projekter mislykkes sjældent på grund af teknologien alene. De lykkes eller mislykkes i samspillet mellem mennesker, processer og ledelse.',
   },
 
   board: {
     label: 'Bestyrelse / Advisory Board',
     heading: 'Hvad jeg bidrager med',
+
     items: [
       {
         icon: '🔄',
-        title: 'Digital transformation',
-        text: 'Hands-on erfaring med at guide organisationer gennem større IT-forandringer, ERP-implementeringer og digitaliseringsinitiativer fra strategi til realisering.',
+        title: 'Digitalisering i praksis',
+        text: 'Erfaring med at gennemføre større IT-forandringer, ERP-implementeringer og digitaliseringsprojekter fra idé til forankring i organisationen.',
       },
       {
         icon: '🤝',
-        title: 'Organisationsforandring',
-        text: 'Rådgivning om den menneskelige side af teknologi, herunder forandringsledelse, kompetenceudvikling og forankring af nye arbejdsformer.',
+        title: 'Forandringsledelse',
+        text: 'Fokus på den menneskelige side af teknologi og på at skabe reel forankring af nye arbejdsmetoder og processer.',
       },
       {
         icon: '🧭',
-        title: 'Løsningsarkitektur',
-        text: 'Omsætter komplekse IT-landskaber til strategisk retning og hjælper med at skabe en tydelig sammenhæng mellem teknologi og forretningsmæssige mål.',
+        title: 'Forretning og teknologi',
+        text: 'Skaber sammenhæng mellem forretningsmål, teknologi, data og processer, så investeringer omsættes til konkrete resultater.',
       },
       {
         icon: '🔒',
-        title: 'Digital risiko og cybersikkerhed',
-        text: 'Bidrager med indsigt i digital risiko, datastyring og cyberrobusthed som grundlag for kvalificerede beslutninger på bestyrelsesniveau.',
+        title: 'Sikkerhed og risikostyring',
+        text: 'Bidrager med erfaring inden for cybersikkerhed, compliance, governance og håndtering af digitale risici.',
       },
       {
         icon: '💡',
-        title: 'IT-investeringer og prioritering',
-        text: 'Udfordrer og kvalificerer beslutninger om IT-budgetter, leverandørvalg og forventet forretningsværdi med afsæt i praktisk erfaring som CIO.',
+        title: 'AI og nye teknologier',
+        text: 'Rådgiver om, hvordan AI og nye teknologier kan anvendes ansvarligt, realistisk og med fokus på dokumenterbar forretningsværdi.',
       },
       {
         icon: '📊',
-        title: 'Styring og opfølgning',
-        text: 'Bidrager til etablering af meningsfulde KPI’er, tydelige governancestrukturer og transparent rapportering.',
+        title: 'Investeringer og prioritering',
+        text: 'Hjælper med at vurdere investeringer, prioritere initiativer og sikre, at ressourcer anvendes, hvor de skaber størst værdi.',
       },
     ],
   },
 
   blog: {
     label: 'Seneste indlæg',
-    heading: 'CIO-tanker',
-    connect: 'Lad os tage kontakt →',
-    authenticityNote: 'Alle indlæg er skrevet ud fra mine egne erfaringer –',
+    heading: 'Tanker fra hverdagen som CIO',
+    connect: 'Lad os tage en snak →',
+    authenticityNote: 'Alle indlæg er skrevet ud fra egne erfaringer og refleksioner –',
     authenticityBold: 'ingen ghostwriters, ingen AI-generering.',
     readPost: 'Læs indlæg →',
     emptyHeading: 'De første indlæg er på vej',
-    emptyBody: 'Jeg arbejder på de første artikler lige nu. Kig forbi snart – eller følg med på LinkedIn, når de går live.',
+    emptyBody: 'Jeg arbejder på de første artikler lige nu. Kig forbi igen snart, eller følg med på LinkedIn.',
     followLinkedIn: 'Følg på LinkedIn →',
     minRead: 'min læsning',
   },
 
   gallery: {
     label: 'Uden for kontoret',
-    heading: 'Steder der giver plads til nye tanker',
+    heading: 'Steder der giver ro til at tænke',
     altNorthCape: 'Nordkap, Norge',
     altReinebringen: 'Reinebringen, Lofoten',
     altPulpitRock: 'Preikestolen',
@@ -102,8 +110,8 @@ const da: Translations = {
 
   perspective: {
     label: 'Perspektiv',
-    heading: 'Teknologi betyder kun noget, når den ændrer måden, vi arbejder og træffer beslutninger på',
-    body: 'Mit fokus er ikke teknologi for teknologiens skyld, men hvordan platforme, AI og arbejdsmodeller kan understøtte bedre eksekvering, stærkere ledelse og reel forretningsværdi.',
+    heading: 'Teknologi er kun interessant, når den gør arbejdet nemmere og beslutningerne bedre',
+    body: 'Jeg interesserer mig ikke for teknologi for teknologiens skyld. Mit fokus er at skabe løsninger, processer og datagrundlag, der hjælper mennesker og virksomheder med at arbejde mere effektivt og træffe bedre beslutninger.',
     cta: 'Kom i kontakt',
   },
 
