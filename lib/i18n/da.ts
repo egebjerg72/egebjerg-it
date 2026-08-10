@@ -11,25 +11,8 @@ const da: Translations = {
   },
 
   hero: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    badge: 'Fra kode til strategi',
-    name: 'Niels Henrik Egebjerg',
-    p1: 'CIO tæt på teknologien, fokuseret på leverance og resultater, der betyder noget for forretningen.',
-    p2: 'Jeg har ledet transformation fra strategi til eksekvering, herunder organisatorisk forandring, governance og implementering på tværs af virksomheden — med moderne cloudteknologi og processer, der sikrer et stærkt datafundament.',
-    p3: 'Nu er jeg fokuseret på at integrere AI i reelle forretningsprocesser på måder, der er styrede, målbare og ændrer den måde, organisationen arbejder og beslutter på.',
-    ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
-    ctaAbout: 'Om mig',
-    profileCardTitle: 'Executive Profile',
-    profileCardSub: 'Fokuspunkter',
-    profileBadge: 'Eksekvering først',
-=======
     badge: '25 år i IT',
     name: 'Niels Henrik Egebjerg',
-=======
-    badge: '25 år i IT',
-    name: 'Niels Henrik Egebjerg',
->>>>>>> origin/main
     p1: 'CIO med begge ben på jorden og en baggrund, der spænder fra drift og sikkerhed til ERP, CRM, e-handel og ledelse.',
     p2: 'Jeg hjælper virksomheder med at omsætte teknologi til konkrete resultater. Gennem årene har jeg ledet større IT-forandringer, implementeret nye platforme og skabt bedre grundlag for beslutninger gennem data, processer og struktur.',
     p3: 'I dag arbejder jeg blandt andet med, hvordan AI kan bruges ansvarligt og pragmatisk til at løse virkelige forretningsmæssige udfordringer og skabe målbar værdi.',
@@ -38,10 +21,6 @@ const da: Translations = {
     profileCardTitle: 'Lederprofil',
     profileCardSub: 'Fokuspunkter',
     profileBadge: 'Praktisk erfaring',
-<<<<<<< HEAD
->>>>>>> agents/check-vscode-version
-=======
->>>>>>> origin/main
     profileLines: [
       'Omsætter strategi til handling',
       'Teknologi med fokus på forretningen',
@@ -52,57 +31,18 @@ const da: Translations = {
   about: {
     label: 'Om mig',
     heading: '25 års erfaring med teknologi og forretning',
-
     experienceHeading: 'Erfaring',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    p1: 'Teknologi er kun så god som de mennesker og processer, der omgiver den. Det er lektionen 25 år i IT lærer dig — især når du har været tæt på begge sider: bygge systemerne og arbejde side om side med de teams, der er afhængige af dem.',
-    p2: 'Jeg har en kandidatgrad i IT, og mit akademiske fundament former den måde, jeg strukturerer problemer, vurderer risici og tænker i systemer. Jeg har arbejdet med ERP og CRM, e-handel, systemadministration, sikkerhed og compliance — i internationalt aktive virksomheder, altid tæt på beslutningerne. Jeg har sjældent haft mulighed for store teams eller store budgetter — hvilket betyder, at jeg løser problemer med klarhed, struktur og opfindsomhed. I dag, på C-niveau, er det stadig præcis sådan, jeg arbejder.',
-    eqHeading: 'Emotionel intelligens',
-    eqP1: 'På ledelsessiden arbejder jeg bevidst med emotionel intelligens — og det starter med selvbevidsthed. At kende sine egne triggere, blinde vinkler og standardreaktioner er fundamentet. Dernæst at fokusere på menneskene omkring sig — deres motivationer, bekymringer og arbejdsformer.',
-    eqP2: 'Man skal aflæse rummet, opbygge ægte tillid og forstå, hvad den enkelte har brug for for at komme videre.',
-    closing: 'Store forandringsprojekter mislykkes ikke på grund af teknologi — de mislykkes på grund af mennesker. Og du kan ikke tage folk med dig, hvis du ikke kender dig selv, og hvis du ikke kender dem.',
-=======
-
     p1: 'Teknologi skaber først værdi, når mennesker, processer og data fungerer sammen. Det er en erfaring, jeg har taget med mig gennem mere end 25 år i IT, hvor jeg både har arbejdet tæt på teknologien og tæt på de mennesker og forretninger, der er afhængige af den.',
-
     p2: 'Min teoretiske baggrund er en bachelor i økonomi suppleret med en Master i IT. Jeg har gennem min karriere arbejdet med ERP, CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Jeg har sjældent haft store budgetter eller store specialistteams til rådighed, men har sikret resultater gennem struktur, prioritering og ved at være tæt på løsningerne. Som CIO arbejder jeg stadig ud fra de samme principper.',
-
     eqHeading: 'Ledelse og mennesker',
-
     eqP1: 'På ledelsessiden arbejder jeg bevidst med emotionel intelligens, og det begynder med selvindsigt. At kende sine egne styrker, blinde vinkler og reaktionsmønstre er fundamentet for god ledelse. Derefter handler det om at forstå de mennesker, man arbejder sammen med: deres motivation, bekymringer og måder at arbejde på.',
-
     eqP2: 'Man skal kunne læse situationen, skabe ægte tillid og forstå, hvad den enkelte har brug for, for at kunne lykkes.',
-
     closing: 'Transformationer fejler sjældent på grund af teknologien. De fejler, fordi mennesker ikke er med. Og man kan ikke skabe følgeskab, hvis man hverken kender sig selv eller de mennesker, man ønsker skal være en del af forandringen.',
->>>>>>> agents/check-vscode-version
-=======
-
-    p1: 'Teknologi skaber først værdi, når mennesker, processer og data fungerer sammen. Det er en erfaring, jeg har taget med mig gennem mere end 25 år i IT, hvor jeg både har arbejdet tæt på teknologien og tæt på de mennesker og forretninger, der er afhængige af den.',
-
-    p2: 'Jeg er uddannet cand.it. og har gennem min karriere arbejdet med ERP, CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Jeg har sjældent haft store budgetter eller store specialistteams til rådighed, og derfor har jeg lært at skabe resultater gennem struktur, prioritering og pragmatiske løsninger. Som CIO arbejder jeg stadig ud fra de samme principper.',
-
-    eqHeading: 'Ledelse og mennesker',
-
-    eqP1: 'Teknologi alene flytter sjældent en organisation. Derfor lægger jeg stor vægt på at forstå mennesker, motivation og de barrierer, der opstår, når arbejdsformer ændrer sig.',
-
-    eqP2: 'God ledelse handler for mig om at skabe tillid, lytte, udfordre konstruktivt og hjælpe mennesker med at lykkes i praksis.',
-
-    closing: 'Store projekter mislykkes sjældent på grund af teknologien alene. De lykkes eller mislykkes i samspillet mellem mennesker, processer og ledelse.',
->>>>>>> origin/main
   },
 
   board: {
     label: 'Bestyrelse / Advisory Board',
     heading: 'Hvad jeg bidrager med',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> agents/check-vscode-version
-=======
-
->>>>>>> origin/main
     items: [
       {
         icon: '🔄',
@@ -152,15 +92,9 @@ const da: Translations = {
 
   gallery: {
     label: 'Uden for kontoret',
-<<<<<<< HEAD
     heading: 'Frisk luft til hjernen',
     altNorthCape: 'Reinebringen, Lofoten',
     altReinebringen: 'Nordkap',
-=======
-    heading: 'Steder der giver ro til at tænke',
-    altNorthCape: 'Nordkap, Norge',
-    altReinebringen: 'Reinebringen, Lofoten',
->>>>>>> origin/main
     altPulpitRock: 'Preikestolen',
     altTrollsTongue: 'Trolltunga',
     altCoffee: 'Stille morgenkaffe',
