@@ -31,26 +31,18 @@ const da: Translations = {
   about: {
     label: 'Om mig',
     heading: '25 års erfaring med teknologi og forretning',
-
     experienceHeading: 'Erfaring',
-
     p1: 'Teknologi skaber først værdi, når mennesker, processer og data fungerer sammen. Det er en erfaring, jeg har taget med mig gennem mere end 25 år i IT, hvor jeg både har arbejdet tæt på teknologien og tæt på de mennesker og forretninger, der er afhængige af den.',
-
     p2: 'Min teoretiske baggrund er en bachelor i økonomi suppleret med en Master i IT. Jeg har gennem min karriere arbejdet med ERP, CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Jeg har sjældent haft store budgetter eller store specialistteams til rådighed, men har sikret resultater gennem struktur, prioritering og ved at være tæt på løsningerne. Som CIO arbejder jeg stadig ud fra de samme principper.',
-
     eqHeading: 'Ledelse og mennesker',
-
     eqP1: 'På ledelsessiden arbejder jeg bevidst med emotionel intelligens, og det begynder med selvindsigt. At kende sine egne styrker, blinde vinkler og reaktionsmønstre er fundamentet for god ledelse. Derefter handler det om at forstå de mennesker, man arbejder sammen med: deres motivation, bekymringer og måder at arbejde på.',
-
     eqP2: 'Man skal kunne læse situationen, skabe ægte tillid og forstå, hvad den enkelte har brug for, for at kunne lykkes.',
-
     closing: 'Transformationer fejler sjældent på grund af teknologien. De fejler, fordi mennesker ikke er med. Og man kan ikke skabe følgeskab, hvis man hverken kender sig selv eller de mennesker, man ønsker skal være en del af forandringen.',
   },
 
   board: {
     label: 'Bestyrelse / Advisory Board',
     heading: 'Hvad jeg bidrager med',
-
     items: [
       {
         icon: '🔄',
