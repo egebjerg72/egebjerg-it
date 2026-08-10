@@ -14,7 +14,7 @@ const da: Translations = {
     badge: '25 år i IT',
     name: 'Niels Henrik Egebjerg',
     p1: 'CIO med begge ben på jorden og en baggrund, der spænder fra drift og sikkerhed til ERP, CRM, e-handel og ledelse.',
-    p2: 'Jeg hjælper virksomheder med at omsætte teknologi til konkrete resultater. Gennem årene har jeg ledet større IT-forandringer, implementeret nye platforme og skabt bedre grundlag for beslutninger gennem data, processer og struktur.',
+    p2: 'Jeg omsætter teknologi til konkrete resultater. Gennem årene har jeg ledet større IT-forandringer, implementeret nye platforme og skabt bedre grundlag for beslutninger gennem data, processer og struktur.',
     p3: 'I dag arbejder jeg blandt andet med, hvordan AI kan bruges ansvarligt og pragmatisk til at løse virkelige forretningsmæssige udfordringer og skabe målbar værdi.',
     ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
     ctaAbout: 'Om mig',
