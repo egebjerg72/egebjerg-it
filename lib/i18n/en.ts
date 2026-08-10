@@ -134,8 +134,8 @@ const en: Translations = {
   gallery: {
     label: 'Outside the office',
     heading: 'The trails that reset the thinking',
-    altNorthCape: 'North Cape, Norway',
-    altReinebringen: 'Reinebringen, Lofoten Islands',
+    altNorthCape: 'Reinebringen, Lofoten Islands',
+    altReinebringen: 'North Cape',
     altPulpitRock: 'Pulpit Rock',
     altTrollsTongue: 'The Trolls Tongue',
     altCoffee: 'Peaceful morning coffee',
