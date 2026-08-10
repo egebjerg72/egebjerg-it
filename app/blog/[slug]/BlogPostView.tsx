@@ -9,6 +9,7 @@ import type { BlogPost } from '../../../data/blogPosts'
 export default function BlogPostView({ post }: { post: BlogPost }) {
   const { t, language } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [connectOpen, setConnectOpen] = useState(false)
 
   const title = language === 'da' ? post.titleDa : post.title
   const content = language === 'da' ? post.contentDa : post.content
@@ -38,7 +39,7 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
             <Link href="/#board"   className="transition hover:text-blue-400">{t.nav.board}</Link>
             <Link href="/#blog"    className="transition hover:text-blue-400">{t.nav.blog}</Link>
             <Link href="/#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</Link>
-            <Link href="/#contact" className="transition hover:text-blue-400">{t.nav.contact}</Link>
+            <button onClick={() => setConnectOpen(true)} className="transition hover:text-blue-400">{t.nav.contact}</button>
             <LanguageSwitcher />
           </nav>
 
@@ -62,7 +63,7 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
               <Link href="/#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.board}</Link>
               <Link href="/#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</Link>
               <Link href="/#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</Link>
-              <Link href="/#contact" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.contact}</Link>
+              <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-blue-400">{t.nav.contact}</button>
               <div className="pt-1"><LanguageSwitcher /></div>
             </nav>
           </div>
@@ -132,6 +133,58 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
           </a>
         </div>
       </footer>
+
+      {/* CONNECT MODAL */}
+      {connectOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.connect.heading}
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+          onKeyDown={(e) => e.key === 'Escape' && setConnectOpen(false)}
+        >
+          <div
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+            onClick={() => setConnectOpen(false)}
+          />
+          <div className="relative z-10 w-full max-w-lg rounded-[2rem] border border-slate-700/60 bg-slate-900/95 p-8 shadow-2xl shadow-black/60 backdrop-blur-2xl md:p-10">
+            <button
+              onClick={() => setConnectOpen(false)}
+              aria-label={t.connect.close}
+              className="absolute right-5 top-5 rounded-full p-2 text-slate-400 transition hover:bg-slate-700 hover:text-white"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <h2 className="mb-4 text-2xl font-bold tracking-tight text-white md:text-3xl">
+              {t.connect.heading}
+            </h2>
+            <p className="mb-8 leading-8 text-slate-300">
+              {t.connect.body}
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="mailto:nh@egebjerg.it"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-blue-500"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                {t.connect.email}
+              </a>
+              <a
+                href="https://www.linkedin.com/in/egebjerg72/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-slate-600 bg-slate-800 px-5 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-blue-500 hover:text-blue-400"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                {t.connect.linkedin}
+              </a>
+            </div>
+            <p className="mt-6 text-xs leading-6 text-slate-500">
+              {t.connect.disclaimer}
+            </p>
+          </div>
+        </div>
+      )}
 
     </div>
   )

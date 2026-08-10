@@ -103,7 +103,7 @@ const da: Translations = {
   perspective: {
     label: 'Perspektiv',
     heading: 'Teknologi er kun interessant, når den gør arbejdet nemmere og beslutningerne bedre',
-    body: 'Jeg interesserer mig ikke for teknologi for teknologiens skyld. Mit fokus er at skabe løsninger, processer og datagrundlag, der hjælper mennesker og virksomheder med at arbejde mere effektivt og træffe bedre beslutninger.',
+    body: 'Mit fokus er ikke teknologien i sig selv, men hvordan systemer, processer, data og AI kan styrke eksekvering, understøtte ledelse og skabe konkret forretningsværdi.',
     cta: 'Kom i kontakt',
   },
 
@@ -118,6 +118,15 @@ const da: Translations = {
     backToAll: '← Tilbage til alle indlæg',
     followLinkedIn: 'Følg på LinkedIn →',
     copyright: '© 2026 Niels Henrik Egebjerg',
+  },
+
+  connect: {
+    heading: 'Lad os connecte',
+    body: 'Jeg udveksler gerne perspektiver om ledelse, digital transformation, AI-adoption og organisatorisk forandring. Har du et spørgsmål, en kommentar til et af mine indlæg, eller ønsker du blot at connecte professionelt, er du meget velkommen til at række ud.',
+    email: 'Send en e-mail',
+    linkedin: 'Connect på LinkedIn',
+    disclaimer: 'Dette er en personlig hjemmeside. Henvendelser håndteres uafhængigt af min nuværende arbejdsgiver.',
+    close: 'Luk',
   },
 }
 

@@ -33,6 +33,10 @@ export type Translations = {
     label: string; allPosts: string; backToAll: string
     followLinkedIn: string; copyright: string
   }
+  connect: {
+    heading: string; body: string; email: string; linkedin: string
+    disclaimer: string; close: string
+  }
 }
 
 const en: Translations = {
@@ -162,6 +166,16 @@ const en: Translations = {
     backToAll: '← Back to all posts',
     followLinkedIn: 'Follow on LinkedIn →',
     copyright: '© 2026 Niels Henrik Egebjerg',
+  },
+
+  // ── Let's Connect modal ─────────────────────────────────────
+  connect: {
+    heading: "Let's Connect",
+    body: 'I enjoy exchanging perspectives on leadership, digital transformation, AI adoption and organisational change. Whether you have a question, a comment on one of my articles, or simply want to connect professionally, feel free to reach out.',
+    email: 'Send an email',
+    linkedin: 'Connect on LinkedIn',
+    disclaimer: 'This is a personal website. Enquiries are handled independently of my current employer.',
+    close: 'Close',
   },
 } as const
 
