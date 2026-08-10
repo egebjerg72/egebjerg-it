@@ -43,12 +43,12 @@ export default function Page() {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex">
+          <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex items-center">
             <a href="#about"   className="transition hover:text-blue-400">{t.nav.about}</a>
             <a href="#board"   className="transition hover:text-blue-400">{t.nav.board}</a>
             <a href="#blog"    className="transition hover:text-blue-400">{t.nav.blog}</a>
             <a href="#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</a>
-            <button onClick={() => setConnectOpen(true)} className="transition hover:text-blue-400">{t.nav.contact}</button>
+            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-blue-400">{t.nav.contact}</button>
             <LanguageSwitcher />
           </nav>
 

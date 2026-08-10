@@ -39,7 +39,7 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
             <Link href="/#board"   className="transition hover:text-blue-400">{t.nav.board}</Link>
             <Link href="/#blog"    className="transition hover:text-blue-400">{t.nav.blog}</Link>
             <Link href="/#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</Link>
-            <button onClick={() => setConnectOpen(true)} className="transition hover:text-blue-400">{t.nav.contact}</button>
+            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-blue-400">{t.nav.contact}</button>
             <LanguageSwitcher />
           </nav>
 
