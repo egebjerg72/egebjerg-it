@@ -36,15 +36,15 @@ const da: Translations = {
 
     p1: 'Teknologi skaber først værdi, når mennesker, processer og data fungerer sammen. Det er en erfaring, jeg har taget med mig gennem mere end 25 år i IT, hvor jeg både har arbejdet tæt på teknologien og tæt på de mennesker og forretninger, der er afhængige af den.',
 
-    p2: 'Jeg er uddannet cand.it. og har gennem min karriere arbejdet med ERP, CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Jeg har sjældent haft store budgetter eller store specialistteams til rådighed, og derfor har jeg lært at skabe resultater gennem struktur, prioritering og pragmatiske løsninger. Som CIO arbejder jeg stadig ud fra de samme principper.',
+    p2: 'Min teoretiske baggrund er en bachelor i økonomi suppleret med en Master i IT. Jeg har gennem min karriere arbejdet med ERP, CRM, e-handel, systemadministration, sikkerhed og compliance i internationalt orienterede virksomheder. Jeg har sjældent haft store budgetter eller store specialistteams til rådighed, men har sikret resultater gennem struktur, prioritering og ved at være tæt på løsningerne. Som CIO arbejder jeg stadig ud fra de samme principper.',
 
     eqHeading: 'Ledelse og mennesker',
 
-    eqP1: 'Teknologi alene flytter sjældent en organisation. Derfor lægger jeg stor vægt på at forstå mennesker, motivation og de barrierer, der opstår, når arbejdsformer ændrer sig.',
+    eqP1: 'På ledelsessiden arbejder jeg bevidst med emotionel intelligens, og det begynder med selvindsigt. At kende sine egne styrker, blinde vinkler og reaktionsmønstre er fundamentet for god ledelse. Derefter handler det om at forstå de mennesker, man arbejder sammen med: deres motivation, bekymringer og måder at arbejde på.',
 
-    eqP2: 'God ledelse handler for mig om at skabe tillid, lytte, udfordre konstruktivt og hjælpe mennesker med at lykkes i praksis.',
+    eqP2: 'Man skal kunne læse situationen, skabe ægte tillid og forstå, hvad den enkelte har brug for, for at kunne lykkes.',
 
-    closing: 'Store projekter mislykkes sjældent på grund af teknologien alene. De lykkes eller mislykkes i samspillet mellem mennesker, processer og ledelse.',
+    closing: 'Transformationer fejler sjældent på grund af teknologien. De fejler, fordi mennesker ikke er med. Og man kan ikke skabe følgeskab, hvis man hverken kender sig selv eller de mennesker, man ønsker skal være en del af forandringen.',
   },
 
   board: {
@@ -100,9 +100,9 @@ const da: Translations = {
 
   gallery: {
     label: 'Uden for kontoret',
-    heading: 'Steder der giver ro til at tænke',
-    altNorthCape: 'Nordkap, Norge',
-    altReinebringen: 'Reinebringen, Lofoten',
+    heading: 'Frisk luft til hjernen',
+    altNorthCape: 'Reinebringen, Lofoten',
+    altReinebringen: 'Nordkap',
     altPulpitRock: 'Preikestolen',
     altTrollsTongue: 'Trolltunga',
     altCoffee: 'Stille morgenkaffe',

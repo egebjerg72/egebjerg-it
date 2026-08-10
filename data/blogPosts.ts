@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Den kløft — mellem ledere der observerer AI og ledere der engagerer sig i det — vokser hurtigt. Her er mit perspektiv på, hvorfor det betyder noget, og hvad jeg gjorde ved det.</p>
 
-<h2>Støjen er reel. Det er muligheden også.</h2>
+<h2>Støjen er reel. Muligheden er det også.</h2>
 
 <p>Der er med rette et intenst fokus på AI i øjeblikket. Konferencer, whitepapers og LinkedIn-opslag fra folk, der <em>"transformerer virksomheder med agentbaseret AI"</em>, bygger AI ind i alle processer, man kan forestille sig, og udfører dyb analyse på sekunder. Og det vil helt sikkert ændre den måde, vi arbejder på, og fortsætte med at udvikle sig i de kommende år.</p>
 
@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>I min erfaring som leder skal du prøve det selv. Du skal vide, hvad der virker. Du skal forstå, hvordan du formulerer prompts til din AI-assistent, der faktisk leverer resultater. Du skal forstå, at AI-agenter har instruktioner, færdigheder og viden — og lære at udfordre og forbedre dem. Forstå, hvorfor agenter handler, som de gør, og være i stand til at komme med idéer til, hvordan man bruger dem, forbedrer dem, og hvilke nye agenter man bør introducere. Det er det, der ændrer det daglige arbejde og leverer nye muligheder, hastighed og automatiseringer.</p>
 
-<p>Min hands-on erfaring startede med ChatGPT i min fritid, men rykkede hurtigt over til Copilot i mit daglige arbejde. De første prompts var imponerende, men mange rutiner glød tilbage til, som jeg plejede at arbejde. Indtil jeg tvang mig selv til at prøve igen, forbedre mine prompts og holde op med at acceptere fejl som resultatet. Efter et stykke tid tippede det fra at være noget, jeg <em>burde</em> lære, til noget der faktisk gav værdi i mit daglige arbejde.</p>
+<p>Min hands-on erfaring startede med ChatGPT i min fritid, men rykkede hurtigt over til Copilot i mit daglige arbejde. De første prompts var imponerende, men mange rutiner gled tilbage til, som jeg plejede at arbejde. Indtil jeg tvang mig selv til at prøve igen, forbedre mine prompts og holde op med at acceptere fejl som resultatet. Efter et stykke tid tippede det fra at være noget, jeg <em>burde</em> lære, til noget der faktisk gav værdi i mit daglige arbejde.</p>
 
 <p>Det punkt var en gamechanger for mig — det gjorde det muligt at udføre mere arbejde og tilføje mere kvalitet og nye dimensioner til det. AI-værktøjer gik fra at være baggrundsstøj til at blive en reel konkurrencemæssig fordel.</p>
 
