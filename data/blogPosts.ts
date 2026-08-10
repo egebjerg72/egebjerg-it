@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Når du prompter, så fortæl AI-assistenten dit <strong>mål</strong>, <strong>konteksten</strong>, de <strong>kilder</strong> der skal bruges, og de <strong>forventninger</strong> du har til resultatet. Det bringer dig langt.</p>
 
-<p>Det er også tydeligt, at dine egne faglige kompetencer påvirker kvaliteten af resultatet. Jeg kunne være rimeligt tilfreds med den første version af egebjerg.it. Men når min marketingkollega ser på frontend-layoutet, når en tekstforfatter gennemgår teksterne, eller når en dygtig udvikler gennemgår koden, vil det blive udfordret på måder, jeg ikke selv er i stand til. Og de ville vide, hvordan de skulle guide AI-assistenten langt mere præcist — og gøre resultatet markant bedre på deres respektive områder.</p>
+<p>Det er også tydeligt, at dine egne faglige kompetencer påvirker kvaliteten af resultatet. Jeg kunne være rimeligt tilfreds med den første version af egebjerg.it. Men når min marketingkollega ser på frontend-layoutet, når en tekstforfatter gennemgår teksterne, eller når en dygtig udvikler gennemgår koden, vil det blive udfordret på måder, jeg ikke selv er i stand til. Og de ville vide, hvordan de skulle guide AI-assistenten langt mere præcist, og gøre resultatet markant bedre på deres respektive områder.</p>
 
 <p>Med denne forståelse er AI bag ekstremt kraftfulde værktøjer. Og jeg vil fortsætte med at udfordre og udvikle løsningen på tværs af forskellige områder.</p>
 
