@@ -14,6 +14,33 @@ import reinebringenImage from '../public/gallery/reinebringen.jpg'
 import { useLanguage } from '../lib/i18n/context'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 
+function LinkedInIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
+function MailIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  )
+}
+
+function ArrowUpIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  )
+}
+
 export default function Page() {
   const { t, language } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -49,6 +76,15 @@ export default function Page() {
             <a href="#blog"    className="transition hover:text-blue-400">{t.nav.blog}</a>
             <a href="#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</a>
             <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-blue-400">{t.nav.contact}</button>
+            <a
+              href="https://www.linkedin.com/in/egebjerg72/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t.nav.linkedin}
+              className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800 p-2 text-slate-300 transition hover:border-blue-500 hover:text-blue-400"
+            >
+              <LinkedInIcon />
+            </a>
             <LanguageSwitcher />
           </nav>
 
@@ -108,6 +144,15 @@ export default function Page() {
               </div>
 
               <div className="mt-auto flex flex-wrap gap-4">
+                <a
+                  href="https://www.linkedin.com/in/egebjerg72/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-[#0a66c2] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-[#0b5cad]"
+                >
+                  <LinkedInIcon />
+                  {t.hero.ctaLinkedIn}
+                </a>
                 <a
                   href="#board"
                   className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500"
@@ -429,22 +474,26 @@ export default function Page() {
           <div className="grid gap-3 text-sm text-slate-400">
             <button
               onClick={() => setConnectOpen(true)}
-              className="text-left transition hover:text-blue-400"
+              className="inline-flex items-center gap-2 text-left transition hover:text-blue-400"
             >
+              <MailIcon />
               {t.nav.contact}
             </button>
             <a
               href="https://www.linkedin.com/in/egebjerg72/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition hover:text-blue-400"
+              className="inline-flex items-center gap-2 transition hover:text-blue-400"
             >
-              LinkedIn
+              <LinkedInIcon />
+              {t.footer.linkedin}
             </a>
-            <a href="mailto:nh@egebjerg.it" className="transition hover:text-blue-400">
-              nh@egebjerg.it
+            <a href="mailto:nh@egebjerg.it" className="inline-flex items-center gap-2 transition hover:text-blue-400">
+              <MailIcon />
+              {t.footer.email}
             </a>
-            <a href="#top" className="transition hover:text-blue-400">
+            <a href="#top" className="inline-flex items-center gap-2 transition hover:text-blue-400">
+              <ArrowUpIcon />
               {t.footer.backToTop}
             </a>
           </div>
@@ -491,20 +540,20 @@ export default function Page() {
             {/* Buttons */}
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="mailto:nh@egebjerg.it"
-                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                {t.connect.email}
-              </a>
-              <a
                 href="https://www.linkedin.com/in/egebjerg72/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-[#0a66c2] px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-[#0b5cad] focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400"
+              >
+                <LinkedInIcon />
+                {t.connect.linkedin}
+              </a>
+              <a
+                href="mailto:nh@egebjerg.it"
                 className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-slate-600 bg-slate-800 px-5 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-blue-500 hover:text-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                {t.connect.linkedin}
+                <MailIcon />
+                {t.connect.email}
               </a>
             </div>
 

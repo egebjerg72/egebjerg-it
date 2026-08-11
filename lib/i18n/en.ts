@@ -1,10 +1,10 @@
 export type Translations = {
   nav: {
-    tagline: string; about: string; board: string; blog: string; gallery: string; contact: string
+    tagline: string; about: string; board: string; blog: string; gallery: string; contact: string; linkedin: string
   }
   hero: {
     badge: string; name: string; p1: string; p2: string; p3: string
-    ctaBoard: string; ctaAbout: string
+    ctaBoard: string; ctaAbout: string; ctaLinkedIn: string
     profileCardTitle: string; profileCardSub: string; profileBadge: string
     profileLines: readonly string[]
   }
@@ -28,7 +28,7 @@ export type Translations = {
     altPulpitRock: string; altTrollsTongue: string; altCoffee: string
   }
   perspective: { label: string; heading: string; body: string; cta: string }
-  footer: { role: string; backToTop: string }
+  footer: { role: string; backToTop: string; linkedin: string; email: string }
   blogPost: {
     label: string; allPosts: string; backToAll: string
     followLinkedIn: string; copyright: string
@@ -48,6 +48,7 @@ const en: Translations = {
     blog: 'Blog',
     gallery: 'Gallery',
     contact: 'Contact',
+    linkedin: 'LinkedIn',
   },
 
   // ── Hero ────────────────────────────────────────────────────
@@ -59,6 +60,7 @@ const en: Translations = {
     p3: 'Now I am focused on embedding AI into real business processes in ways that are governed, measurable, and changes how the organisation works and decides.',
     ctaBoard: 'What I bring to the board',
     ctaAbout: 'About me',
+    ctaLinkedIn: 'Connect on LinkedIn',
     profileCardTitle: 'Executive Profile',
     profileCardSub: 'Positioning highlights',
     profileBadge: 'Execution-first',
@@ -157,6 +159,8 @@ const en: Translations = {
   footer: {
     role: 'CIO · egebjerg.it',
     backToTop: 'Back to top',
+    linkedin: 'LinkedIn',
+    email: 'Email',
   },
 
   // ── Blog post detail ────────────────────────────────────────
