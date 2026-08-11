@@ -8,6 +8,7 @@ const da: Translations = {
     blog: 'Blog',
     gallery: 'Galleri',
     contact: 'Kontakt',
+    linkedin: 'LinkedIn',
   },
 
   hero: {
@@ -18,6 +19,7 @@ const da: Translations = {
     p3: 'I dag arbejder jeg blandt andet med, hvordan AI kan bruges ansvarligt og pragmatisk til at løse virkelige forretningsmæssige udfordringer og skabe målbar værdi.',
     ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
     ctaAbout: 'Om mig',
+    ctaLinkedIn: 'Connect på LinkedIn',
     profileCardTitle: 'Lederprofil',
     profileCardSub: 'Fokuspunkter',
     profileBadge: 'Praktisk erfaring',
@@ -110,6 +112,8 @@ const da: Translations = {
   footer: {
     role: 'CIO · egebjerg.it',
     backToTop: 'Tilbage til toppen',
+    linkedin: 'LinkedIn',
+    email: 'E-mail',
   },
 
   blogPost: {
