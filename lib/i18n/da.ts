@@ -12,7 +12,7 @@ const da: Translations = {
   },
 
   hero: {
-    badge: '25 år i IT',
+    badge: 'Digital transformation',
     name: 'Niels Henrik Egebjerg',
     p1: 'CIO med begge ben på jorden og en baggrund, der spænder fra drift og sikkerhed til ERP, CRM, e-handel og ledelse.',
     p2: 'Jeg omsætter teknologi til konkrete resultater. Gennem årene har jeg ledet større IT-forandringer, implementeret nye platforme og skabt bedre grundlag for beslutninger gennem data, processer og struktur.',
@@ -24,9 +24,9 @@ const da: Translations = {
     profileCardSub: 'Fokuspunkter',
     profileBadge: 'Praktisk erfaring',
     profileLines: [
-      'Omsætter strategi til handling',
-      'Teknologi med fokus på forretningen',
-      'Skaber forandringer, der holder',
+      'Strategisk ledelse med mennesker i centrum',
+      'Implementerer robuste platforme og skalerbare processer',
+      'Omsætter AI til konkret forretningsværdi',
     ],
   },
 

@@ -53,7 +53,7 @@ const en: Translations = {
 
   // ── Hero ────────────────────────────────────────────────────
   hero: {
-    badge: 'From coding to leading transformation',
+    badge: 'Digital transformation',
     name: 'Niels Henrik Egebjerg',
     p1: 'CIO close to technology, grounded in delivery, and focused on outcomes that matter to the business.',
     p2: 'I have led transformation from strategy through execution, including organisational change, governance, and adoption across the enterprise, implementing modern cloud technology and processes ensuring a strong data foundation.',
@@ -66,8 +66,8 @@ const en: Translations = {
     profileBadge: 'Execution-first',
     profileLines: [
       'Enterprise leadership with human depth',
-      'Applies AI in real operations',
       'Builds sustainable platforms and processes',
+      'Applies AI in real operations',
     ],
   },
 
