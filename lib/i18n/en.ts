@@ -143,7 +143,7 @@ const en: Translations = {
     professionalLabel: 'Professional life',
     professionalHeading: 'In the office',
     altDymakHq: 'Dymak HQ',
-    altOfficePortrait: 'Niels Henrik Egebjerg at the office',
+    altOfficePortrait: 'At the office',
     label: 'Outside the office',
     heading: 'The trails that reset the thinking',
     altNorthCape: 'Reinebringen, Lofoten Islands',

@@ -93,10 +93,10 @@ const da: Translations = {
   },
 
   gallery: {
-    professionalLabel: 'Professionelt liv',
+    professionalLabel: 'Professionelt',
     professionalHeading: 'På kontoret',
     altDymakHq: 'Dymak HQ',
-    altOfficePortrait: 'Niels Henrik Egebjerg på kontoret',
+    altOfficePortrait: 'På kontoret',
     label: 'Uden for kontoret',
     heading: 'Frisk luft til hjernen',
     altNorthCape: 'Reinebringen, Lofoten',
