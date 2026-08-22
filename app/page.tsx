@@ -6,7 +6,9 @@ import Link from 'next/link'
 import { blogPosts } from '../data/blogPosts'
 import profileImage from '../public/profile.jpg'
 import aboutImage from '../public/about.jpg'
+import dymakHqImage from '../public/gallery/dymak-hq.jpg'
 import northCapeImage from '../public/gallery/north-cape.jpg'
+import officePortraitImage from '../public/gallery/office-portrait.jpg'
 import hiking1Image from '../public/gallery/hiking-1.jpg'
 import hiking2Image from '../public/gallery/hiking-2.jpg'
 import hiking3Image from '../public/gallery/hiking-3.jpg'
@@ -49,6 +51,11 @@ export default function Page() {
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
   const boardContributions = t.board.items
+
+  const professionalImages = [
+    { image: dymakHqImage, alt: t.gallery.altDymakHq },
+    { image: officePortraitImage, alt: t.gallery.altOfficePortrait },
+  ]
 
   const galleryImages = [
     { image: northCapeImage, alt: t.gallery.altNorthCape },
@@ -389,6 +396,41 @@ export default function Page() {
         {/* GALLERY */}
         <section id="gallery" className="bg-slate-800 py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+            <div className="mb-16">
+              <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+                {t.gallery.professionalLabel}
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                {t.gallery.professionalHeading}
+              </h2>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {professionalImages
+                  .filter((img) => !failedImages.has(img.image.src))
+                  .map((img) => (
+                    <button
+                      key={img.image.src}
+                      onClick={() => setLightbox(img)}
+                      className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-slate-700 bg-slate-700 shadow-sm transition hover:border-slate-500 hover:shadow-xl hover:shadow-black/40 focus:outline-none"
+                    >
+                      <Image
+                        src={img.image}
+                        alt={img.alt}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        placeholder="blur"
+                        className="object-cover transition duration-500 group-hover:scale-105"
+                        onError={() => setFailedImages((prev) => new Set([...prev, img.image.src]))}
+                      />
+                      <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
+                        <div className="p-5">
+                          <p className="text-sm font-medium text-white">{img.alt}</p>
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+              </div>
+            </div>
 
             <div className="mb-10">
               <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">

@@ -23,6 +23,8 @@ export type Translations = {
     followLinkedIn: string; minRead: string
   }
   gallery: {
+    professionalLabel: string; professionalHeading: string
+    altDymakHq: string; altOfficePortrait: string
     label: string; heading: string
     altNorthCape: string; altReinebringen: string
     altPulpitRock: string; altTrollsTongue: string; altCoffee: string
@@ -138,6 +140,10 @@ const en: Translations = {
 
   // ── Gallery ─────────────────────────────────────────────────
   gallery: {
+    professionalLabel: 'Professional life',
+    professionalHeading: 'In the office',
+    altDymakHq: 'Dymak HQ',
+    altOfficePortrait: 'Niels Henrik Egebjerg at the office',
     label: 'Outside the office',
     heading: 'The trails that reset the thinking',
     altNorthCape: 'Reinebringen, Lofoten Islands',
