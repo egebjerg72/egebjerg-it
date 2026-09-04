@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { blogPosts } from '../data/blogPosts'
+import { blogPosts, hasEnglishVersion } from '../data/blogPosts'
 import { absoluteUrl } from '../lib/site'
 
 export const dynamic = 'force-static'
@@ -18,12 +18,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: [absoluteUrl('/about.jpg')],
     },
-    ...blogPosts.map((post) => ({
-      url: absoluteUrl(`/blog/${post.slug}`),
-      lastModified: post.date,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-      images: [absoluteUrl('/images/blog-ai-leadership.jpg')],
-    })),
+    ...blogPosts.flatMap((post) => {
+      const danishEntry = {
+        url: absoluteUrl(`/da/blog/${post.slug}`),
+        lastModified: post.date,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+        images: [absoluteUrl('/images/blog-ai-leadership.jpg')],
+      }
+
+      if (!hasEnglishVersion(post)) {
+        return [danishEntry]
+      }
+
+      return [
+        {
+          url: absoluteUrl(`/blog/${post.slug}`),
+          lastModified: post.date,
+          changeFrequency: 'monthly' as const,
+          priority: 0.8,
+          images: [absoluteUrl('/images/blog-ai-leadership.jpg')],
+        },
+        danishEntry,
+      ]
+    }),
   ]
 }

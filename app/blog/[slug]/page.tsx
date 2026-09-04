@@ -1,11 +1,11 @@
-import { blogPosts } from '../../../data/blogPosts'
+import { blogPosts, hasEnglishVersion } from '../../../data/blogPosts'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import BlogPostView from './BlogPostView'
 import { absoluteUrl, siteConfig } from '../../../lib/site'
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }))
+  return blogPosts.filter(hasEnglishVersion).map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({
@@ -15,15 +15,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
-  if (!post) return {}
+  if (!post || !hasEnglishVersion(post)) return {}
 
   const canonicalPath = `/blog/${post.slug}`
+  const danishPath = `/da/blog/${post.slug}`
 
   return {
     title: post.title,
     description: post.excerpt,
     alternates: {
       canonical: canonicalPath,
+      languages: {
+        da: danishPath,
+        en: canonicalPath,
+      },
     },
     openGraph: {
       type: 'article',
@@ -52,7 +57,13 @@ export default async function BlogPostPage({
 }) {
   const { slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
-  if (!post) notFound()
+  if (!post || !hasEnglishVersion(post)) notFound()
 
-  return <BlogPostView post={post} />
+  return (
+    <BlogPostView
+      post={post}
+      displayLanguage="en"
+      languageLinks={{ en: `/blog/${post.slug}`, da: `/da/blog/${post.slug}` }}
+    />
+  )
 }
