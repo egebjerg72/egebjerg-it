@@ -1,20 +1,69 @@
 // src/data/blogPosts.ts
 
+export type BlogLanguage = 'en' | 'da'
+
 export interface BlogPost {
   slug: string
-  title: string
+  title?: string
   titleDa: string
-  excerpt: string
+  excerpt?: string
   excerptDa: string
   date: string
   author: string
-  readingTime: string
+  readingTime?: string
   readingTimeDa: string
-  content: string
+  content?: string
   contentDa: string
 }
 
+export function hasEnglishVersion(
+  post: BlogPost,
+): post is BlogPost & Required<Pick<BlogPost, 'title' | 'excerpt' | 'readingTime' | 'content'>> {
+  return Boolean(post.title && post.excerpt && post.readingTime && post.content)
+}
+
+export function getBlogPostsForLanguage(language: BlogLanguage) {
+  const posts = language === 'da' ? blogPosts : blogPosts.filter(hasEnglishVersion)
+  return [...posts].sort((a, b) => b.date.localeCompare(a.date))
+}
+
+export function getBlogPostHref(post: BlogPost, language: BlogLanguage) {
+  return language === 'da' ? `/da/blog/${post.slug}` : `/blog/${post.slug}`
+}
+
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'kandidat-til-repraesentantskabet-i-energi-fyn',
+    titleDa: 'Kandidat til repræsentantskabet i Energi Fyn',
+    excerptDa:
+      'Der er valg til repræsentantskabet i Energi Fyn, og jeg er kandidat. Her deler jeg min motivation og mit syn på Energi Fyns rolle.',
+    date: '2026-09-04',
+    author: 'Niels Henrik Egebjerg',
+    readingTimeDa: '2 min læsning',
+    contentDa: `
+<p class="blog-intro"><strong>Der er valg til repræsentantskabet i Energi Fyn, og jeg er kandidat.</strong></p>
+
+<p>Hvis du er bosat eller har sommerhus på Fyn, og har en elmåler fra Vores Elnet (Energi Fyns datterselskab), så er du en af de ca. 220.000 andelshavere, som ejer Energi Fyn, med mulighed for at stemme til repræsentantskabsvalget i perioden fra 12. oktober til 2. november 2026. Og jeg håber, du vil benytte muligheden for at gøre din stemme gældende.</p>
+
+<p>Her vil jeg dele, hvordan jeg ser Energi Fyns rolle og min motivation for at stille op til repræsentantskabsvalget.</p>
+
+<h2>Elforsyningen på Fyn</h2>
+
+<ul>
+  <li>
+    <strong>Energinet:</strong> Ansvaret for den overordnede forsyningssikkerhed i Danmark ligger hos Klima-, Energi- og Forsyningsministeriet, som via det statsejede selskab Energinet ejer og driver det landsdækkende højspændingsnet (transmissionsnettet).
+  </li>
+  <li>
+    <strong>Vores Elnet:</strong> Det netselskab, der ejer den lokale del af elnettet på størstedelen af Fyn. De sørger for, at strømmen kommer fra det overordnede transmissionsnet og helt frem til virksomheder, husstande, ladestandere og produktionsanlæg. Vores Elnet har et naturligt monopol, da det eksempelvis ikke giver mening at grave flere konkurrerende kabler ned ved siden af hinanden og ind i husene.
+  </li>
+  <li>
+    <strong>Energi Fyn Handel:</strong> Selskabet som i konkurrence med andre elselskaber (for eksempel Norlys, OK, EWII, Andel og Nettopower) sælger den strøm, som leveres via nettet til slutbrugeren.
+  </li>
+</ul>
+
+<p>Flere opdateringer på vej.</p>
+    `,
+  },
   {
     slug: 'you-dont-need-to-understand-everything-about-ai',
     title: 'You don\'t need to understand everything about AI',

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { blogPosts } from '../data/blogPosts'
+import { getBlogPostHref, getBlogPostsForLanguage } from '../data/blogPosts'
 import profileImage from '../public/profile.jpg'
 import aboutImage from '../public/about.jpg'
 import dymakHqImage from '../public/gallery/dymak-hq.jpg'
@@ -51,6 +51,7 @@ export default function Page() {
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
   const boardContributions = t.board.items
+  const visibleBlogPosts = getBlogPostsForLanguage(language)
 
   const professionalImages = [
     { image: dymakHqImage, alt: t.gallery.altDymakHq },
@@ -337,12 +338,12 @@ export default function Page() {
               </p>
             </div>
 
-            {blogPosts.length > 0 ? (
+            {visibleBlogPosts.length > 0 ? (
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {blogPosts.map((post) => (
+                {visibleBlogPosts.map((post) => (
                   <Link
                     key={post.slug}
-                    href={`/blog/${post.slug}`}
+                    href={getBlogPostHref(post, language)}
                     className="group flex flex-col rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-800/60 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
                   >
                     <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
@@ -357,10 +358,10 @@ export default function Page() {
                       <span>{language === 'da' ? post.readingTimeDa : post.readingTime}</span>
                     </div>
                     <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition group-hover:text-blue-400">
-                      {language === 'da' ? post.titleDa : post.title}
+                      {language === 'da' ? post.titleDa : (post.title ?? post.titleDa)}
                     </h3>
                     <p className="mb-6 flex-1 text-sm leading-7 text-slate-400">
-                      {language === 'da' ? post.excerptDa : post.excerpt}
+                      {language === 'da' ? post.excerptDa : (post.excerpt ?? post.excerptDa)}
                     </p>
                     <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
                       {t.blog.readPost}

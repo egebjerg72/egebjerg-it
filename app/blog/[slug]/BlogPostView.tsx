@@ -4,7 +4,9 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useLanguage } from '../../../lib/i18n/context'
 import LanguageSwitcher from '../../../components/LanguageSwitcher'
-import type { BlogPost } from '../../../data/blogPosts'
+import da from '../../../lib/i18n/da'
+import en from '../../../lib/i18n/en'
+import type { BlogLanguage, BlogPost } from '../../../data/blogPosts'
 
 function LinkedInIcon() {
   return (
@@ -33,14 +35,28 @@ function ArrowUpIcon() {
   )
 }
 
-export default function BlogPostView({ post }: { post: BlogPost }) {
-  const { t, language } = useLanguage()
+interface BlogPostViewProps {
+  post: BlogPost
+  displayLanguage?: BlogLanguage
+  languageLinks?: Partial<Record<BlogLanguage, string>>
+  backHref?: string
+}
+
+export default function BlogPostView({
+  post,
+  displayLanguage,
+  languageLinks,
+  backHref = '/#blog',
+}: BlogPostViewProps) {
+  const { language: preferredLanguage } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
   const [connectOpen, setConnectOpen] = useState(false)
 
-  const title = language === 'da' ? post.titleDa : post.title
-  const content = language === 'da' ? post.contentDa : post.content
-  const readingTime = language === 'da' ? post.readingTimeDa : post.readingTime
+  const language = displayLanguage ?? preferredLanguage
+  const t = language === 'da' ? da : en
+  const title = language === 'da' ? post.titleDa : (post.title ?? post.titleDa)
+  const content = language === 'da' ? post.contentDa : (post.content ?? post.contentDa)
+  const readingTime = language === 'da' ? post.readingTimeDa : (post.readingTime ?? post.readingTimeDa)
 
   const formattedDate = new Date(post.date).toLocaleDateString(
     language === 'da' ? 'da-DK' : 'en-GB',
@@ -76,7 +92,7 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
             >
               <LinkedInIcon />
             </a>
-            <LanguageSwitcher />
+            <LanguageSwitcher currentLanguage={language} hrefs={languageLinks} />
           </nav>
 
           {/* Mobile hamburger */}
@@ -100,7 +116,7 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
               <Link href="/#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</Link>
               <Link href="/#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</Link>
               <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-blue-400">{t.nav.contact}</button>
-              <div className="pt-1"><LanguageSwitcher /></div>
+              <div className="pt-1"><LanguageSwitcher currentLanguage={language} hrefs={languageLinks} /></div>
             </nav>
           </div>
         )}
@@ -140,7 +156,7 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
         {/* Footer nav */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
-            href="/#blog"
+            href={backHref}
             className="text-sm font-semibold text-blue-400 transition hover:text-blue-300"
           >
             {t.blogPost.backToAll}
