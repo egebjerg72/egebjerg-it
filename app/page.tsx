@@ -586,7 +586,7 @@ export default function Page() {
                 href="https://www.linkedin.com/in/egebjerg72/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-[#0a66c2] px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-[#0b5cad] focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-emerald-700 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-500"
               >
                 <LinkedInIcon />
                 {t.connect.linkedin}
