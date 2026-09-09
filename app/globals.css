@@ -35,7 +35,7 @@ body {
 
 /* Closing italic signature */
 .blog-content p.blog-closing {
-  @apply mt-10 text-slate-600 italic border-l-2 border-emerald-600 pl-4;
+  @apply mt-10 text-slate-600 italic border-l-2 border-green-700 pl-4;
 }
 
 .blog-content h2 {
@@ -65,13 +65,13 @@ body {
 
 .blog-content ul li::before {
   content: '→';
-  @apply absolute left-0 text-emerald-600;
+  @apply absolute left-0 text-green-700;
 }
 
 /* ─── Blog Hero Image ─────────────────────────────────────── */
 
 .blog-content figure.blog-hero-image {
-  @apply my-10 overflow-hidden rounded-xl border border-emerald-100 shadow-lg shadow-emerald-100/50;
+  @apply my-10 overflow-hidden rounded-xl border border-green-100 shadow-lg shadow-green-100/50;
 }
 
 .blog-content figure.blog-hero-image img {

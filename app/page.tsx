@@ -70,7 +70,7 @@ export default function Page() {
     <div id="top" className="min-h-screen bg-stone-50 text-slate-800">
 
       {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-emerald-100 bg-white/85 shadow-sm shadow-emerald-100/60 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-green-100 bg-white/85 shadow-sm shadow-green-100/60 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <div>
             <div className="text-lg font-semibold tracking-tight text-slate-900">egebjerg.it</div>
@@ -79,17 +79,17 @@ export default function Page() {
 
           {/* Desktop nav */}
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex items-center">
-            <a href="#about"   className="transition hover:text-emerald-700">{t.nav.about}</a>
-            <a href="#board"   className="transition hover:text-emerald-700">{t.nav.board}</a>
-            <a href="#blog"    className="transition hover:text-emerald-700">{t.nav.blog}</a>
-            <a href="#gallery" className="transition hover:text-emerald-700">{t.nav.gallery}</a>
-            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-emerald-700">{t.nav.contact}</button>
+            <a href="#about"   className="transition hover:text-green-800">{t.nav.about}</a>
+            <a href="#board"   className="transition hover:text-green-800">{t.nav.board}</a>
+            <a href="#blog"    className="transition hover:text-green-800">{t.nav.blog}</a>
+            <a href="#gallery" className="transition hover:text-green-800">{t.nav.gallery}</a>
+            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-green-800">{t.nav.contact}</button>
             <a
               href="https://www.linkedin.com/in/egebjerg72/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t.nav.linkedin}
-              className="inline-flex items-center justify-center rounded-full border border-emerald-200 bg-white p-2 text-emerald-700 transition hover:border-emerald-400 hover:bg-emerald-50"
+              className="inline-flex items-center justify-center rounded-full border border-green-200 bg-white p-2 text-green-800 transition hover:border-green-400 hover:bg-green-50"
             >
               <LinkedInIcon />
             </a>
@@ -110,13 +110,13 @@ export default function Page() {
 
           {/* Mobile menu panel */}
         {menuOpen && (
-          <div className="border-t border-emerald-100 bg-white/95 px-6 py-4 md:hidden">
+          <div className="border-t border-green-100 bg-white/95 px-6 py-4 md:hidden">
             <nav className="flex flex-col gap-4 text-sm font-medium text-slate-700">
-              <a href="#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.about}</a>
-              <a href="#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.board}</a>
-              <a href="#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.blog}</a>
-              <a href="#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.gallery}</a>
-              <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-emerald-700">{t.nav.contact}</button>
+              <a href="#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-green-800">{t.nav.about}</a>
+              <a href="#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-green-800">{t.nav.board}</a>
+              <a href="#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-green-800">{t.nav.blog}</a>
+              <a href="#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-green-800">{t.nav.gallery}</a>
+              <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-green-800">{t.nav.contact}</button>
               <div className="pt-1"><LanguageSwitcher /></div>
             </nav>
           </div>
@@ -128,16 +128,16 @@ export default function Page() {
         {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-to-b from-[#f7fbf7] via-white to-[#eef6ef]">
           <div className="absolute inset-0 opacity-40">
-            <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-emerald-200 blur-3xl" />
-            <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-teal-100 blur-3xl" />
+            <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-green-200 blur-3xl" />
+            <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-lime-100 blur-3xl" />
           </div>
 
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:px-10 lg:py-28">
 
             {/* LEFT COLUMN */}
             <div className="flex flex-col">
-              <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm text-emerald-800 shadow-sm shadow-emerald-100/70">
-                <span className="h-2 w-2 rounded-full bg-emerald-600" />
+              <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-green-200 bg-white/80 px-4 py-2 text-sm text-green-800 shadow-sm shadow-green-100/70">
+                <span className="h-2 w-2 rounded-full bg-green-700" />
                 {t.hero.badge}
               </div>
 
@@ -156,20 +156,20 @@ export default function Page() {
                   href="https://www.linkedin.com/in/egebjerg72/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-600"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-green-800 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-green-200 transition hover:bg-green-700"
                 >
                   <LinkedInIcon />
                   {t.hero.ctaLinkedIn}
                 </a>
                 <a
                   href="#board"
-                  className="rounded-2xl border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm shadow-emerald-100 transition hover:border-emerald-300 hover:bg-emerald-50"
+                  className="rounded-2xl border border-green-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm shadow-green-100 transition hover:border-green-300 hover:bg-green-50"
                 >
                   {t.hero.ctaBoard}
                 </a>
                 <a
                   href="#about"
-                  className="rounded-2xl border border-stone-200 bg-stone-100 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:bg-white hover:text-emerald-700"
+                  className="rounded-2xl border border-stone-200 bg-stone-100 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-green-300 hover:bg-white hover:text-green-800"
                 >
                   {t.hero.ctaAbout}
                 </a>
@@ -178,9 +178,9 @@ export default function Page() {
 
             {/* RIGHT COLUMN — Executive Profile card */}
             <div className="flex items-end">
-              <div className="w-full rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-xl shadow-emerald-100/80 backdrop-blur-xl">
+              <div className="w-full rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-xl shadow-green-100/80 backdrop-blur-xl">
                 <div className="mb-5 flex justify-center">
-                  <div className="relative h-36 w-36 overflow-hidden rounded-full ring-4 ring-emerald-100 shadow-lg shadow-emerald-100/80">
+                  <div className="relative h-36 w-36 overflow-hidden rounded-full ring-4 ring-green-100 shadow-lg shadow-green-100/80">
                     <Image
                       src={profileImage}
                       alt="Niels Henrik Egebjerg"
@@ -198,15 +198,15 @@ export default function Page() {
                     <div className="text-sm font-semibold text-slate-900">{t.hero.profileCardTitle}</div>
                     <div className="text-sm text-slate-500">{t.hero.profileCardSub}</div>
                   </div>
-                  <div className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
+                  <div className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-800">
                     {t.hero.profileBadge}
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   {t.hero.profileLines.map((line) => (
-                    <div key={line} className="flex items-start gap-3 rounded-2xl border border-emerald-100 bg-[#f6faf4] p-4">
-                      <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500" />
+                    <div key={line} className="flex items-start gap-3 rounded-2xl border border-green-100 bg-[#f5f8f1] p-4">
+                      <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-r from-green-700 to-lime-600" />
                       <p className="text-sm leading-6 text-slate-700">{line}</p>
                     </div>
                   ))}
@@ -224,7 +224,7 @@ export default function Page() {
     {/* LEFT — label, heading, experience headline, photo */}
     <div className="flex flex-col gap-8">
       <div>
-        <div className="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+        <div className="mb-4 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-green-800">
           {t.about.label}
         </div>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -233,7 +233,7 @@ export default function Page() {
       </div>
 
       {/* Portrait */}
-      <div className="group relative overflow-hidden rounded-[1.75rem] border border-stone-200 bg-white shadow-xl shadow-emerald-100/70">
+      <div className="group relative overflow-hidden rounded-[1.75rem] border border-stone-200 bg-white shadow-xl shadow-green-100/70">
         <div className="relative aspect-[3/4] w-full">
           <Image
             src={aboutImage}
@@ -246,7 +246,7 @@ export default function Page() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/25 via-transparent to-transparent" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-5 py-4">
-          <div className="h-2 w-2 rounded-full bg-emerald-500" />
+          <div className="h-2 w-2 rounded-full bg-green-700" />
           <span className="text-sm font-medium text-white">Niels Henrik Egebjerg · CIO</span>
         </div>
       </div>
@@ -284,7 +284,7 @@ export default function Page() {
 
             <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <div className="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                <div className="mb-4 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-green-800">
                   {t.board.label}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -297,9 +297,9 @@ export default function Page() {
               {boardContributions.map((item) => (
                 <div
                   key={item.title}
-                  className="group rounded-[1.75rem] border border-stone-200 bg-white p-7 shadow-sm shadow-emerald-100/60 transition hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-100/90"
+                  className="group rounded-[1.75rem] border border-stone-200 bg-white p-7 shadow-sm shadow-green-100/60 transition hover:-translate-y-1 hover:border-green-300 hover:shadow-xl hover:shadow-green-100/90"
                 >
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-500 text-xl text-white">
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-green-700 to-lime-600 text-xl text-white">
                     {item.icon}
                   </div>
                   <h3 className="mb-3 text-xl font-semibold text-slate-900">{item.title}</h3>
@@ -317,20 +317,20 @@ export default function Page() {
 
             <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <div className="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                <div className="mb-4 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-green-800">
                   {t.blog.label}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
                   {t.blog.heading}
                 </h2>
               </div>
-              <button onClick={() => setConnectOpen(true)} className="text-sm font-semibold text-emerald-700 transition hover:text-emerald-600">
+              <button onClick={() => setConnectOpen(true)} className="text-sm font-semibold text-green-800 transition hover:text-green-700">
                 {t.blog.connect}
               </button>
             </div>
 
             {/* Authenticity note */}
-            <div className="mb-12 flex items-start gap-3 rounded-2xl border border-emerald-100 bg-[#f7faf5] px-5 py-4">
+            <div className="mb-12 flex items-start gap-3 rounded-2xl border border-green-100 bg-[#f6f8f2] px-5 py-4">
               <span className="mt-0.5 text-base">✍️</span>
               <p className="text-sm leading-7 text-slate-600">
                 {t.blog.authenticityNote}{' '}
@@ -344,7 +344,7 @@ export default function Page() {
                   <Link
                     key={post.slug}
                     href={getBlogPostHref(post, language)}
-                    className="group flex flex-col rounded-[1.75rem] border border-stone-200 bg-white p-7 shadow-sm shadow-emerald-100/60 transition hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-100/90"
+                    className="group flex flex-col rounded-[1.75rem] border border-stone-200 bg-white p-7 shadow-sm shadow-green-100/60 transition hover:-translate-y-1 hover:border-green-300 hover:shadow-xl hover:shadow-green-100/90"
                   >
                     <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
                       <span>
@@ -357,21 +357,21 @@ export default function Page() {
                       <span>·</span>
                       <span>{language === 'da' ? post.readingTimeDa : post.readingTime}</span>
                     </div>
-                    <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-900 transition group-hover:text-emerald-700">
+                    <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-900 transition group-hover:text-green-800">
                       {language === 'da' ? post.titleDa : (post.title ?? post.titleDa)}
                     </h3>
                     <p className="mb-6 flex-1 text-sm leading-7 text-slate-600">
                       {language === 'da' ? post.excerptDa : (post.excerpt ?? post.excerptDa)}
                     </p>
-                    <div className="text-sm font-semibold text-emerald-700 transition group-hover:text-emerald-600">
+                    <div className="text-sm font-semibold text-green-800 transition group-hover:text-green-700">
                       {t.blog.readPost}
                     </div>
                   </Link>
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-emerald-200 bg-[#f7faf5] px-8 py-20 text-center">
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm shadow-emerald-100">
+              <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-green-200 bg-[#f6f8f2] px-8 py-20 text-center">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm shadow-green-100">
                   📝
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-slate-900">
@@ -384,7 +384,7 @@ export default function Page() {
                   href="https://www.linkedin.com/in/egebjerg72/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 rounded-2xl border border-emerald-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-emerald-300 hover:text-emerald-700"
+                  className="mt-6 rounded-2xl border border-green-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-green-300 hover:text-green-800"
                 >
                   {t.blog.followLinkedIn}
                 </a>
@@ -395,11 +395,11 @@ export default function Page() {
         </section>
 
         {/* GALLERY */}
-        <section id="gallery" className="bg-[#f3f7f2] py-20">
+        <section id="gallery" className="bg-[#f2f5ee] py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
             <div className="mb-16">
-              <div className="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+              <div className="mb-4 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-green-800">
                 {t.gallery.professionalLabel}
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -412,7 +412,7 @@ export default function Page() {
                     <button
                       key={img.image.src}
                       onClick={() => setLightbox(img)}
-                      className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-stone-200 bg-white shadow-sm shadow-emerald-100/60 transition hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-100/90 focus:outline-none"
+                      className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-stone-200 bg-white shadow-sm shadow-green-100/60 transition hover:border-green-300 hover:shadow-xl hover:shadow-green-100/90 focus:outline-none"
                     >
                       <Image
                         src={img.image}
@@ -434,7 +434,7 @@ export default function Page() {
             </div>
 
             <div className="mb-10">
-              <div className="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+              <div className="mb-4 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-green-800">
                 {t.gallery.label}
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -449,7 +449,7 @@ export default function Page() {
                   <button
                     key={img.image.src}
                     onClick={() => setLightbox(img)}
-                    className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-stone-200 bg-white shadow-sm shadow-emerald-100/60 transition hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-100/90 focus:outline-none"
+                    className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-stone-200 bg-white shadow-sm shadow-green-100/60 transition hover:border-green-300 hover:shadow-xl hover:shadow-green-100/90 focus:outline-none"
                   >
                     <Image
                       src={img.image}
@@ -475,11 +475,11 @@ export default function Page() {
         {/* PERSPECTIVE BANNER */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="overflow-hidden rounded-[2rem] bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-300 p-[1px] shadow-xl shadow-emerald-100/80">
-              <div className="rounded-[2rem] bg-[#f7faf5] px-8 py-10 md:px-12 md:py-12">
+            <div className="overflow-hidden rounded-[2rem] bg-gradient-to-r from-green-700 via-green-600 to-lime-500 p-[1px] shadow-xl shadow-green-100/80">
+              <div className="rounded-[2rem] bg-[#f6f8f2] px-8 py-10 md:px-12 md:py-12">
                 <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
                   <div>
-                    <div className="mb-3 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                    <div className="mb-3 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-green-800">
                       {t.perspective.label}
                     </div>
                     <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -492,7 +492,7 @@ export default function Page() {
                   <div>
                     <button
                       onClick={() => setConnectOpen(true)}
-                      className="inline-flex rounded-2xl bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                      className="inline-flex rounded-2xl bg-green-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-700"
                     >
                       {t.perspective.cta}
                     </button>
@@ -506,7 +506,7 @@ export default function Page() {
       </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-emerald-100 bg-white">
+      <footer className="border-t border-green-100 bg-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[1fr_auto] lg:px-10">
           <div>
             <div className="text-lg font-semibold text-slate-900">Niels Henrik Egebjerg</div>
@@ -517,7 +517,7 @@ export default function Page() {
           <div className="grid gap-3 text-sm text-slate-500">
             <button
               onClick={() => setConnectOpen(true)}
-              className="inline-flex items-center gap-2 text-left transition hover:text-emerald-700"
+              className="inline-flex items-center gap-2 text-left transition hover:text-green-800"
             >
               <MailIcon />
               {t.nav.contact}
@@ -526,16 +526,16 @@ export default function Page() {
               href="https://www.linkedin.com/in/egebjerg72/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 transition hover:text-emerald-700"
+              className="inline-flex items-center gap-2 transition hover:text-green-800"
             >
               <LinkedInIcon />
               {t.footer.linkedin}
             </a>
-            <a href="mailto:nh@egebjerg.it" className="inline-flex items-center gap-2 transition hover:text-emerald-700">
+            <a href="mailto:nh@egebjerg.it" className="inline-flex items-center gap-2 transition hover:text-green-800">
               <MailIcon />
               {t.footer.email}
             </a>
-            <a href="#top" className="inline-flex items-center gap-2 transition hover:text-emerald-700">
+            <a href="#top" className="inline-flex items-center gap-2 transition hover:text-green-800">
               <ArrowUpIcon />
               {t.footer.backToTop}
             </a>
@@ -559,7 +559,7 @@ export default function Page() {
           />
 
           {/* Panel */}
-          <div className="relative z-10 w-full max-w-lg rounded-[2rem] border border-emerald-100 bg-white/95 p-8 shadow-2xl shadow-emerald-100/90 backdrop-blur-2xl md:p-10">
+          <div className="relative z-10 w-full max-w-lg rounded-[2rem] border border-green-100 bg-white/95 p-8 shadow-2xl shadow-green-100/90 backdrop-blur-2xl md:p-10">
 
             {/* Close button */}
             <button
@@ -586,14 +586,14 @@ export default function Page() {
                 href="https://www.linkedin.com/in/egebjerg72/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-emerald-700 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-500"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-green-800 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-green-200 transition hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600"
               >
                 <LinkedInIcon />
                 {t.connect.linkedin}
               </a>
               <a
                 href="mailto:nh@egebjerg.it"
-                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-3.5 text-sm font-semibold text-emerald-800 transition hover:border-emerald-300 hover:bg-emerald-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-500"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-green-200 bg-green-50 px-5 py-3.5 text-sm font-semibold text-green-800 transition hover:border-green-300 hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600"
               >
                 <MailIcon />
                 {t.connect.email}
