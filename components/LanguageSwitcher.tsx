@@ -21,7 +21,7 @@ export default function LanguageSwitcher({ currentLanguage, hrefs }: LanguageSwi
     }
 
     const className = `rounded-full p-1.5 transition ${
-      activeLanguage === lang ? 'bg-green-100 shadow-sm shadow-green-100' : 'opacity-55 hover:bg-green-50 hover:opacity-100'
+      activeLanguage === lang ? 'bg-[#eef2e6] shadow-sm shadow-stone-200/80' : 'opacity-55 hover:bg-[#f5f1e8] hover:opacity-100'
     }`
 
     if (hrefs?.[lang]) {
@@ -53,7 +53,7 @@ export default function LanguageSwitcher({ currentLanguage, hrefs }: LanguageSwi
   }
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-green-200 bg-white/90 p-1 shadow-sm shadow-green-100/80">
+    <div className="flex items-center gap-1 rounded-full border border-[#d7dfcc] bg-white/90 p-1 shadow-sm shadow-stone-200/70">
       {renderOption('da', 'Dansk', '/flags/dk.svg')}
       {renderOption('en', 'English', '/flags/gb.svg')}
     </div>
