@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8faf7;
+  --background: #f7f4ec;
   --foreground: #1f2937;
 }
 
@@ -35,7 +35,7 @@ body {
 
 /* Closing italic signature */
 .blog-content p.blog-closing {
-  @apply mt-10 text-slate-600 italic border-l-2 border-green-700 pl-4;
+  @apply mt-10 text-slate-600 italic border-l-2 border-[#4f6b3c] pl-4;
 }
 
 .blog-content h2 {
@@ -65,13 +65,13 @@ body {
 
 .blog-content ul li::before {
   content: '→';
-  @apply absolute left-0 text-green-700;
+  @apply absolute left-0 text-[#4f6b3c];
 }
 
 /* ─── Blog Hero Image ─────────────────────────────────────── */
 
 .blog-content figure.blog-hero-image {
-  @apply my-10 overflow-hidden rounded-xl border border-green-100 shadow-lg shadow-green-100/50;
+  @apply my-10 overflow-hidden rounded-xl border border-[#d7dfcc] shadow-lg shadow-stone-200/70;
 }
 
 .blog-content figure.blog-hero-image img {
