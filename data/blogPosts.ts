@@ -81,7 +81,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Afsluttende perspektiv</h2>
 
-<p>Jeg ønsker, at Energi Fyn også i fremtiden er blandt Danmarks mest moderne og veldrevne energiselskaber. Gennem investeringer i grøn omstilling, robust infrastruktur og ansvarlig anvendelse af ny teknologi kan vi styrke vores position som fynboernes foretrukne energipartner.</p>
+<p>Jeg ønsker, at Energi Fyn også i fremtiden er blandt Danmarks mest moderne og veldrevne energiselskaber. Gennem investeringer i grøn omstilling, robust infrastruktur og ansvarlig anvendelse af ny teknologi kan Energi Fyn styrke sin position som fynboernes foretrukne energiselskab.</p>
     `,
   },
   {

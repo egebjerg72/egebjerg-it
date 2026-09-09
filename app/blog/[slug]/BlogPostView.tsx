@@ -64,31 +64,31 @@ export default function BlogPostView({
   )
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100">
+    <div className="min-h-screen bg-stone-50 text-slate-800">
 
       {/* HEADER — same as homepage */}
-      <header className="sticky top-0 z-50 border-b border-slate-700 bg-slate-900/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-emerald-100 bg-white/85 shadow-sm shadow-emerald-100/60 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <Link href="/" className="group">
-            <div className="text-lg font-semibold tracking-tight text-white transition group-hover:text-blue-400">
+            <div className="text-lg font-semibold tracking-tight text-slate-900 transition group-hover:text-emerald-700">
               egebjerg.it
             </div>
-            <div className="text-xs text-slate-400">{t.nav.tagline}</div>
+            <div className="text-xs text-slate-500">{t.nav.tagline}</div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex items-center">
-            <Link href="/#about"   className="transition hover:text-blue-400">{t.nav.about}</Link>
-            <Link href="/#board"   className="transition hover:text-blue-400">{t.nav.board}</Link>
-            <Link href="/#blog"    className="transition hover:text-blue-400">{t.nav.blog}</Link>
-            <Link href="/#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</Link>
-            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-blue-400">{t.nav.contact}</button>
+          <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex items-center">
+            <Link href="/#about"   className="transition hover:text-emerald-700">{t.nav.about}</Link>
+            <Link href="/#board"   className="transition hover:text-emerald-700">{t.nav.board}</Link>
+            <Link href="/#blog"    className="transition hover:text-emerald-700">{t.nav.blog}</Link>
+            <Link href="/#gallery" className="transition hover:text-emerald-700">{t.nav.gallery}</Link>
+            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-emerald-700">{t.nav.contact}</button>
             <a
               href="https://www.linkedin.com/in/egebjerg72/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t.nav.linkedin}
-              className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800 p-2 text-slate-300 transition hover:border-blue-500 hover:text-blue-400"
+              className="inline-flex items-center justify-center rounded-full border border-emerald-200 bg-white p-2 text-emerald-700 transition hover:border-emerald-400 hover:bg-emerald-50"
             >
               <LinkedInIcon />
             </a>
@@ -101,21 +101,21 @@ export default function BlogPostView({
             aria-label="Toggle menu"
             className="flex flex-col justify-center gap-1.5 md:hidden"
           >
-            <span className={`block h-0.5 w-6 bg-slate-300 transition-all duration-300 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`block h-0.5 w-6 bg-slate-300 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 w-6 bg-slate-300 transition-all duration-300 ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-slate-700 transition-all duration-300 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-slate-700 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-slate-700 transition-all duration-300 ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
           </button>
         </div>
 
         {/* Mobile menu panel */}
         {menuOpen && (
-          <div className="border-t border-slate-700 bg-slate-800 px-6 py-4 md:hidden">
-            <nav className="flex flex-col gap-4 text-sm font-medium text-slate-200">
-              <Link href="/#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.about}</Link>
-              <Link href="/#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.board}</Link>
-              <Link href="/#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</Link>
-              <Link href="/#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</Link>
-              <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-blue-400">{t.nav.contact}</button>
+          <div className="border-t border-emerald-100 bg-white/95 px-6 py-4 md:hidden">
+            <nav className="flex flex-col gap-4 text-sm font-medium text-slate-700">
+              <Link href="/#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.about}</Link>
+              <Link href="/#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.board}</Link>
+              <Link href="/#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.blog}</Link>
+              <Link href="/#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-700">{t.nav.gallery}</Link>
+              <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-emerald-700">{t.nav.contact}</button>
               <div className="pt-1"><LanguageSwitcher currentLanguage={language} hrefs={languageLinks} /></div>
             </nav>
           </div>
@@ -125,25 +125,25 @@ export default function BlogPostView({
       <main className="mx-auto max-w-3xl px-6 py-16 lg:px-10">
 
         {/* Label */}
-        <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+        <div className="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
           {t.blogPost.label}
         </div>
 
         {/* Title */}
-        <h1 className="mb-5 text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl">
+        <h1 className="mb-5 text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl">
           {title}
         </h1>
 
         {/* Meta row */}
-        <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-slate-400">
+        <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-slate-500">
           <span>{post.author}</span>
-          <span className="text-slate-600">·</span>
+          <span className="text-slate-300">·</span>
           <span>{formattedDate}</span>
-          <span className="text-slate-600">·</span>
+          <span className="text-slate-300">·</span>
           <span>{readingTime}</span>
         </div>
 
-        <hr className="mb-10 border-slate-700" />
+        <hr className="mb-10 border-stone-200" />
 
         {/* Blog body */}
         <div
@@ -151,13 +151,13 @@ export default function BlogPostView({
           dangerouslySetInnerHTML={{ __html: content }}
         />
 
-        <hr className="mb-8 mt-12 border-slate-700" />
+        <hr className="mb-8 mt-12 border-stone-200" />
 
         {/* Footer nav */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
             href={backHref}
-            className="text-sm font-semibold text-blue-400 transition hover:text-blue-300"
+            className="text-sm font-semibold text-emerald-700 transition hover:text-emerald-600"
           >
             {t.blogPost.backToAll}
           </Link>
@@ -165,7 +165,7 @@ export default function BlogPostView({
             href="https://www.linkedin.com/in/egebjerg72/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold text-slate-400 transition hover:text-blue-400"
+            className="text-sm font-semibold text-slate-500 transition hover:text-emerald-700"
           >
             {t.blogPost.followLinkedIn}
           </a>
@@ -174,22 +174,22 @@ export default function BlogPostView({
       </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-700 bg-slate-900">
+      <footer className="border-t border-emerald-100 bg-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-8 lg:px-10">
-          <div className="text-sm text-slate-400">{t.blogPost.copyright}</div>
-          <div className="grid gap-3 text-sm text-slate-400">
+          <div className="text-sm text-slate-500">{t.blogPost.copyright}</div>
+          <div className="grid gap-3 text-sm text-slate-500">
             <a
               href="https://www.linkedin.com/in/egebjerg72/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 transition hover:text-blue-400"
+              className="inline-flex items-center gap-2 transition hover:text-emerald-700"
             >
               <LinkedInIcon />
               {t.footer.linkedin}
             </a>
             <a
               href="mailto:nh@egebjerg.it"
-              className="inline-flex items-center gap-2 transition hover:text-blue-400"
+              className="inline-flex items-center gap-2 transition hover:text-emerald-700"
             >
               <MailIcon />
               {t.footer.email}
@@ -208,21 +208,21 @@ export default function BlogPostView({
           onKeyDown={(e) => e.key === 'Escape' && setConnectOpen(false)}
         >
           <div
-            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-slate-900/35 backdrop-blur-sm"
             onClick={() => setConnectOpen(false)}
           />
-          <div className="relative z-10 w-full max-w-lg rounded-[2rem] border border-slate-700/60 bg-slate-900/95 p-8 shadow-2xl shadow-black/60 backdrop-blur-2xl md:p-10">
+          <div className="relative z-10 w-full max-w-lg rounded-[2rem] border border-emerald-100 bg-white/95 p-8 shadow-2xl shadow-emerald-100/90 backdrop-blur-2xl md:p-10">
             <button
               onClick={() => setConnectOpen(false)}
               aria-label={t.connect.close}
-              className="absolute right-5 top-5 rounded-full p-2 text-slate-400 transition hover:bg-slate-700 hover:text-white"
+              className="absolute right-5 top-5 rounded-full p-2 text-slate-500 transition hover:bg-stone-100 hover:text-slate-900"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
-            <h2 className="mb-4 text-2xl font-bold tracking-tight text-white md:text-3xl">
+            <h2 className="mb-4 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
               {t.connect.heading}
             </h2>
-            <p className="mb-8 leading-8 text-slate-300">
+            <p className="mb-8 leading-8 text-slate-600">
               {t.connect.body}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -230,14 +230,14 @@ export default function BlogPostView({
                 href="https://www.linkedin.com/in/egebjerg72/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-[#0a66c2] px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-[#0b5cad]"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-emerald-700 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-600"
               >
                 <LinkedInIcon />
                 {t.connect.linkedin}
               </a>
               <a
                 href="mailto:nh@egebjerg.it"
-                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-slate-600 bg-slate-800 px-5 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-blue-500 hover:text-blue-400"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-3.5 text-sm font-semibold text-emerald-800 transition hover:border-emerald-300 hover:bg-emerald-100"
               >
                 <MailIcon />
                 {t.connect.email}
