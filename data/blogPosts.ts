@@ -36,52 +36,132 @@ export const blogPosts: BlogPost[] = [
     slug: 'kandidat-til-repraesentantskabet-i-energi-fyn',
     titleDa: 'Kandidat til repræsentantskabet i Energi Fyn',
     excerptDa:
-      'Der er valg til repræsentantskabet i Energi Fyn, og jeg er kandidat. Her deler jeg min motivation, mit bidrag og mine synspunkter.',
+      'Jeg stiller op til Energi Fyns repræsentantskab og deler her min motivation og mine perspektiver på infrastruktur, grøn omstilling, teknologi og andelseje.',
     date: '2026-09-04',
     author: 'Niels Henrik Egebjerg',
-    readingTimeDa: '4 min læsning',
+    readingTimeDa: '8 min læsning',
     contentDa: `
-<p class="blog-intro"><strong>Der er valg til repræsentantskabet i Energi Fyn, og jeg er kandidat.</strong></p>
+<p class="blog-intro"><strong>Jeg stiller op til Energi Fyns repræsentantskab.</strong></p>
 
-<p>Hvis du er bosat eller har sommerhus på Fyn, og har en elmåler fra Vores Elnet (Energi Fyns datterselskab), så er du en af de ca 220.000 andelshavere som ejer Energi Fyn, med mulighed for at stemme til repræsentantskabsvalget i perioden fra 12. oktober til 2. november 2026. Og jeg håber du vil benytte muligheden for at gøre din stemme gældende.</p>
+<p>Der er valg til repræsentantskabet i Energi Fyn, og jeg er kandidat.</p>
 
-<p>Her vil jeg dele hvordan jeg ser EnergiFyns rolle og min motivation for at være stille op til repræsentantskabsvalget.</p>
+<p>Har du en elmåler fra Vores Elnet, er du andelshaver og dermed medejer af Energi Fyn, også selv om du eventuelt køber el hos et konkurrerende selskab. Mere end 220.000 fynske andelshavere ejer i fællesskab selskabet og vælger hvert fjerde år medlemmerne af repræsentantskabet.</p>
 
-<h2>Fakta om elforsyningen på Fyn</h2>
+<p>Energi Fyn er ikke bare det selskab, der sender en regning eller sørger for, at der er strøm i stikkontakten. Det er en betydelig fynsk virksomhed, en vigtig del af vores infrastruktur og et selskab, som vi som andelshavere ejer i fællesskab.</p>
+
+<p>Repræsentantskabet er Energi Fyns øverste myndighed og er blandt andet med til at sætte retningen for selskabets udvikling, godkende årsrapport og vedtægter og vælge medlemmer til bestyrelsen.</p>
+
+<p>Derfor ønsker jeg at engagere mig, fordi jeg gerne vil være med til at tage ansvar for den udvikling.</p>
+
+<h2>Energi Fyn er mere end el</h2>
+
+<p>Når man siger Energi Fyn, tænker de fleste nok først på elektricitet. Men koncernen beskæftiger sig i dag med meget mere end det. Energi Fyn ejer gennem Vores Elnet en stor del af den fynske elinfrastruktur og har samtidig andre aktiviteter inden for el, naturgas, fibernet, ladeløsninger, varmepumper og energirådgivning.</p>
+
+<p>De forskellige områder har meget forskellig karakter. På nogle områder forvalter Energi Fyn kritisk infrastruktur på vegne af os alle. På andre områder konkurrerer selskabet på almindelige markedsvilkår.</p>
+
+<p>Det er væsentligt at forstå, når vi skal diskutere, hvor Energi Fyn skal investere og udvikle sig i fremtiden.</p>
+
+<h2>Energi og infrastruktur</h2>
+
+<p>Energisystemet kendetegnes ved, at det selskab man køber sin strøm eller gas af, ikke nødvendigvis er det selskab, der ejer infrastrukturen.</p>
+
+<h3>El</h3>
+
+<p>På elområdet kan det lidt forenklet beskrives sådan:</p>
 
 <ul>
-  <li>
-    <strong>Energinet:</strong> Ansvaret for den overordnede forsyningssikkerhed i Danmark ligger hos Klima-, Energi- og Forsyningsministeriet, som via det statsejede selskab Energinet ejer og driver det landsdækkende højspændingsnet (transmissionsnettet).
-  </li>
-  <li>
-    <strong>Vores Elnet:</strong> Vores Elnet er det netselskab, der ejer den lokale del af elnettet på størstedelen af Fyn. De sørger for, at strømmen kommer fra det overordnede transmissionsnet og helt frem til virksomheder, husstande, ladestandere og produktionsanlæg. Vores Elnet har et naturligt monopol da det eksempelvis ikke giver mening at grave flere konkurrerende kabler ned ved siden af hinanden og ind i husene.
-  </li>
-  <li>
-    <strong>Energi Fyn Handel:</strong> Energi Fyn Handel er selskabet som i konkurrence med andre elselskaber (f.eks. Norlys, OK, EWII, Andel, m.fl.) sælger den strøm som leveres via nettet til slutbrugeren.
-  </li>
+  <li><strong>Energinet:</strong> Energinet ejer og driver det overordnede transmissionsnet, der transporterer elektricitet rundt i Danmark og forbinder Danmark med vores nabolande.</li>
+  <li><strong>Vores Elnet:</strong> Vores Elnet er en del af Energi Fyn-koncernen og ejer, driver og udvikler elnettet på størstedelen af Fyn. Det er blandt andet kabler, transformerstationer og den øvrige lokale infrastruktur, der skal bringe elektriciteten det sidste stykke frem til virksomheder og husstande.</li>
+  <li><strong>Energi Fyn Handel:</strong> Energi Fyn Handel sælger elektricitet til kunderne i konkurrence med en lang række andre elselskaber.</li>
 </ul>
 
-<h2>Mit bidrag</h2>
+<p>Vores Elnet er reguleret infrastruktur og et naturligt monopol. Det giver af gode grunde ikke mening at grave flere konkurrerende elkabler ned ved siden af hinanden til den enkelte virksomhed eller husstand. Elsalg er derimod en kommerciel aktivitet, hvor kunderne frit kan vælge leverandør.</p>
 
-<p>Repræsentantskabet driver ikke virksomheden, men er med til at sætte kursen. Derfor ønsker jeg at engagere mig og bidrage med mine erfaringer med ledelse, strategi og digital udvikling. Jeg tror samtidig på værdien af sund fornuft, ordentlighed og stærkt engagement, når der skal træffes beslutninger til gavn for Energi Fyns andelshavere og betydning for Fyn i almindelighed.</p>
+<h3>Naturgas</h3>
 
-<h2>Mine synspunkter</h2>
+<p>På naturgasområdet er Energi Fyn leverandør, men ejer ikke gasnettet. Energi Fyn sælger naturgas til private og virksomheder i konkurrence med andre leverandører. Distributionen gennem gasnettet varetages af det statsejede Evida, mens Energinet har ansvaret for det overordnede transmissionssystem.</p>
 
-<h3>Kritisk infrastruktur</h3>
+<p>Naturgas er derfor for Energi Fyn grundlæggende en kommerciel forretning og har en anden karakter end ejerskabet af det fynske elnet.</p>
 
-<p>Vores Elnet er en del af den kritiske infrastruktur, som vi har stærkt brug for hver dag, og som vi tager for givet fungerer. I en tid med geopolitiske spændinger og hybridkrig der omfatter cyberangreb og sabotage på kritisk infrastruktur, skal der fastholdes fokus på såvel cybersikkerhed som fysisk sikkerhed. Det skal tænkes ind i alle beslutninger der træffes. Der er allerede hårde lovmæssige krav på området, eksempelvis via EU-direktiver som NIS2, så det er et spørgsmål om at holde fokus og blive bedre da angreb hele tiden bliver mere og mere sofistikerede. Af samme årsag er det ligeledes vigtigt at fastholde kontrollen og ejerskabet af den kritiske infrastruktur.</p>
+<h3>Fiber</h3>
 
-<h3>Grøn omstilling</h3>
+<p>Energi Fyn har gennem mange år investeret i fibernet og tilbyder i dag bredbåndsløsninger til både private og virksomheder.</p>
 
-<p>Den grønne omstilling kræver et stærkt og fremtidssikret elnet. Flere elbiler, varmepumper og vedvarende energikilder stiller nye krav til infrastrukturen. Jeg ønsker, at Energi Fyn fortsat investerer ansvarligt i de løsninger, der gør Fyn klar til fremtidens energisystem, samtidig med at lokale grønne initiativer understøttes (som det gør i dag via Energi Fyns Udviklingsfond).</p>
+<p>Digital infrastruktur har stor betydning for både virksomheder og borgere. Og ligesom elnettet er det for mange også en del af den kritiske infrastruktur. Samtidig er fiber et område præget af konkurrence og hastig teknologisk udvikling.</p>
 
-<h3>Teknologi</h3>
+<p>Det gør det efter min mening vigtigt løbende at vurdere både nye investeringer og den værdi, vi får ud af de investeringer, der allerede er foretaget.</p>
 
-<p>Digitalisering, data og kunstig intelligens får stigende betydning i energisektoren. Energi Fyn skal følge med udviklingen og investerer i sikre digitale platforme, høj datasikkerhed og ansvarlig anvendelse af ny teknologi. Målet er bedre service, stærkere forsyningssikkerhed og mere effektiv drift til gavn for andelshaverne.</p>
+<h2>Hvorfor stiller jeg op?</h2>
 
-<h2>Afsluttende perspektiv</h2>
+<p>Repræsentantskabet skal ikke drive Energi Fyn i det daglige. Det er ledelsens opgave.</p>
 
-<p>Jeg ønsker, at Energi Fyn også i fremtiden er blandt Danmarks mest moderne og veldrevne energiselskaber. Gennem investeringer i grøn omstilling, robust infrastruktur og ansvarlig anvendelse af ny teknologi kan Energi Fyn styrke sin position som fynboernes foretrukne energiselskab.</p>
+<p>Men repræsentantskabet er selskabets øverste myndighed og har derfor en vigtig rolle i forhold til de overordnede rammer og den langsigtede retning.</p>
+
+<p>Her vil jeg gerne bidrage med mine erfaringer inden for ledelse, strategi, digitalisering, teknologi og cybersikkerhed. Jeg tror samtidig på værdien af sund fornuft, ordentlighed og engagement, når der skal træffes beslutninger.</p>
+
+<p>Energi Fyn skal udvikle sig og udnytte nye muligheder. Men det skal ske med blik for, at selskabet i sidste ende er ejet af os andelshavere og skal skabe langsigtet værdi for Fyn.</p>
+
+<h2>Mit fokus</h2>
+
+<h3 class="blog-focus-heading">1. Robust og sikker kritisk infrastruktur</h3>
+
+<p>Vi tænker sjældent over elnettet, når det fungerer. Vi tænder lyset, oplader bilen, starter produktionsanlægget eller computeren og forventer naturligt, at strømmen er der. Men elektricitet er fundamentet under en meget stor del af vores moderne samfund.</p>
+
+<p>I en tid med geopolitiske spændinger, cyberangreb og risiko for sabotage mod kritisk infrastruktur mener jeg derfor, at både cybersikkerhed, fysisk sikkerhed og beredskab skal have meget høj prioritet. Der stilles allerede omfattende lovgivningsmæssige krav på området, blandt andet gennem direktiver som NIS2. Men sikkerhed er ikke noget, man bliver færdig med.</p>
+
+<p>Trusselsbilledet ændrer sig hele tiden. Derfor skal sikkerhed tænkes ind i teknologi, investeringer, leverandørsamarbejder og beredskab fra starten. Jeg mener samtidig, at vi skal værne om den langsigtede kontrol med den kritiske infrastruktur, som andelshaverne gennem Energi Fyn ejer.</p>
+
+<h3 class="blog-focus-heading">2. Et elnet, der kan bære den grønne omstilling</h3>
+
+<p>Den grønne omstilling handler ikke kun om at opstille flere vindmøller og solceller.</p>
+
+<p>Flere elbiler, varmepumper og en generel elektrificering af samfundet betyder, at vi både kommer til at producere og forbruge elektricitet på nye måder.</p>
+
+<p>Det stiller store krav til elnettet.</p>
+
+<p>Fremtidens elnet skal kunne håndtere større belastning, mere decentral energiproduktion og et langt mere dynamisk energisystem.</p>
+
+<p>Det kræver investeringer.</p>
+
+<p>Men investeringerne skal foretages ansvarligt og med et langsigtet perspektiv. Vi skal udvikle infrastrukturen i takt med behovet og samtidig bruge teknologi, data og intelligent styring til at få mest muligt ud af den kapacitet, vi allerede har.</p>
+
+<p>Den grønne omstilling skal være ambitiøs, men den skal også være økonomisk ansvarlig.</p>
+
+<h3 class="blog-focus-heading">3. Digitalisering, data og kunstig intelligens</h3>
+
+<p>Teknologi kommer til at spille en stadig større rolle i energisektoren. Data, automatisering og kunstig intelligens giver nye muligheder for eksempelvis at udnytte infrastrukturen bedre, optimere driften og skabe bedre digitale løsninger for kunder og andelshavere.</p>
+
+<p>Men digitalisering må aldrig blive et mål i sig selv. Ny teknologi skal bruges, når den løser et reelt problem eller skaber en reel værdi. Investeringer i teknologi skal derfor kunne forsvares forretningsmæssigt, og brugen af data og kunstig intelligens skal ske ansvarligt og med respekt for sikkerhed og privatliv.</p>
+
+<h3 class="blog-focus-heading">4. Fiber som langsigtet digital infrastruktur</h3>
+
+<p>Adgangen til hurtige og stabile digitale forbindelser er blevet en grundlæggende del af infrastrukturen for både virksomheder og private. Energi Fyn har allerede investeret betydeligt i fiberinfrastruktur på Fyn.</p>
+
+<h3 class="blog-focus-heading">5. Naturgas og et energisystem i forandring</h3>
+
+<p>Naturgas har i mange år været en vigtig del af det danske energisystem.</p>
+
+<p>Men energisystemet er under forandring. Elektrificering, varmepumper, fjernvarme, biogas og andre teknologier vil ændre energimarkedet over de kommende år.</p>
+
+<p>Energi Fyn ejer ikke gasnettet, men konkurrerer som gasleverandør på det frie marked.</p>
+
+<p>Derfor mener jeg også, at vi løbende skal forholde os strategisk til, hvilken rolle naturgas og andre energiprodukter skal spille i Energi Fyns fremtidige forretning.</p>
+
+<p>Det handler ikke om at forsøge at forudsige energisystemet 20 år frem. Det handler om at sikre, at andelshavernes selskab investerer dér, hvor der både er et langsigtet behov og en sund forretning.</p>
+
+<h2>Derfor stiller jeg op</h2>
+
+<p>Jeg ønsker, at Energi Fyn også i fremtiden skal være et moderne, veldrevet og økonomisk ansvarligt energiselskab med stærke fynske rødder.</p>
+
+<ul>
+  <li>Et selskab, der investerer langsigtet i den nødvendige infrastruktur.</li>
+  <li>Et selskab, der tager sikkerhed alvorligt.</li>
+  <li>Et selskab, der bidrager aktivt til den grønne omstilling.</li>
+  <li>Et selskab, der udnytter mulighederne i ny teknologi uden at løbe efter enhver ny trend.</li>
+  <li>Et selskab, som er fynboernes foretrukne leverandør, fordi det giver os det bedste produkt.</li>
+</ul>
+
+<p class="blog-closing">Det vil jeg gerne være med til at arbejde for i Energi Fyns repræsentantskab.</p>
     `,
   },
   {

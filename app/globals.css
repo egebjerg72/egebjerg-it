@@ -49,6 +49,10 @@ body {
   @apply mt-10 mb-4 text-2xl font-bold tracking-tight text-white;
 }
 
+.blog-content h3.blog-focus-heading {
+  @apply mt-10 mb-5 block rounded-2xl border border-blue-400/50 border-l-4 border-l-blue-300 bg-blue-900/40 px-5 py-3 text-xl font-bold tracking-tight text-white shadow-lg shadow-blue-950/30;
+}
+
 .blog-content strong {
   @apply font-semibold text-slate-100;
 }
