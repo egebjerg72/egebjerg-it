@@ -53,6 +53,130 @@ body {
   @apply mt-10 mb-5 block rounded-2xl border border-blue-400/50 border-l-4 border-l-blue-300 bg-blue-900/40 px-5 py-3 text-xl font-bold tracking-tight text-white shadow-lg shadow-blue-950/30;
 }
 
+.blog-content .campaign-sheet {
+  @apply overflow-hidden rounded-[2rem] border border-emerald-500/20 bg-slate-950/70 shadow-2xl shadow-black/40;
+}
+
+.blog-content .campaign-hero {
+  @apply grid gap-8 bg-gradient-to-br from-[#062d29] via-slate-950 to-slate-950 px-6 py-8 md:grid-cols-[1.35fr_0.85fr] md:items-start md:px-8 md:py-10;
+}
+
+.blog-content .campaign-copy {
+  @apply min-w-0;
+}
+
+.blog-content p.campaign-subtitle {
+  @apply mb-0 text-xl font-medium leading-9 text-white md:pt-2 md:text-2xl;
+}
+
+.blog-content .campaign-focus-section {
+  @apply border-t border-emerald-500/15 px-6 py-8 md:px-8;
+}
+
+.blog-content p.campaign-focus-lead {
+  @apply mb-4 text-base text-emerald-100;
+}
+
+.blog-content ol.campaign-focus-list {
+  @apply m-0 space-y-4 px-1 pl-0 md:px-3;
+  counter-reset: campaign-focus;
+  list-style: none;
+}
+
+.blog-content ol.campaign-focus-list li {
+  @apply relative rounded-2xl border border-emerald-400/20 bg-emerald-500/10 py-4 pl-16 pr-5 text-slate-100;
+  counter-increment: campaign-focus;
+}
+
+.blog-content ol.campaign-focus-list li::before {
+  content: counter(campaign-focus);
+  @apply absolute left-4 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-emerald-400 font-bold text-slate-950;
+}
+
+.blog-content .campaign-aside {
+  @apply flex flex-col md:items-end;
+}
+
+.blog-content figure.campaign-photo {
+  @apply m-0 overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900 shadow-xl shadow-black/30;
+}
+
+.blog-content figure.campaign-photo img {
+  @apply h-auto w-full object-cover;
+}
+
+.blog-content .campaign-body {
+  @apply px-6 py-8 md:px-8;
+}
+
+.blog-content .campaign-body p {
+  @apply text-slate-200;
+}
+
+.blog-content .campaign-cta {
+  @apply grid gap-6 border-t border-emerald-500/15 bg-slate-900/80 px-6 py-8 md:grid-cols-[1fr_auto] md:items-center md:px-8;
+}
+
+.blog-content .campaign-cta-copy h2 {
+  @apply mt-0 mb-3 text-2xl text-white;
+}
+
+.blog-content .campaign-cta-copy p {
+  @apply mb-0 text-slate-200;
+}
+
+.blog-content .campaign-cta a {
+  @apply font-semibold text-emerald-300 underline decoration-emerald-500/50 underline-offset-4 transition hover:text-emerald-200;
+}
+
+.blog-content .campaign-qr-card {
+  @apply flex w-full max-w-[14rem] flex-col items-center gap-3 rounded-2xl border border-emerald-400/20 bg-slate-950 px-4 py-4 text-center shadow-lg shadow-black/30;
+}
+
+.blog-content .campaign-qr-card img {
+  @apply h-auto w-40 rounded-xl bg-white p-2;
+}
+
+.blog-content .campaign-qr-card a {
+  @apply text-sm;
+}
+
+.blog-content .vote-box {
+  @apply my-10 grid gap-6 rounded-[1.75rem] border border-emerald-400/20 bg-gradient-to-br from-[#062d29] via-slate-900 to-slate-900 px-6 py-6 shadow-xl shadow-black/30 md:grid-cols-[1fr_auto] md:items-center;
+}
+
+.blog-content .vote-box-copy h2 {
+  @apply mt-0 mb-3 text-2xl text-white;
+}
+
+.blog-content .vote-box-copy p {
+  @apply mb-0 text-slate-200;
+}
+
+.blog-content .vote-box a {
+  @apply font-semibold text-emerald-300 underline decoration-emerald-500/50 underline-offset-4 transition hover:text-emerald-200;
+}
+
+.blog-content .vote-box-qr {
+  @apply flex w-full max-w-[14rem] flex-col items-center gap-3 rounded-2xl border border-emerald-400/20 bg-slate-950 px-4 py-4 text-center shadow-lg shadow-black/30;
+}
+
+.blog-content .vote-box-qr img {
+  @apply h-auto w-40 rounded-xl bg-white p-2;
+}
+
+.blog-content .vote-box-qr a {
+  @apply text-sm;
+}
+
+.blog-content .vote-box--compact {
+  @apply mt-12;
+}
+
+.blog-content .vote-box--no-qr {
+  @apply grid-cols-1;
+}
+
 .blog-content strong {
   @apply font-semibold text-slate-100;
 }
