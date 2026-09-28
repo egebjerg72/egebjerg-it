@@ -1,0 +1,643 @@
+'use client'
+
+import { useState } from 'react'
+import Image, { type StaticImageData } from 'next/image'
+import Link from 'next/link'
+import { getBlogPostHref, getBlogPostsForLanguage } from '../data/blogPosts'
+import profileImage from '../public/profile.jpg'
+import aboutImage from '../public/about.jpg'
+import dymakHqImage from '../public/gallery/dymak-hq.jpg'
+import northCapeImage from '../public/gallery/north-cape.jpg'
+import officePortraitImage from '../public/gallery/office-portrait.jpg'
+import hiking1Image from '../public/gallery/hiking-1.jpg'
+import hiking2Image from '../public/gallery/hiking-2.jpg'
+import hiking3Image from '../public/gallery/hiking-3.jpg'
+import reinebringenImage from '../public/gallery/reinebringen.jpg'
+import { useLanguage } from '../lib/i18n/context'
+import LanguageSwitcher from '../components/LanguageSwitcher'
+
+function LinkedInIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
+function MailIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  )
+}
+
+function ArrowUpIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  )
+}
+
+export default function Page() {
+  const { t, language } = useLanguage()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [lightbox, setLightbox] = useState<{ image: StaticImageData; alt: string } | null>(null)
+  const [connectOpen, setConnectOpen] = useState(false)
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
+
+  const boardContributions = t.board.items
+  const visibleBlogPosts = getBlogPostsForLanguage(language)
+
+  const professionalImages = [
+    { image: dymakHqImage, alt: t.gallery.altDymakHq },
+    { image: officePortraitImage, alt: t.gallery.altOfficePortrait },
+  ]
+
+  const galleryImages = [
+    { image: northCapeImage, alt: t.gallery.altNorthCape },
+    { image: reinebringenImage, alt: t.gallery.altReinebringen },
+    { image: hiking1Image, alt: t.gallery.altPulpitRock },
+    { image: hiking2Image, alt: t.gallery.altTrollsTongue },
+    { image: hiking3Image, alt: t.gallery.altCoffee },
+  ]
+
+  return (
+    <div id="top" className="min-h-screen bg-slate-900 text-slate-100">
+
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 border-b border-slate-700 bg-slate-900/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+          <div>
+            <div className="text-lg font-semibold tracking-tight text-white">egebjerg.it</div>
+            <div className="text-xs text-slate-400">{t.nav.tagline}</div>
+          </div>
+
+          {/* Desktop nav */}
+          <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex items-center">
+            <a href="#about"   className="transition hover:text-blue-400">{t.nav.about}</a>
+            <a href="#board"   className="transition hover:text-blue-400">{t.nav.board}</a>
+            <a href="#blog"    className="transition hover:text-blue-400">{t.nav.blog}</a>
+            <a href="#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</a>
+            <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-blue-400">{t.nav.contact}</button>
+            <a
+              href="https://www.linkedin.com/in/egebjerg72/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t.nav.linkedin}
+              className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800 p-2 text-slate-300 transition hover:border-blue-500 hover:text-blue-400"
+            >
+              <LinkedInIcon />
+            </a>
+            <LanguageSwitcher />
+          </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            className="flex flex-col justify-center gap-1.5 md:hidden"
+          >
+            <span className={`block h-0.5 w-6 bg-slate-300 transition-all duration-300 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-slate-300 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-slate-300 transition-all duration-300 ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+          </button>
+        </div>
+
+          {/* Mobile menu panel */}
+        {menuOpen && (
+          <div className="border-t border-slate-700 bg-slate-800 px-6 py-4 md:hidden">
+            <nav className="flex flex-col gap-4 text-sm font-medium text-slate-200">
+              <a href="#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.about}</a>
+              <a href="#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.board}</a>
+              <a href="#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</a>
+              <a href="#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</a>
+              <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-blue-400">{t.nav.contact}</button>
+              <div className="pt-1"><LanguageSwitcher /></div>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      <main>
+        {/* HERO */}
+        <section className="relative overflow-hidden bg-slate-900">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-blue-700 blur-3xl" />
+            <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-emerald-700 blur-3xl" />
+          </div>
+
+          <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:px-10 lg:py-28">
+
+            {/* LEFT COLUMN */}
+            <div className="flex flex-col">
+              <div className="mb-5 inline-flex self-start items-center gap-2 rounded-full border border-slate-600 bg-slate-700/80 px-4 py-2 text-sm text-slate-200 shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                {t.hero.badge}
+              </div>
+
+              <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                Niels Henrik Egebjerg
+              </h1>
+
+              <div className="mb-8 space-y-5 text-lg leading-8 text-slate-300">
+                <p>{t.hero.p1}</p>
+                <p>{t.hero.p2}</p>
+                <p>{t.hero.p3}</p>
+              </div>
+
+              <div className="mt-auto flex flex-wrap gap-4">
+                <a
+                  href="https://www.linkedin.com/in/egebjerg72/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-[#0a66c2] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-[#0b5cad]"
+                >
+                  <LinkedInIcon />
+                  {t.hero.ctaLinkedIn}
+                </a>
+                <a
+                  href="#board"
+                  className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500"
+                >
+                  {t.hero.ctaBoard}
+                </a>
+                <a
+                  href="#about"
+                  className="rounded-2xl border border-slate-600 bg-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 shadow-sm transition hover:border-blue-600 hover:text-blue-400"
+                >
+                  {t.hero.ctaAbout}
+                </a>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN — Executive Profile card */}
+            <div className="flex items-end">
+              <div className="w-full rounded-[2rem] border border-slate-700 bg-slate-800/80 p-6 shadow-xl shadow-black/40 backdrop-blur-xl">
+                <div className="mb-5 flex justify-center">
+                  <div className="relative h-36 w-36 overflow-hidden rounded-full ring-4 ring-slate-600 shadow-lg">
+                    <Image
+                      src={profileImage}
+                      alt="Niels Henrik Egebjerg"
+                      fill
+                      sizes="144px"
+                      placeholder="blur"
+                      className="object-cover object-top"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-5 flex items-center justify-between">
+                  <div>
+                    <div className="text-sm font-semibold text-slate-100">{t.hero.profileCardTitle}</div>
+                    <div className="text-sm text-slate-400">{t.hero.profileCardSub}</div>
+                  </div>
+                  <div className="rounded-full bg-emerald-900/50 px-3 py-1 text-xs font-semibold text-emerald-400">
+                    {t.hero.profileBadge}
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {t.hero.profileLines.map((line) => (
+                    <div key={line} className="flex items-start gap-3 rounded-2xl bg-slate-700/60 p-4">
+                      <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500" />
+                      <p className="text-sm leading-6 text-slate-200">{line}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+       {/* ── ABOUT ── */}
+<section id="about" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+  <div className="grid gap-14 lg:grid-cols-[1fr_1.6fr]">
+
+    {/* LEFT — label, heading, experience headline, photo */}
+    <div className="flex flex-col gap-8">
+      <div>
+        <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+          {t.about.label}
+        </div>
+        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+          {t.about.heading}
+        </h2>
+      </div>
+
+      {/* Portrait */}
+      <div className="group relative overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-800 shadow-xl shadow-black/40">
+        <div className="relative aspect-[3/4] w-full">
+          <Image
+            src={aboutImage}
+            alt="Niels Henrik Egebjerg"
+            fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            placeholder="blur"
+            className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-5 py-4">
+          <div className="h-2 w-2 rounded-full bg-emerald-500" />
+          <span className="text-sm font-medium text-slate-200">Niels Henrik Egebjerg · CIO</span>
+        </div>
+      </div>
+    </div>
+
+    {/* RIGHT — text content */}
+<div className="flex flex-col justify-center space-y-5 text-lg leading-8 text-slate-300">
+
+  <h3 className="text-2xl font-bold tracking-tight text-white">
+    {t.about.experienceHeading}
+  </h3>
+
+  <p>{t.about.p1}</p>
+  <p>{t.about.p2}</p>
+
+  {/* Emotional Intelligence */}
+  <div className="pt-2">
+    <h4 className="mb-4 text-xl font-semibold text-white">
+      {t.about.eqHeading}
+    </h4>
+
+    <p className="leading-relaxed text-slate-300">{t.about.eqP1}</p>
+    <p className="mt-4 leading-relaxed text-slate-300">{t.about.eqP2}</p>
+  </div>
+
+  <p className="font-medium text-slate-200">{t.about.closing}</p>
+
+</div>
+  </div>
+</section>
+
+        {/* BOARD CONTRIBUTIONS */}
+        <section id="board" className="bg-slate-800 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+            <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
+                  {t.board.label}
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                  {t.board.heading}
+                </h2>
+              </div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {boardContributions.map((item) => (
+                <div
+                  key={item.title}
+                  className="group rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-700 to-slate-800 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
+                >
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 text-xl">
+                    {item.icon}
+                  </div>
+                  <h3 className="mb-3 text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="leading-7 text-slate-300">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* BLOG */}
+        <section id="blog" className="bg-slate-900 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+            <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+                  {t.blog.label}
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                  {t.blog.heading}
+                </h2>
+              </div>
+              <button onClick={() => setConnectOpen(true)} className="text-sm font-semibold text-blue-400 transition hover:text-blue-300">
+                {t.blog.connect}
+              </button>
+            </div>
+
+            {/* Authenticity note */}
+            <div className="mb-12 flex items-start gap-3 rounded-2xl border border-slate-700 bg-slate-800 px-5 py-4">
+              <span className="mt-0.5 text-base">✍️</span>
+              <p className="text-sm leading-7 text-slate-300">
+                {t.blog.authenticityNote}{' '}
+                <span className="font-semibold text-slate-100">{t.blog.authenticityBold}</span>
+              </p>
+            </div>
+
+            {visibleBlogPosts.length > 0 ? (
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {visibleBlogPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={getBlogPostHref(post, language)}
+                    className="group flex flex-col rounded-[1.75rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-800/60 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-black/30"
+                  >
+                    <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                      <span>
+                        {new Date(post.date).toLocaleDateString(language === 'da' ? 'da-DK' : 'en-GB', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric',
+                        })}
+                      </span>
+                      <span>·</span>
+                      <span>{language === 'da' ? post.readingTimeDa : post.readingTime}</span>
+                    </div>
+                    <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition group-hover:text-blue-400">
+                      {language === 'da' ? post.titleDa : (post.title ?? post.titleDa)}
+                    </h3>
+                    <p className="mb-6 flex-1 text-sm leading-7 text-slate-400">
+                      {language === 'da' ? post.excerptDa : (post.excerpt ?? post.excerptDa)}
+                    </p>
+                    <div className="text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
+                      {t.blog.readPost}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-dashed border-slate-700 bg-slate-800/50 px-8 py-20 text-center">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-700 text-2xl">
+                  📝
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">
+                  {t.blog.emptyHeading}
+                </h3>
+                <p className="max-w-md text-sm leading-7 text-slate-400">
+                  {t.blog.emptyBody}
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/egebjerg72/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 rounded-2xl border border-slate-600 bg-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-blue-600 hover:text-blue-400"
+                >
+                  {t.blog.followLinkedIn}
+                </a>
+              </div>
+            )}
+
+          </div>
+        </section>
+
+        {/* GALLERY */}
+        <section id="gallery" className="bg-slate-800 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+            <div className="mb-16">
+              <div className="mb-4 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+                {t.gallery.professionalLabel}
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                {t.gallery.professionalHeading}
+              </h2>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {professionalImages
+                  .filter((img) => !failedImages.has(img.image.src))
+                  .map((img) => (
+                    <button
+                      key={img.image.src}
+                      onClick={() => setLightbox(img)}
+                      className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-slate-700 bg-slate-700 shadow-sm transition hover:border-slate-500 hover:shadow-xl hover:shadow-black/40 focus:outline-none"
+                    >
+                      <Image
+                        src={img.image}
+                        alt={img.alt}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        placeholder="blur"
+                        className="object-cover transition duration-500 group-hover:scale-105"
+                        onError={() => setFailedImages((prev) => new Set([...prev, img.image.src]))}
+                      />
+                      <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
+                        <div className="p-5">
+                          <p className="text-sm font-medium text-white">{img.alt}</p>
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+              </div>
+            </div>
+
+            <div className="mb-10">
+              <div className="mb-4 inline-block rounded-full bg-emerald-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
+                {t.gallery.label}
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                {t.gallery.heading}
+              </h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {galleryImages
+                .filter((img) => !failedImages.has(img.image.src))
+                .map((img) => (
+                  <button
+                    key={img.image.src}
+                    onClick={() => setLightbox(img)}
+                    className="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-slate-700 bg-slate-700 shadow-sm transition hover:border-slate-500 hover:shadow-xl hover:shadow-black/40 focus:outline-none"
+                  >
+                    <Image
+                      src={img.image}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      placeholder="blur"
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                      onError={() => setFailedImages((prev) => new Set([...prev, img.image.src]))}
+                    />
+                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
+                      <div className="p-5">
+                        <p className="text-sm font-medium text-white">{img.alt}</p>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* PERSPECTIVE BANNER */}
+        <section className="bg-slate-900 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="overflow-hidden rounded-[2rem] bg-gradient-to-r from-blue-600 to-emerald-500 p-[1px] shadow-xl shadow-blue-900/30">
+              <div className="rounded-[2rem] bg-slate-800 px-8 py-10 md:px-12 md:py-12">
+                <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+                  <div>
+                    <div className="mb-3 inline-block rounded-full bg-blue-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-400">
+                      {t.perspective.label}
+                    </div>
+                    <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                      {t.perspective.heading}
+                    </h2>
+                    <p className="mt-4 max-w-3xl leading-8 text-slate-300">
+                      {t.perspective.body}
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      onClick={() => setConnectOpen(true)}
+                      className="inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                    >
+                      {t.perspective.cta}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      {/* FOOTER */}
+      <footer className="border-t border-slate-700 bg-slate-900">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[1fr_auto] lg:px-10">
+          <div>
+            <div className="text-lg font-semibold text-white">Niels Henrik Egebjerg</div>
+            <p className="mt-2 max-w-xl text-sm leading-7 text-slate-400">
+              {t.footer.role}
+            </p>
+          </div>
+          <div className="grid gap-3 text-sm text-slate-400">
+            <button
+              onClick={() => setConnectOpen(true)}
+              className="inline-flex items-center gap-2 text-left transition hover:text-blue-400"
+            >
+              <MailIcon />
+              {t.nav.contact}
+            </button>
+            <a
+              href="https://www.linkedin.com/in/egebjerg72/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition hover:text-blue-400"
+            >
+              <LinkedInIcon />
+              {t.footer.linkedin}
+            </a>
+            <a href="mailto:nh@egebjerg.it" className="inline-flex items-center gap-2 transition hover:text-blue-400">
+              <MailIcon />
+              {t.footer.email}
+            </a>
+            <a href="#top" className="inline-flex items-center gap-2 transition hover:text-blue-400">
+              <ArrowUpIcon />
+              {t.footer.backToTop}
+            </a>
+          </div>
+        </div>
+      </footer>
+
+      {/* CONNECT MODAL */}
+      {connectOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.connect.heading}
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+          onKeyDown={(e) => e.key === 'Escape' && setConnectOpen(false)}
+        >
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+            onClick={() => setConnectOpen(false)}
+          />
+
+          {/* Panel */}
+          <div className="relative z-10 w-full max-w-lg rounded-[2rem] border border-slate-700/60 bg-slate-900/95 p-8 shadow-2xl shadow-black/60 backdrop-blur-2xl md:p-10">
+
+            {/* Close button */}
+            <button
+              onClick={() => setConnectOpen(false)}
+              aria-label={t.connect.close}
+              className="absolute right-5 top-5 rounded-full p-2 text-slate-400 transition hover:bg-slate-700 hover:text-white"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+
+            {/* Heading */}
+            <h2 className="mb-4 text-2xl font-bold tracking-tight text-white md:text-3xl">
+              {t.connect.heading}
+            </h2>
+
+            {/* Body */}
+            <p className="mb-8 leading-8 text-slate-300">
+              {t.connect.body}
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://www.linkedin.com/in/egebjerg72/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-[#0a66c2] px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-[#0b5cad] focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400"
+              >
+                <LinkedInIcon />
+                {t.connect.linkedin}
+              </a>
+              <a
+                href="mailto:nh@egebjerg.it"
+                className="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-slate-600 bg-slate-800 px-5 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-blue-500 hover:text-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400"
+              >
+                <MailIcon />
+                {t.connect.email}
+              </a>
+            </div>
+
+            {/* Disclaimer */}
+            <p className="mt-6 text-xs leading-6 text-slate-500">
+              {t.connect.disclaimer}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* LIGHTBOX */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute right-5 top-5 z-10 rounded-full bg-slate-700 p-2 text-slate-300 transition hover:bg-slate-600 hover:text-white"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+          <div
+            className="flex max-h-[90vh] max-w-4xl flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={lightbox.image}
+              alt={lightbox.alt}
+              width={lightbox.image.width}
+              height={lightbox.image.height}
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              placeholder="blur"
+              className="max-h-[82vh] w-auto max-w-full rounded-[1.5rem] object-contain shadow-2xl"
+            />
+            <p className="mt-4 text-sm font-medium text-slate-300">{lightbox.alt}</p>
+          </div>
+        </div>
+      )}
+
+    </div>
+  )
+}

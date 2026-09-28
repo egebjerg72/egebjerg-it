@@ -8,6 +8,10 @@ import da from '../../../lib/i18n/da'
 import en from '../../../lib/i18n/en'
 import type { BlogLanguage, BlogPost } from '../../../data/blogPosts'
 
+const shortCampaignSlug = 'jeg-stiller-op-til-energi-fyn-valget'
+const longCampaignSlug = 'kandidat-til-repraesentantskabet-i-energi-fyn'
+const voteHref = 'https://electa.eu.assemblyvoting.net/candidacy/energifyn/repvalg26/da/groups/107/candidates/2267'
+
 function LinkedInIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
@@ -57,6 +61,9 @@ export default function BlogPostView({
   const title = language === 'da' ? post.titleDa : (post.title ?? post.titleDa)
   const content = language === 'da' ? post.contentDa : (post.content ?? post.contentDa)
   const readingTime = language === 'da' ? post.readingTimeDa : (post.readingTime ?? post.readingTimeDa)
+  const isShortCampaignPost = post.slug === shortCampaignSlug
+  const isLongCampaignPost = post.slug === longCampaignSlug
+  const isCampaignPost = isShortCampaignPost || isLongCampaignPost
 
   const formattedDate = new Date(post.date).toLocaleDateString(
     language === 'da' ? 'da-DK' : 'en-GB',
@@ -69,7 +76,7 @@ export default function BlogPostView({
       {/* HEADER — same as homepage */}
       <header className="sticky top-0 z-50 border-b border-slate-700 bg-slate-900/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-          <Link href="/" className="group">
+          <Link href={isCampaignPost ? '/home' : '/'} className="group">
             <div className="text-lg font-semibold tracking-tight text-white transition group-hover:text-blue-400">
               egebjerg.it
             </div>
@@ -78,10 +85,29 @@ export default function BlogPostView({
 
           {/* Desktop nav */}
           <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex items-center">
-            <Link href="/#about"   className="transition hover:text-blue-400">{t.nav.about}</Link>
-            <Link href="/#board"   className="transition hover:text-blue-400">{t.nav.board}</Link>
-            <Link href="/#blog"    className="transition hover:text-blue-400">{t.nav.blog}</Link>
-            <Link href="/#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</Link>
+            {isCampaignPost ? (
+              <>
+                {isShortCampaignPost ? (
+                  <>
+                    <Link href="/home" className="transition hover:text-emerald-300">Hovedside</Link>
+                    <Link href="/da/blog/kandidat-til-repraesentantskabet-i-energi-fyn" className="transition hover:text-emerald-300">Læs mere</Link>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/" className="transition hover:text-emerald-300">Kampagneindlæg</Link>
+                    <Link href="/home" className="transition hover:text-emerald-300">Hovedside</Link>
+                  </>
+                )}
+                <a href={voteHref} target="_blank" rel="noopener noreferrer" className="transition hover:text-emerald-300">Stem</a>
+              </>
+            ) : (
+              <>
+                <Link href="/#about"   className="transition hover:text-blue-400">{t.nav.about}</Link>
+                <Link href="/#board"   className="transition hover:text-blue-400">{t.nav.board}</Link>
+                <Link href="/#blog"    className="transition hover:text-blue-400">{t.nav.blog}</Link>
+                <Link href="/#gallery" className="transition hover:text-blue-400">{t.nav.gallery}</Link>
+              </>
+            )}
             <button onClick={() => setConnectOpen(true)} className="bg-transparent p-0 leading-none transition hover:text-blue-400">{t.nav.contact}</button>
             <a
               href="https://www.linkedin.com/in/egebjerg72/"
@@ -111,10 +137,29 @@ export default function BlogPostView({
         {menuOpen && (
           <div className="border-t border-slate-700 bg-slate-800 px-6 py-4 md:hidden">
             <nav className="flex flex-col gap-4 text-sm font-medium text-slate-200">
-              <Link href="/#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.about}</Link>
-              <Link href="/#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.board}</Link>
-              <Link href="/#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</Link>
-              <Link href="/#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</Link>
+              {isCampaignPost ? (
+                <>
+                  {isShortCampaignPost ? (
+                    <>
+                      <Link href="/home" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-300">Hovedside</Link>
+                      <Link href="/da/blog/kandidat-til-repraesentantskabet-i-energi-fyn" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-300">Læs mere</Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link href="/" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-300">Kampagneindlæg</Link>
+                      <Link href="/home" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-300">Hovedside</Link>
+                    </>
+                  )}
+                  <a href={voteHref} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="transition hover:text-emerald-300">Stem</a>
+                </>
+              ) : (
+                <>
+                  <Link href="/#about"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.about}</Link>
+                  <Link href="/#board"   onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.board}</Link>
+                  <Link href="/#blog"    onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.blog}</Link>
+                  <Link href="/#gallery" onClick={() => setMenuOpen(false)} className="transition hover:text-blue-400">{t.nav.gallery}</Link>
+                </>
+              )}
               <button onClick={() => { setMenuOpen(false); setConnectOpen(true) }} className="text-left transition hover:text-blue-400">{t.nav.contact}</button>
               <div className="pt-1"><LanguageSwitcher currentLanguage={language} hrefs={languageLinks} /></div>
             </nav>
@@ -156,19 +201,30 @@ export default function BlogPostView({
         {/* Footer nav */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
-            href={backHref}
+            href={isCampaignPost ? '/home' : backHref}
             className="text-sm font-semibold text-blue-400 transition hover:text-blue-300"
           >
-            {t.blogPost.backToAll}
+            {isCampaignPost ? '← Til hovedsiden' : t.blogPost.backToAll}
           </Link>
-          <a
-            href="https://www.linkedin.com/in/egebjerg72/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-slate-400 transition hover:text-blue-400"
-          >
-            {t.blogPost.followLinkedIn}
-          </a>
+          {isCampaignPost ? (
+            <a
+              href={isShortCampaignPost ? '/da/blog/kandidat-til-repraesentantskabet-i-energi-fyn' : voteHref}
+              target={isShortCampaignPost ? undefined : '_blank'}
+              rel={isShortCampaignPost ? undefined : 'noopener noreferrer'}
+              className="text-sm font-semibold text-emerald-300 transition hover:text-emerald-200"
+            >
+              {isShortCampaignPost ? 'Læs mere om mit kandidatur →' : 'Stem på mig →'}
+            </a>
+          ) : (
+            <a
+              href="https://www.linkedin.com/in/egebjerg72/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-slate-400 transition hover:text-blue-400"
+            >
+              {t.blogPost.followLinkedIn}
+            </a>
+          )}
         </div>
 
       </main>
