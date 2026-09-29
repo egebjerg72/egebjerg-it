@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     titleDa: 'Jeg stiller op til Energi Fyn-valget',
     excerptDa:
       'Kort kandidatpræsentation med mine vigtigste fokusområder og direkte link til den længere præsentation og afstemningen.',
-    date: '2026-09-05',
+    date: '2026-09-29',
     author: 'Niels Henrik Egebjerg',
     readingTimeDa: '2 min læsning',
     contentDa: `
@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     titleDa: 'Mere om mit kandidatur',
     excerptDa:
       'Læs mere om mit kandidatur til repræsentantskabet i Energi Fyn, mine fokusområder og hvor du kan stemme.',
-    date: '2026-09-04',
+    date: '2026-09-29',
     author: 'Niels Henrik Egebjerg',
     readingTimeDa: '5 min læsning',
     contentDa: `
