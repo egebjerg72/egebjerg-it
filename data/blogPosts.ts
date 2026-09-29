@@ -70,7 +70,10 @@ export const blogPosts: BlogPost[] = [
     <div class="campaign-cta">
       <div class="campaign-cta-copy">
         <h2>Læs mere og stem på mig</h2>
-        <p>Læs den længere præsentation her på <a href="/da/blog/kandidat-til-repraesentantskabet-i-energi-fyn">egebjerg.it</a> og stem på mig direkte her: <a href="https://electa.eu.assemblyvoting.net/candidacy/energifyn/repvalg26/da/groups/107/candidates/2267" target="_blank" rel="noopener noreferrer">Repræsentantskabsvalg 2026</a>.</p>
+        <ul>
+          <li>Læs mere om <a href="/da/blog/kandidat-til-repraesentantskabet-i-energi-fyn">mig og mine holdninger</a>.</li>
+          <li>Stem på til <a href="https://electa.eu.assemblyvoting.net/candidacy/energifyn/repvalg26/da/groups/107/candidates/2267" target="_blank" rel="noopener noreferrer">Repræsentantskabsvalg 2026</a>.</li>
+        </ul>
       </div>
 
       <div class="campaign-qr-card">
@@ -116,7 +119,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>I kraft af mit daglige arbejde som CIO har jeg et naturligt fokus og en dyb interesse for ledelse og strategi, men også et dagligt ansvar for kritisk infrastruktur. Jeg tror samtidig på værdien af sund fornuft, ordentlighed og engagement, når der skal træffes beslutninger. Her ser jeg gode muligheder for at bidrage til arbejdet i repræsentantskabet.</p>
 
-<p>Gennem det meste af mit liv har jeg været bosat på Fyn og været en del af det fynske erhvervsliv, hvor jeg blandt andet har arbejdet hos Trioplast i Nyborg (nu Trioworld), Kompan, HJHansen-koncernen og nu Dymak. Jeg har kort sagt en naturlig interesse i Fyn, fynboerne og det fynske erhvervsliv, og det vil være et privilegium at få muligheden for at repræsentere Distrikt 5 og bidrage til udviklingen af Energi Fyn.</p>
+<p>Gennem det meste af mit liv har jeg været bosat på Fyn og været en del af det fynske erhvervsliv, hvor jeg blandt andet har arbejdet hos Trioplast i Nyborg (nu Trioworld), Kompan, HJHansen koncernen og nu Dymak. Jeg har kort sagt en naturlig interesse i Fyn, fynboerne og det fynske erhvervsliv, og det vil være et privilegium at få muligheden for at repræsentere Distrikt 5 og bidrage til udviklingen af Energi Fyn.</p>
 
 <h2>Kritisk infrastruktur</h2>
 
