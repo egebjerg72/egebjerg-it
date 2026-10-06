@@ -14,9 +14,9 @@ const da: Translations = {
   hero: {
     badge: 'Digital transformation',
     name: 'Niels Henrik Egebjerg',
-    p1: 'CIO med begge ben på jorden og en baggrund, der spænder fra drift og sikkerhed til ERP, CRM, e-handel og ledelse.',
-    p2: 'Jeg omsætter teknologi til konkrete resultater. Gennem årene har jeg ledet større IT-forandringer, implementeret nye platforme og skabt bedre grundlag for beslutninger gennem data, processer og struktur.',
-    p3: 'I dag arbejder jeg blandt andet med, hvordan AI kan bruges ansvarligt og pragmatisk til at løse virkelige forretningsmæssige udfordringer og skabe målbar værdi.',
+    p1: 'CIO med erfaring, der spænder fra drift og informationssikkerhed til ERP, CRM, e-handel, forandringsledelse, organisation og mennesker.',
+    p2: 'Jeg omsætter teknologi til forretningsværdi. Gennem årene har jeg ledet større IT- og procesforandringer, implementeret nye platforme og skabt et stærkere beslutningsgrundlag gennem data, struktur og effektive processer.',
+    p3: 'I dag er mit fokus at forankre AI i virksomhedens kerneprocesser gennem målbar og ansvarlig anvendelse, der optimerer arbejdsprocesser, understøtter bedre beslutninger og skaber varige forretningsmæssige resultater.',
     ctaBoard: 'Hvad jeg bidrager med i bestyrelsen',
     ctaAbout: 'Om mig',
     ctaLinkedIn: 'Connect på LinkedIn',
