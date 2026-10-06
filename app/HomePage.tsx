@@ -145,7 +145,7 @@ export default function Page() {
               </h1>
 
               <div className="mb-8 space-y-5 text-lg leading-8 text-slate-300">
-                <p>{t.hero.p1}</p>
+                <p className="font-semibold text-white">{t.hero.p1}</p>
                 <p>{t.hero.p2}</p>
                 <p>{t.hero.p3}</p>
               </div>
