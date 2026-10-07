@@ -77,20 +77,22 @@ body {
   @apply mb-4 text-base text-emerald-100;
 }
 
-.blog-content ol.campaign-focus-list {
+.blog-content .campaign-focus-list {
   @apply m-0 space-y-4 px-1 pl-0 md:px-3;
-  counter-reset: campaign-focus;
   list-style: none;
 }
 
-.blog-content ol.campaign-focus-list li {
-  @apply relative rounded-2xl border border-emerald-400/20 bg-emerald-500/10 py-4 pl-16 pr-5 text-slate-100;
-  counter-increment: campaign-focus;
+.blog-content .campaign-focus-list li {
+  @apply relative rounded-2xl border border-emerald-400/20 bg-emerald-500/10 py-4 pl-14 pr-5 text-slate-100;
 }
 
-.blog-content ol.campaign-focus-list li::before {
-  content: counter(campaign-focus);
-  @apply absolute left-4 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-emerald-400 font-bold text-slate-950;
+.blog-content .campaign-focus-list li::before {
+  content: '•';
+  @apply absolute left-5 top-[1.55rem] text-2xl leading-none text-emerald-300;
+}
+
+.blog-content .campaign-focus-list li strong {
+  @apply text-white;
 }
 
 .blog-content .campaign-aside {

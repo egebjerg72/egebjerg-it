@@ -55,13 +55,13 @@ export const blogPosts: BlogPost[] = [
   </div>
 
   <div id="fokus" class="campaign-focus-section">
-    <p class="campaign-focus-lead"><strong>Mit primære fokus er:</strong></p>
+    <p class="campaign-focus-lead"><strong>Mit primære fokus i forhold til Energi Fyn:</strong></p>
 
-    <ol class="campaign-focus-list">
-      <li>At passe på vores kritiske infrastruktur og fastholde ejerskab i en geopolitisk usikker tid.</li>
-      <li>At sikre konkurrencedygtige elpriser til fynske forbrugere og virksomheder.</li>
-      <li>At støtte grøn omstilling ved at udbyde attraktive grønne energivalg.</li>
-    </ol>
+    <ul class="campaign-focus-list">
+      <li><strong>Sikkerhed:</strong> At passe på vores kritiske infrastruktur og fastholde ejerskab i en geopolitisk usikker tid.</li>
+      <li><strong>Pris:</strong> At sikre konkurrencedygtige elpriser til fynske forbrugere og virksomheder gennem effektiv drift.</li>
+      <li><strong>Grøn omstilling:</strong> At støtte den grønne omstilling ved at udbyde attraktive og økonomisk ansvarlige grønne energivalg.</li>
+    </ul>
   </div>
 
   <div class="campaign-body">
