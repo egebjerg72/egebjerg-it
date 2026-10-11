@@ -94,17 +94,29 @@ export const blogPosts: BlogPost[] = [
     author: 'Niels Henrik Egebjerg',
     readingTimeDa: '5 min læsning',
     contentDa: `
-<p class="blog-intro"><strong>Hej,</strong></p>
+<div class="campaign-sheet">
+  <div class="campaign-hero">
+    <div class="campaign-copy">
+      <p class="campaign-subtitle"><strong>Mit navn er Niels Henrik Egebjerg, og jeg er opstillet som kandidat til repræsentantskabet i Energi Fyn.</strong></p>
+    </div>
 
-<p>Mit navn er Niels Henrik Egebjerg, og jeg er opstillet som kandidat til repræsentantskabet i Energi Fyn.</p>
+    <aside class="campaign-aside">
+      <figure class="campaign-photo">
+        <img src="/blog/energi-fyn/candidate.jpg" alt="Niels Henrik Egebjerg" />
+      </figure>
+    </aside>
+  </div>
 
-<p><strong>Mit primære fokus er:</strong></p>
+  <div id="fokus" class="campaign-focus-section">
+    <p class="campaign-focus-lead"><strong>Mit primære fokus i forhold til Energi Fyn:</strong></p>
 
-<ul>
-  <li>At passe på vores kritiske infrastruktur og fastholde ejerskab i en geopolitisk usikker tid.</li>
-  <li>At sikre konkurrencedygtige elpriser til fynske forbrugere og virksomheder.</li>
-  <li>At støtte grøn omstilling ved at udbyde attraktive grønne energivalg.</li>
-</ul>
+    <ul class="campaign-focus-list">
+      <li><strong>Sikkerhed:</strong> At passe på vores kritiske infrastruktur og fastholde ejerskab i en geopolitisk usikker tid.</li>
+      <li><strong>Pris:</strong> At sikre konkurrencedygtige elpriser til fynske forbrugere og virksomheder gennem effektiv drift.</li>
+      <li><strong>Grøn omstilling:</strong> At støtte den grønne omstilling ved at udbyde attraktive og økonomisk ansvarlige grønne energivalg.</li>
+    </ul>
+  </div>
+</div>
 
 <div class="vote-box vote-box--no-qr">
   <div class="vote-box-copy">
@@ -121,15 +133,21 @@ export const blogPosts: BlogPost[] = [
 
 <p>Gennem det meste af mit liv har jeg været bosat på Fyn og været en del af det fynske erhvervsliv, hvor jeg blandt andet har arbejdet hos Trioplast i Nyborg (nu Trioworld), Kompan, HJHansen koncernen og nu Dymak. Jeg har kort sagt en naturlig interesse i Fyn, fynboerne og det fynske erhvervsliv, og det vil være et privilegium at få muligheden for at repræsentere Distrikt 5 og bidrage til udviklingen af Energi Fyn.</p>
 
-<h2>Kritisk infrastruktur</h2>
+<figure class="blog-section-banner">
+  <img src="/blog/energi-fyn/header-kritisk-infrastruktur.png" alt="Kritisk infrastruktur – stabil strøm i en usikker verden" />
+</figure>
 
 <p>Elektricitet er noget, vi tager for givet i hverdagen. Det skal bare fungere, og det gør det også. Men med tiltagende geopolitisk uro og hybridkrig kræver det hele tiden mere fokus. Af samme grund er det positivt, at vi selv ejer vores infrastruktur, hvilket vi skal blive ved med. Men det forpligter også, når det kommer til sikkerheden. Det er et vigtigt fokuspunkt nu, og det vil være et vigtigt fokuspunkt i de kommende år.</p>
 
-<h2>Konkurrencedygtige priser</h2>
+<figure class="blog-section-banner">
+  <img src="/blog/energi-fyn/header-konkurrencedygtige-priser.png" alt="Konkurrencedygtige priser – mere værdi til fynboerne" />
+</figure>
 
 <p>Energi Fyn skal være fynboernes foretrukne leverandør af strøm. Det betyder gode produkter til gode priser. I en grad så vi er trygge ved at sige nej til sælgere i supermarkeder og diverse nystartede elselskaber, der prøver lykken med forretningsmodeller, som ikke holder. Man skal vide, at man er godt stillet, og det skal føles naturligt at vælge Energi Fyn som sin el-leverandør.</p>
 
-<h2>Grøn omstilling</h2>
+<figure class="blog-section-banner">
+  <img src="/blog/energi-fyn/header-gron-omstilling.png" alt="Grøn omstilling – attraktive grønne energivalg" />
+</figure>
 
 <p>Det grønne er noget, mange af os ønsker at vælge til. Jeg mener, at Energi Fyn styrker den grønne omstilling bedst ved at udbyde grønne løsninger, som er økonomisk ansvarlige, attraktive for fynboerne og samtidig styrker lokale grønne initiativer. Eksempelvis er det muligheden for fortsat at kunne vælge certificeret grøn strøm til en rimelig merpris, og at Energi Fyn investerer i mere lokal vedvarende energiproduktion.</p>
 

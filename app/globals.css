@@ -210,3 +210,11 @@ body {
 .blog-content figure.blog-hero-image img {
   @apply w-full h-auto object-cover rounded-xl;
 }
+
+.blog-content figure.blog-section-banner {
+  @apply my-10 overflow-hidden rounded-xl;
+}
+
+.blog-content figure.blog-section-banner img {
+  @apply w-full h-auto object-cover rounded-xl;
+}
