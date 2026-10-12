@@ -127,11 +127,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Mere om mit kandidatur</h2>
 
-<p>Jeg er bosat i Nyborg og dermed opstillet i Distrikt 5. Jeg vil gerne opfordre dig til at læse om kandidaterne og gøre din stemme gældende. Og selvfølgelig gerne stemme på mig :-)</p>
+<p>Jeg er bosat i Nyborg og opstiller dermed i Valgområde 5. Gennem mit arbejde som CIO har jeg dagligt ansvar for teknologi, sikkerhed og kritisk infrastruktur, men jeg tror samtidig på, at gode beslutninger bygger på mere end faglighed alene. Sund fornuft, ordentlighed og engagement er mindst lige så vigtige.</p>
 
-<p>I kraft af mit daglige arbejde som CIO har jeg et naturligt fokus og en dyb interesse for ledelse og strategi, men også et dagligt ansvar for kritisk infrastruktur. Jeg tror samtidig på værdien af sund fornuft, ordentlighed og engagement, når der skal træffes beslutninger. Her ser jeg gode muligheder for at bidrage til arbejdet i repræsentantskabet.</p>
-
-<p>Gennem det meste af mit liv har jeg været bosat på Fyn og været en del af det fynske erhvervsliv, hvor jeg blandt andet har arbejdet hos Trioplast i Nyborg (nu Trioworld), Kompan, HJHansen koncernen og nu Dymak. Jeg har kort sagt en naturlig interesse i Fyn, fynboerne og det fynske erhvervsliv, og det vil være et privilegium at få muligheden for at repræsentere Distrikt 5 og bidrage til udviklingen af Energi Fyn.</p>
+<p>Som mangeårig fynbo og en aktiv del af det fynske erhvervsliv har jeg et stærkt ønske om at bidrage til udviklingen af Energi Fyn. Jeg håber at få muligheden for at repræsentere Valgområde 5 og arbejde for, at Energi Fyn også i fremtiden står stærkt som et lokalt forankret og ansvarligt andelsselskab.</p>
 
 <figure class="blog-section-banner">
   <img src="/blog/energi-fyn/header-kritisk-infrastruktur.png" alt="Kritisk infrastruktur – stabil strøm i en usikker verden" />
@@ -155,6 +153,10 @@ export const blogPosts: BlogPost[] = [
   <div class="vote-box-copy">
     <h2>Klar til at stemme?</h2>
     <p>Kontakt mig, hvis du vil vide mere – og <a href="https://electa.eu.assemblyvoting.net/candidacy/energifyn/repvalg26/da/groups/107/candidates/2267" target="_blank" rel="noopener noreferrer">klik her for at stemme</a>. Du kan stemme fra 12. oktober til 2. november 2026.</p>
+    <figure class="vote-box-map">
+      <img src="/blog/energi-fyn/valgomraade-5.png" alt="Kort over valgområderne i Energi Fyn med Valgområde 5 markeret" />
+    </figure>
+    <p>Valgområde 5 dækker 5540 (Ullerslev), 5550 (Langeskov), 5600 (Faaborg), 5601 (Lyø), 5602 (Avernakø), 5603 (Bjørnø), 5771 (Stenstrup), 5772 (Kværndrup), 5792 (Årslev), 5800 (Nyborg), 5853 (Ørbæk), 5854 (Gislev), 5856 (Ryslinge), 5863 (Ferritslev Fyn), 5871 (Frørup), 5874 (Hesselager), 5892 (Gudbjerg Sydfyn)</p>
   </div>
   <div class="vote-box-qr">
     <img src="/blog/energi-fyn/qr.png" alt="QR-kode til Energi Fyn-valget" />
