@@ -127,7 +127,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Mere om mit kandidatur</h2>
 
-<p>Jeg er bosat i Nyborg og opstiller dermed i Valgområde 5. Gennem mit arbejde som CIO har jeg dagligt ansvar for teknologi, sikkerhed og kritisk infrastruktur, men jeg tror samtidig på, at gode beslutninger bygger på mere end faglighed alene. Sund fornuft, ordentlighed og engagement er mindst lige så vigtige.</p>
+<p>Jeg er bosat i Nyborg og opstiller dermed i Valgområde 5. Gennem mit arbejde som CIO har jeg dagligt ansvar for teknologi, sikkerhed og infrastruktur, men jeg tror samtidig på, at gode beslutninger bygger på mere end faglighed alene. Sund fornuft, ordentlighed og engagement er mindst lige så vigtige.</p>
 
 <p>Som mangeårig fynbo og en aktiv del af det fynske erhvervsliv har jeg et stærkt ønske om at bidrage til udviklingen af Energi Fyn. Jeg håber at få muligheden for at repræsentere Valgområde 5 og arbejde for, at Energi Fyn også i fremtiden står stærkt som et lokalt forankret og ansvarligt andelsselskab.</p>
 
